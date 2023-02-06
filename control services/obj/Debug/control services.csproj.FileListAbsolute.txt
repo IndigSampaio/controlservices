@@ -1,0 +1,21 @@
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\bin\Debug\control services.exe.config
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\bin\Debug\control services.exe
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\bin\Debug\control services.pdb
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.csprojAssemblyReference.cache
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.Form1.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.csproj.GenerateResource.cache
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.exe
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.pdb
+C:\Users\Gabriel\Desktop\control service\deploy\control services\bin\Debug\control services.exe.config
+C:\Users\Gabriel\Desktop\control service\deploy\control services\bin\Debug\control services.exe
+C:\Users\Gabriel\Desktop\control service\deploy\control services\bin\Debug\control services.pdb
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control services.csprojAssemblyReference.cache
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control_services.splash.resources
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control_services.frm_lgn.resources
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control_services.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control services.csproj.GenerateResource.cache
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control services.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control services.exe
+C:\Users\Gabriel\Desktop\control service\deploy\control services\obj\Debug\control services.pdb
