@@ -16,10 +16,5 @@ namespace control_services
         {
             InitializeComponent();
         }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("Chrome", "https://web.whatsapp.com/send?phone=5511984062207");
-        }
     }
 }
