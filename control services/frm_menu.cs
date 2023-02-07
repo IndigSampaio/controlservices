@@ -17,12 +17,24 @@ namespace control_services
             InitializeComponent();
         }
 
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Deseja realmente sair?","Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            if( MessageBox.Show("Deseja realmente sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+
                 Application.Exit();
             }
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_cadfun cad_fun = new frm_cadfun();
+            cad_fun.ShowDialog();
         }
     }
 }
