@@ -33,8 +33,9 @@ namespace control_services
 
         private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_cadfun cad_fun = new frm_cadfun();
-            cad_fun.ShowDialog();
+            frm_cadfun cadfun = new frm_cadfun();
+            cadfun.ShowDialog();
+
         }
     }
 }

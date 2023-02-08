@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>https://gldturfre.000webhostapp.com/control%2520services/|publish\</PublishUrlHistory>
-    <InstallUrlHistory />
+    <PublishUrlHistory>C:\Users\Gabriel\Desktop\ctrl service\|C:\Program Files %28x86%29\|https://gldturfre.000webhostapp.com/|https://gldturfre.000webhostapp.com/control%2520services/|publish\</PublishUrlHistory>
+    <InstallUrlHistory>https://gldturfre.000webhostapp.com/control%2520services/|https://gldturfre.000webhostapp.com/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>https://gldturfre.000webhostapp.com/control%2520services/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>pt-BR</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
 </Project>

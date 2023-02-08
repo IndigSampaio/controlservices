@@ -41,8 +41,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gldturDataSet = new control_services.gldturDataSet();
+            this.usuariosTableAdapter = new control_services.gldturDataSetTableAdapters.usuariosTableAdapter();
+            this.tableAdapterManager = new control_services.gldturDataSetTableAdapters.TableAdapterManager();
+            this.tst_lgnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tst_lgnTableAdapter = new control_services.gldturDataSetTableAdapters.tst_lgnTableAdapter();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tst_lgnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,7 +111,6 @@
             // 
             // txtbx_lgn
             // 
-            this.txtbx_lgn.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtbx_lgn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_lgn.Location = new System.Drawing.Point(99, 256);
             this.txtbx_lgn.Name = "txtbx_lgn";
@@ -111,7 +119,6 @@
             // 
             // txtbx_snh
             // 
-            this.txtbx_snh.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtbx_snh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_snh.Location = new System.Drawing.Point(99, 310);
             this.txtbx_snh.Name = "txtbx_snh";
@@ -153,6 +160,39 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.gldturDataSet;
+            this.usuariosBindingSource.CurrentChanged += new System.EventHandler(this.usuariosBindingSource_CurrentChanged);
+            // 
+            // gldturDataSet
+            // 
+            this.gldturDataSet.DataSetName = "gldturDataSet";
+            this.gldturDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.testeTableAdapter = null;
+            this.tableAdapterManager.tst_lgnTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = control_services.gldturDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
+            // 
+            // tst_lgnBindingSource
+            // 
+            this.tst_lgnBindingSource.DataMember = "tst_lgn";
+            this.tst_lgnBindingSource.DataSource = this.gldturDataSet;
+            // 
+            // tst_lgnTableAdapter
+            // 
+            this.tst_lgnTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_lgn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,6 +216,9 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tst_lgnBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +238,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
+        private gldturDataSet gldturDataSet;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private gldturDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private gldturDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource tst_lgnBindingSource;
+        private gldturDataSetTableAdapters.tst_lgnTableAdapter tst_lgnTableAdapter;
     }
 }

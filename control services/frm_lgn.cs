@@ -42,6 +42,10 @@ namespace control_services
 
         private void frm_lgn_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'gldturDataSet.tst_lgn'. Você pode movê-la ou removê-la conforme necessário.
+            this.tst_lgnTableAdapter.Fill(this.gldturDataSet.tst_lgn);
+            // TODO: esta linha de código carrega dados na tabela 'gldturDataSet.usuarios'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuariosTableAdapter.Fill(this.gldturDataSet.usuarios);
 
         }
 
@@ -55,23 +59,21 @@ namespace control_services
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtbx_lgn.Text == "ADMIN" && txtbx_snh.Text == "123456")
+            //  int result = usuariosTableAdapter.FillByLgnFunc(gldturDataSet.usuarios, txtbx_lgn.Text, txtbx_snh.Text);
+            int result = tst_lgnTableAdapter.FillByLgnUser(gldturDataSet.tst_lgn, txtbx_lgn.Text, txtbx_snh.Text);
+
+            if (result == 1)
             {
                 frm_menu menu = new frm_menu();
-                menu.ShowDialog();
                 this.Visible = false;
+                menu.ShowDialog();
             }
 
-            if (txtbx_lgn.Text != "ADMIN")
+            else if (cont <= 3 )
             {
                 cont = cont - 1;
-                MessageBox.Show("Login incorreto. \n Tentativas restantes: " + cont, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            else if (txtbx_snh.Text != "123456")
-            {
-                cont = cont - 1;
-                MessageBox.Show("Senha incorreta. \n Tentativas restantes: " + cont, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Usuario ou senha incorreto!\n Tentativas restante: " + cont , "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
             }
 
             if (cont == 0)
@@ -90,6 +92,24 @@ namespace control_services
         private void toolStripStatusLabel2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(@"Chrome.exe", "https://web.whatsapp.com/send?phone=5511984062207");
+        }
+
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gldturDataSet);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuariosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
