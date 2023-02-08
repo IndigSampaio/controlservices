@@ -2153,10 +2153,10 @@ namespace control_services {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tst_lgnRow Addtst_lgnRow(int id, string nome, string lgn, string snh, bool ativo, string DataColumn1) {
+            public tst_lgnRow Addtst_lgnRow(string nome, string lgn, string snh, int ativo, string DataColumn1) {
                 tst_lgnRow rowtst_lgnRow = ((tst_lgnRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
+                        null,
                         nome,
                         lgn,
                         snh,
@@ -2210,13 +2210,15 @@ namespace control_services {
                 base.Columns.Add(this.columnlgn);
                 this.columnsnh = new global::System.Data.DataColumn("snh", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsnh);
-                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnativo);
                 this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataColumn1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.columnid.AutoIncrementSeed = 1;
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnnome.AllowDBNull = false;
@@ -2225,6 +2227,8 @@ namespace control_services {
                 this.columnlgn.MaxLength = 250;
                 this.columnsnh.AllowDBNull = false;
                 this.columnsnh.MaxLength = 250;
+                this.columnativo.AutoIncrementSeed = -1;
+                this.columnativo.AutoIncrementStep = -1;
                 this.columnativo.AllowDBNull = false;
             }
             
@@ -3696,9 +3700,9 @@ namespace control_services {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool ativo {
+            public int ativo {
                 get {
-                    return ((bool)(this[this.tabletst_lgn.ativoColumn]));
+                    return ((int)(this[this.tabletst_lgn.ativoColumn]));
                 }
                 set {
                     this[this.tabletst_lgn.ativoColumn] = value;

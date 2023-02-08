@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="control services.exe" size="3135984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="control services.exe" size="3143152">
       <assemblyIdentity name="control services" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p892/La/XRfTWwlWP/rWoQXg6uMwc7F1KzbTZRgX92c=</dsig:DigestValue>
+        <dsig:DigestValue>7E0dH7PZG9UCcQFjgEKI14os9INUMXDfq0rRsFinDXU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

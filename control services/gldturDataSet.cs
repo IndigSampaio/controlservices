@@ -10,9 +10,12 @@
     }
 }
 
-namespace control_services.gldturDataSetTableAdapters {
-    
-    
+namespace control_services.gldturDataSetTableAdapters
+{
+    partial class tst_lgnTableAdapter
+    {
+    }
+
     public partial class usuariosTableAdapter {
     }
 }

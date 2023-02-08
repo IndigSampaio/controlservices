@@ -34,10 +34,8 @@ namespace control_services
         {
             this.Validate();
             this.tst_lgnBindingSource.AddNew();
-            this.tableAdapterManager.UpdateAll(this.gldturDataSet);
             groupBox1.Enabled = true;
             btn_add.Enabled = false;
-
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -50,9 +48,21 @@ namespace control_services
             this.Validate();
             this.tst_lgnBindingSource.AddNew();
             this.tableAdapterManager.UpdateAll(this.gldturDataSet);
+
+            
         }
 
         private void bindingNavigatorPositionItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void msktxtbx_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

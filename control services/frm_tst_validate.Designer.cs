@@ -30,22 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tst_validate));
-            System.Windows.Forms.MaskedTextBox maskedTextBox1;
             this.tst_lgnBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tst_lgnBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btn_add = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ativo_check = new System.Windows.Forms.CheckBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,16 +56,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.ativo_check = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tst_lgnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gldturDataSet = new control_services.gldturDataSet();
             this.tst_lgnTableAdapter = new control_services.gldturDataSetTableAdapters.tst_lgnTableAdapter();
             this.tableAdapterManager = new control_services.gldturDataSetTableAdapters.TableAdapterManager();
-            maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tst_lgnBindingNavigator)).BeginInit();
             this.tst_lgnBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,6 +100,32 @@
             this.tst_lgnBindingNavigator.TabIndex = 0;
             this.tst_lgnBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -134,16 +159,9 @@
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             this.bindingNavigatorPositionItem.Click += new System.EventHandler(this.bindingNavigatorPositionItem_Click);
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -166,27 +184,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // tst_lgnBindingNavigatorSaveItem
             // 
@@ -209,7 +208,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(maskedTextBox1);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.ativo_check);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -222,11 +221,48 @@
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(13, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(429, 329);
+            this.groupBox1.Size = new System.Drawing.Size(417, 329);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.UseCompatibleTextRendering = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // ativo_check
+            // 
+            this.ativo_check.AutoSize = true;
+            this.ativo_check.Checked = true;
+            this.ativo_check.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ativo_check.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tst_lgnBindingSource, "ativo", true));
+            this.ativo_check.Location = new System.Drawing.Point(79, 259);
+            this.ativo_check.Name = "ativo_check";
+            this.ativo_check.Size = new System.Drawing.Size(18, 17);
+            this.ativo_check.TabIndex = 15;
+            this.ativo_check.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "snh", true));
+            this.textBox4.Location = new System.Drawing.Point(79, 206);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(147, 22);
+            this.textBox4.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "lgn", true));
+            this.textBox3.Location = new System.Drawing.Point(79, 157);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(147, 22);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "nome", true));
+            this.textBox2.Location = new System.Drawing.Point(79, 102);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(330, 22);
+            this.textBox2.TabIndex = 12;
             // 
             // label5
             // 
@@ -272,6 +308,7 @@
             this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Id :";
+            this.label1.Visible = false;
             // 
             // btn_save
             // 
@@ -292,41 +329,15 @@
             this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBox1
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "nome", true));
-            this.textBox2.Location = new System.Drawing.Point(79, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(330, 22);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "lgn", true));
-            this.textBox3.Location = new System.Drawing.Point(79, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 22);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "snh", true));
-            this.textBox4.Location = new System.Drawing.Point(79, 206);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(147, 22);
-            this.textBox4.TabIndex = 14;
-            // 
-            // ativo_check
-            // 
-            this.ativo_check.AutoSize = true;
-            this.ativo_check.Checked = true;
-            this.ativo_check.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ativo_check.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tst_lgnBindingSource, "ativo", true));
-            this.ativo_check.Location = new System.Drawing.Point(79, 259);
-            this.ativo_check.Name = "ativo_check";
-            this.ativo_check.Size = new System.Drawing.Size(18, 17);
-            this.ativo_check.TabIndex = 15;
-            this.ativo_check.UseVisualStyleBackColor = true;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "id", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tst_lgnBindingSource, "id", true));
+            this.textBox1.Location = new System.Drawing.Point(79, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 22);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.Visible = false;
             // 
             // tst_lgnBindingSource
             // 
@@ -350,17 +361,6 @@
             this.tableAdapterManager.tst_lgnTableAdapter = this.tst_lgnTableAdapter;
             this.tableAdapterManager.UpdateOrder = control_services.gldturDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tst_lgnBindingSource, "id", true));
-            maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tst_lgnBindingSource, "id", true));
-            maskedTextBox1.Location = new System.Drawing.Point(79, 54);
-            maskedTextBox1.Mask = "00000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            maskedTextBox1.TabIndex = 16;
-            maskedTextBox1.ValidatingType = typeof(int);
             // 
             // frm_tst_validate
             // 
@@ -420,5 +420,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

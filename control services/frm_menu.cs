@@ -12,6 +12,7 @@ namespace control_services
 {
     public partial class frm_menu : Form
     {
+        bool sidebarExpand;
         public frm_menu()
         {
             InitializeComponent();
@@ -36,6 +37,54 @@ namespace control_services
             frm_cadfun cadfun = new frm_cadfun();
             cadfun.ShowDialog();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      /*  private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                toolStrip1.Width -= 10;
+                if(toolStrip1.Width == toolStrip1.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                toolStrip1.Width += 10;
+
+                if(toolStrip1.Width == toolStrip1.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }*/
+
+        private void sidebarbutton_menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
         }
     }
 }

@@ -54,6 +54,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 90);
+            this.label3.Location = new System.Drawing.Point(164, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 3;
@@ -86,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(356, 90);
+            this.label4.Location = new System.Drawing.Point(340, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 4;
@@ -95,7 +97,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(560, 90);
+            this.label5.Location = new System.Drawing.Point(544, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 17);
             this.label5.TabIndex = 5;
@@ -104,7 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 223);
+            this.label6.Location = new System.Drawing.Point(135, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 7;
@@ -113,7 +115,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(356, 223);
+            this.label7.Location = new System.Drawing.Point(340, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 17);
             this.label7.TabIndex = 8;
@@ -122,7 +124,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(560, 223);
+            this.label8.Location = new System.Drawing.Point(544, 184);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 17);
             this.label8.TabIndex = 9;
@@ -140,7 +142,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(208, 151);
+            this.label10.Location = new System.Drawing.Point(192, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 17);
             this.label10.TabIndex = 11;
@@ -149,7 +151,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(356, 151);
+            this.label11.Location = new System.Drawing.Point(340, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 17);
             this.label11.TabIndex = 12;
@@ -248,7 +250,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(18, 223);
+            this.label22.Location = new System.Drawing.Point(2, 184);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(37, 17);
             this.label22.TabIndex = 6;
@@ -266,7 +268,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(776, 90);
+            this.label24.Location = new System.Drawing.Point(760, 51);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(87, 17);
             this.label24.TabIndex = 13;
@@ -290,39 +292,51 @@
             this.label26.TabIndex = 21;
             this.label26.Text = "Estado :";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Location = new System.Drawing.Point(16, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(908, 260);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frm_cadfun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 746);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Name = "frm_cadfun";
             this.Text = "frm_cadfun";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +370,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
