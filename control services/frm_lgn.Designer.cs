@@ -82,7 +82,7 @@
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 519);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(381, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(374, 25);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -179,6 +179,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.categ_veicTableAdapter = null;
             this.tableAdapterManager.testeTableAdapter = null;
             this.tableAdapterManager.tst_lgnTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.gldturDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -197,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 544);
+            this.ClientSize = new System.Drawing.Size(374, 544);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ver_senha);
@@ -244,5 +245,6 @@
         private gldturDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource tst_lgnBindingSource;
         private gldturDataSetTableAdapters.tst_lgnTableAdapter tst_lgnTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

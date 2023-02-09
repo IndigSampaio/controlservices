@@ -27,7 +27,7 @@
     <UpdateUrl>https://gldturfre.000webhostapp.com/control%2520services/</UpdateUrl>
     <ProductName>Control Service</ProductName>
     <PublisherName>Gold Turismo e Fretamentos</PublisherName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -212,6 +212,26 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 R2 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools para Office Runtime %28x86 e x64%29</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
       <Visible>False</Visible>

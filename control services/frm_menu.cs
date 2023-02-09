@@ -86,5 +86,22 @@ namespace control_services
         {
             sidebarTimer.Start();
         }
+
+        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Deseja realmente sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

@@ -33,16 +33,12 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.gldturDataSet1 = new control_services.gldturDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orcamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,12 +50,16 @@
             this.pagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -87,59 +87,25 @@
             this.panel1.Size = new System.Drawing.Size(1017, 741);
             this.panel1.TabIndex = 1;
             // 
-            // button4
+            // toolStrip1
             // 
-            this.button4.Location = new System.Drawing.Point(581, 403);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 115);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Sair";
-            this.button4.UseVisualStyleBackColor = true;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1017, 27);
+            this.toolStrip1.TabIndex = 15;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // button5
+            // toolStripButton1
             // 
-            this.button5.Location = new System.Drawing.Point(335, 403);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 115);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Agendamento";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(89, 403);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(240, 115);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Calendario";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(581, 222);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 115);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Contrato";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(335, 222);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 115);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Orcamento";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(89, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 115);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Cadastrar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // menuStrip1
             // 
@@ -169,22 +135,22 @@
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.cadastroToolStripMenuItem.Text = "Cadastrar";
             // 
-            // clienteToolStripMenuItem
-            // 
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.clienteToolStripMenuItem.Text = "Cliente";
-            // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             // 
             // orcamentoToolStripMenuItem
@@ -246,6 +212,7 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
@@ -256,25 +223,60 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 24);
             this.toolStripMenuItem1.Text = ".";
             // 
-            // toolStrip1
+            // button4
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1017, 27);
-            this.toolStrip1.TabIndex = 15;
-            this.toolStrip1.Text = "toolStrip1";
+            this.button4.Location = new System.Drawing.Point(581, 403);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(240, 115);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Sair";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // toolStripButton1
+            // button5
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.button5.Location = new System.Drawing.Point(335, 403);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(240, 115);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Agendamento";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(89, 403);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(240, 115);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Calendario";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(581, 222);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(240, 115);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Contrato";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(335, 222);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(240, 115);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Orcamento";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(89, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 115);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Cadastrar Cliente";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_menu
             // 
@@ -291,10 +293,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
