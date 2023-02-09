@@ -25,8 +25,9 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://gldturfre.000webhostapp.com/control%2520services/</InstallUrl>
     <UpdateUrl>https://gldturfre.000webhostapp.com/control%2520services/</UpdateUrl>
-    <PublisherName>Pedro Gabriel Indig Sampaio</PublisherName>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ProductName>Control Service</ProductName>
+    <PublisherName>Gold Turismo e Fretamentos</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -102,6 +103,12 @@
     <Compile Include="frm_menu.Designer.cs">
       <DependentUpon>frm_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_novo_orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_novo_orcamento.Designer.cs">
+      <DependentUpon>frm_novo_orcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_tst_validate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_novo_orcamento.resx">
+      <DependentUpon>frm_novo_orcamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_tst_validate.resx">
       <DependentUpon>frm_tst_validate.cs</DependentUpon>
@@ -202,6 +212,11 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>

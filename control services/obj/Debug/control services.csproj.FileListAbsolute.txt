@@ -18,3 +18,4 @@ C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Deb
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadfun.resources
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadfun_teste.resources
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_tst_validate.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_novo_orcamento.resources
