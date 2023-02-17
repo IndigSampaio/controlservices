@@ -33,5 +33,16 @@ namespace control_services.Properties {
                 return ((string)(this["gldturConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=34.69.219.27;Initial Catalog=glturfreDeploy;Persist Security Info=Tru" +
+            "e;User ID=PedroSampaio;Password=DanielePedro1!")]
+        public string glturfreDeployConnectionString {
+            get {
+                return ((string)(this["glturfreDeployConnectionString"]));
+            }
+        }
     }
 }

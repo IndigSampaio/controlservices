@@ -12,10 +12,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Gabriel\Desktop\ctrl service\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Gabriel\Desktop\ctrl service\control services\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
+    <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -23,11 +23,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://gldturfre.000webhostapp.com/control%2520services/</InstallUrl>
     <UpdateUrl>https://gldturfre.000webhostapp.com/control%2520services/</UpdateUrl>
     <ProductName>Control Service</ProductName>
     <PublisherName>Gold Turismo e Fretamentos</PublisherName>
-    <ApplicationRevision>4</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -65,6 +65,15 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>control_services.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,23 +88,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_cadfun.cs">
+    <Compile Include="frm_cadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_cadfun.Designer.cs">
-      <DependentUpon>frm_cadfun.cs</DependentUpon>
+    <Compile Include="frm_cadFunc.Designer.cs">
+      <DependentUpon>frm_cadFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_cadfun2.cs">
+    <Compile Include="frm_consult_cadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_cadfun2.Designer.cs">
-      <DependentUpon>frm_cadfun2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_cadfun_teste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_cadfun_teste.Designer.cs">
-      <DependentUpon>frm_cadfun_teste.cs</DependentUpon>
+    <Compile Include="frm_consult_cadFunc.Designer.cs">
+      <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
@@ -109,14 +112,13 @@
     <Compile Include="frm_novo_orcamento.Designer.cs">
       <DependentUpon>frm_novo_orcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_tst_validate.cs">
-      <SubType>Form</SubType>
+    <Compile Include="glturfreDeployDataSet.cs">
+      <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frm_tst_validate.Designer.cs">
-      <DependentUpon>frm_tst_validate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gldturDataSet.cs">
-      <DependentUpon>gldturDataSet.xsd</DependentUpon>
+    <Compile Include="glturfreDeployDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="splah.cs">
       <SubType>Form</SubType>
@@ -130,30 +132,19 @@
     <Compile Include="frm_lgn.Designer.cs">
       <DependentUpon>frm_lgn.cs</DependentUpon>
     </Compile>
-    <Compile Include="gldturDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>gldturDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_cadfun.resx">
-      <DependentUpon>frm_cadfun.cs</DependentUpon>
+    <EmbeddedResource Include="frm_cadFunc.resx">
+      <DependentUpon>frm_cadFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_cadfun2.resx">
-      <DependentUpon>frm_cadfun2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_cadfun_teste.resx">
-      <DependentUpon>frm_cadfun_teste.cs</DependentUpon>
+    <EmbeddedResource Include="frm_consult_cadFunc.resx">
+      <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_novo_orcamento.resx">
       <DependentUpon>frm_novo_orcamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_tst_validate.resx">
-      <DependentUpon>frm_tst_validate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splah.resx">
       <DependentUpon>splah.cs</DependentUpon>
@@ -172,17 +163,18 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="control services_TemporaryKey.pfx" />
-    <None Include="gldturDataSet.xsc">
-      <DependentUpon>gldturDataSet.xsd</DependentUpon>
+    <None Include="glturfreDeployDataSet.xsc">
+      <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </None>
-    <None Include="gldturDataSet.xsd">
+    <None Include="glturfreDeployDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>gldturDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>glturfreDeployDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="gldturDataSet.xss">
-      <DependentUpon>gldturDataSet.xsd</DependentUpon>
+    <None Include="glturfreDeployDataSet.xss">
+      <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,7 +186,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -203,15 +197,45 @@
     <None Include="Resources\logo gold.png" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
       <Visible>False</Visible>
@@ -228,19 +252,57 @@
       <ProductName>SQL Server 2012 Express LocalDB</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft®-System-CLR-Typen für SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft®-System-CLR-Typen für SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.arm">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28ARM%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Bibliotecas de Tempo de Execução do Visual C++ "14" %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
       <ProductName>Microsoft Visual Studio 2010 Tools para Office Runtime %28x86 e x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
-      <Visible>False</Visible>
-      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu-hamburguer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\001-analytic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\002-inserir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\003-ponto-de-verificacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\004-excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-exit1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

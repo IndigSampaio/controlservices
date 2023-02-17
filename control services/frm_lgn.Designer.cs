@@ -41,17 +41,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gldturDataSet = new control_services.gldturDataSet();
-            this.usuariosTableAdapter = new control_services.gldturDataSetTableAdapters.usuariosTableAdapter();
-            this.tableAdapterManager = new control_services.gldturDataSetTableAdapters.TableAdapterManager();
-            this.tst_lgnBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tst_lgnTableAdapter = new control_services.gldturDataSetTableAdapters.tst_lgnTableAdapter();
+            this.cad_funBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
+            this.cad_funTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_funTableAdapter();
+            this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tst_lgnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -160,39 +157,25 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // usuariosBindingSource
+            // cad_funBindingSource
             // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.gldturDataSet;
-            this.usuariosBindingSource.CurrentChanged += new System.EventHandler(this.usuariosBindingSource_CurrentChanged);
+            this.cad_funBindingSource.DataMember = "cad_fun";
+            this.cad_funBindingSource.DataSource = this.glturfreDeployDataSet;
             // 
-            // gldturDataSet
+            // glturfreDeployDataSet
             // 
-            this.gldturDataSet.DataSetName = "gldturDataSet";
-            this.gldturDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
+            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuariosTableAdapter
+            // cad_funTableAdapter
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
+            this.cad_funTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.categ_veicTableAdapter = null;
-            this.tableAdapterManager.testeTableAdapter = null;
-            this.tableAdapterManager.tst_lgnTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.gldturDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
-            // 
-            // tst_lgnBindingSource
-            // 
-            this.tst_lgnBindingSource.DataMember = "tst_lgn";
-            this.tst_lgnBindingSource.DataSource = this.gldturDataSet;
-            // 
-            // tst_lgnTableAdapter
-            // 
-            this.tst_lgnTableAdapter.ClearBeforeFill = true;
+            this.tableAdapterManager.cad_funTableAdapter = this.cad_funTableAdapter;
+            this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frm_lgn
             // 
@@ -217,9 +200,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tst_lgnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,12 +221,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
-        private gldturDataSet gldturDataSet;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private gldturDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
-        private gldturDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource tst_lgnBindingSource;
-        private gldturDataSetTableAdapters.tst_lgnTableAdapter tst_lgnTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private glturfreDeployDataSet glturfreDeployDataSet;
+        private System.Windows.Forms.BindingSource cad_funBindingSource;
+        private glturfreDeployDataSetTableAdapters.cad_funTableAdapter cad_funTableAdapter;
+        private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

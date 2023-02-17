@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.gldturDataSet1 = new control_services.gldturDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -56,8 +56,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,13 +66,9 @@
             // 
             this.sidebarTimer.Interval = 10;
             // 
-            // gldturDataSet1
-            // 
-            this.gldturDataSet1.DataSetName = "gldturDataSet";
-            this.gldturDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.button4);
@@ -86,6 +82,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1017, 741);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(129, 411);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(732, 299);
+            this.dataGridView1.TabIndex = 16;
             // 
             // toolStrip1
             // 
@@ -140,6 +146,7 @@
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click_1);
             // 
             // clienteToolStripMenuItem
             // 
@@ -165,13 +172,14 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // agendamentoToolStripMenuItem
@@ -225,7 +233,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(581, 403);
+            this.button4.Location = new System.Drawing.Point(621, 249);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(240, 115);
             this.button4.TabIndex = 12;
@@ -235,7 +243,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(335, 403);
+            this.button5.Location = new System.Drawing.Point(375, 249);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(240, 115);
             this.button5.TabIndex = 11;
@@ -244,7 +252,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(89, 403);
+            this.button6.Location = new System.Drawing.Point(129, 249);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(240, 115);
             this.button6.TabIndex = 10;
@@ -253,7 +261,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(581, 222);
+            this.button3.Location = new System.Drawing.Point(621, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(240, 115);
             this.button3.TabIndex = 9;
@@ -262,7 +270,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(335, 222);
+            this.button2.Location = new System.Drawing.Point(375, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 115);
             this.button2.TabIndex = 8;
@@ -271,12 +279,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(89, 222);
+            this.button1.Location = new System.Drawing.Point(129, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 115);
             this.button1.TabIndex = 7;
             this.button1.Text = "Cadastrar Cliente";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frm_menu
             // 
@@ -290,9 +299,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Service";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.gldturDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -303,7 +312,6 @@
 
         #endregion
         private System.Windows.Forms.Timer sidebarTimer;
-        private gldturDataSet gldturDataSet1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -328,5 +336,6 @@
         private System.Windows.Forms.ToolStripMenuItem pagamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

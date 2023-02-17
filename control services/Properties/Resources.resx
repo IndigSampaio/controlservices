@@ -121,7 +121,22 @@
   <data name="logo gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="002-inserir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\png\002-inserir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="004-excluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\png\004-excluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="001-analytic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\png\001-analytic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="003-ponto-de-verificacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\png\003-ponto-de-verificacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="menu-hamburguer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu-hamburguer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="001-exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\001-exit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

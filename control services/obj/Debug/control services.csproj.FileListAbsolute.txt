@@ -14,8 +14,7 @@ C:\Users\Gabriel\Desktop\control service\base de testes\control services\bin\Deb
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\bin\Debug\control services.application
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.exe.manifest
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.application
-C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadfun2.resources
-C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadfun.resources
-C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadfun_teste.resources
-C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_tst_validate.resources
 C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_novo_orcamento.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_cadFunc.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control_services.frm_consult_cadFunc.resources
+C:\Users\Gabriel\Desktop\control service\base de testes\control services\obj\Debug\control services.TrustInfo.xml

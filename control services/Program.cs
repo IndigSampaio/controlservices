@@ -16,7 +16,7 @@ namespace control_services
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new splash());
+            Application.Run(new frm_menu());
         }
     }
 }
