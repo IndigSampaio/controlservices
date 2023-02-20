@@ -42,9 +42,12 @@ namespace control_services
 
         private void frm_lgn_Load(object sender, EventArgs e)
         {
-         
+            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_login'. Você pode movê-la ou removê-la conforme necessário.
+            this.cad_loginTableAdapter.Fill(this.glturfreDeployDataSet.cad_login);
+
             //TODO: esta linha de codigo carrega dados da tablea 'gldturfreDeployDataSet.cad_fun'. Voce pode move-la ou remove-la conforme necessario.
-            this.cad_funTableAdapter.Fill(this.glturfreDeployDataSet.cad_fun);
+            //this.cad_funTableAdapter.Fill(this.glturfreDeployDataSet.cad_fun);
+            this.cad_loginTableAdapter.Fill(this.glturfreDeployDataSet.cad_login);
 
         }
 
@@ -58,8 +61,9 @@ namespace control_services
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int result = cad_funTableAdapter.loginFillBy(glturfreDeployDataSet.cad_fun, txtbx_lgn.Text, txtbx_snh.Text);
-            
+            //int result = cad_funTableAdapter.loginFillBy(glturfreDeployDataSet.cad_fun, txtbx_lgn.Text, txtbx_snh.Text);
+            int result = cad_loginTableAdapter.loginFillBy(glturfreDeployDataSet.cad_login, txtbx_lgn.Text, txtbx_snh.Text);
+
             if (result == 1)
             {
                 frm_menu menu = new frm_menu();
@@ -104,8 +108,24 @@ namespace control_services
 
         private void cad_funBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void cad_funBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cad_funBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cad_loginBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
             this.Validate();
-            this.cad_funBindingSource.EndEdit();
+            this.cad_loginBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.glturfreDeployDataSet);
 
         }

@@ -38,9 +38,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.group_info_contrato = new System.Windows.Forms.GroupBox();
-            this.chkbx_ativo = new System.Windows.Forms.CheckBox();
+            this.ver_senha = new System.Windows.Forms.CheckBox();
             this.cadfunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
+            this.txtbx_snh = new System.Windows.Forms.TextBox();
+            this.txtbx_lgn = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkbx_ativo = new System.Windows.Forms.CheckBox();
             this.chkbx_vt = new System.Windows.Forms.CheckBox();
             this.txtbx_cargo = new System.Windows.Forms.TextBox();
             this.txtbx_salario = new System.Windows.Forms.TextBox();
@@ -66,6 +71,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.group_DadosPessoais = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -106,13 +112,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtbx_lgn = new System.Windows.Forms.TextBox();
-            this.txtbx_snh = new System.Windows.Forms.TextBox();
-            this.ver_senha = new System.Windows.Forms.CheckBox();
             this.timersnh = new System.Windows.Forms.Timer(this.components);
+            this.cad_loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cad_loginTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_loginTableAdapter();
             button2 = new System.Windows.Forms.Button();
             btnSalvar = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
@@ -127,6 +129,7 @@
             this.group_DadosPessoais.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -244,15 +247,16 @@
             this.group_info_contrato.TabStop = false;
             this.group_info_contrato.Text = "Informacoes para contratacao";
             // 
-            // chkbx_ativo
+            // ver_senha
             // 
-            this.chkbx_ativo.AutoSize = true;
-            this.chkbx_ativo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "ativo", true));
-            this.chkbx_ativo.Location = new System.Drawing.Point(817, 38);
-            this.chkbx_ativo.Name = "chkbx_ativo";
-            this.chkbx_ativo.Size = new System.Drawing.Size(18, 17);
-            this.chkbx_ativo.TabIndex = 3;
-            this.chkbx_ativo.UseVisualStyleBackColor = true;
+            this.ver_senha.AutoSize = true;
+            this.ver_senha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "ativo", true));
+            this.ver_senha.Location = new System.Drawing.Point(677, 120);
+            this.ver_senha.Name = "ver_senha";
+            this.ver_senha.Size = new System.Drawing.Size(18, 17);
+            this.ver_senha.TabIndex = 41;
+            this.ver_senha.UseVisualStyleBackColor = true;
+            this.ver_senha.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // cadfunBindingSource
             // 
@@ -263,6 +267,54 @@
             // 
             this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
             this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtbx_snh
+            // 
+            this.txtbx_snh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "snh", true));
+            this.txtbx_snh.Location = new System.Drawing.Point(510, 117);
+            this.txtbx_snh.MaxLength = 20;
+            this.txtbx_snh.Name = "txtbx_snh";
+            this.txtbx_snh.PasswordChar = '*';
+            this.txtbx_snh.Size = new System.Drawing.Size(161, 22);
+            this.txtbx_snh.TabIndex = 8;
+            // 
+            // txtbx_lgn
+            // 
+            this.txtbx_lgn.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbx_lgn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "lgn", true));
+            this.txtbx_lgn.Location = new System.Drawing.Point(152, 117);
+            this.txtbx_lgn.MaxLength = 15;
+            this.txtbx_lgn.Name = "txtbx_lgn";
+            this.txtbx_lgn.Size = new System.Drawing.Size(198, 22);
+            this.txtbx_lgn.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(447, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 17);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Senha :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(95, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Login :";
+            // 
+            // chkbx_ativo
+            // 
+            this.chkbx_ativo.AutoSize = true;
+            this.chkbx_ativo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "ativo", true));
+            this.chkbx_ativo.Location = new System.Drawing.Point(817, 38);
+            this.chkbx_ativo.Name = "chkbx_ativo";
+            this.chkbx_ativo.Size = new System.Drawing.Size(18, 17);
+            this.chkbx_ativo.TabIndex = 3;
+            this.chkbx_ativo.UseVisualStyleBackColor = true;
             // 
             // chkbx_vt
             // 
@@ -575,6 +627,16 @@
             this.group_DadosPessoais.Text = "Dados Pessoais";
             this.group_DadosPessoais.Enter += new System.EventHandler(this.group_DadosPessoais_Enter);
             // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cep", true));
+            this.maskedTextBox4.Location = new System.Drawing.Point(152, 341);
+            this.maskedTextBox4.Mask = "00.000-000";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(183, 22);
+            this.maskedTextBox4.TabIndex = 21;
+            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "estado", true));
@@ -884,7 +946,7 @@
             this.tabpage_depUm.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depUm.Name = "tabpage_depUm";
             this.tabpage_depUm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depUm.Size = new System.Drawing.Size(1065, 662);
+            this.tabpage_depUm.Size = new System.Drawing.Size(1065, 714);
             this.tabpage_depUm.TabIndex = 1;
             this.tabpage_depUm.Text = "Dependente 1";
             this.tabpage_depUm.UseVisualStyleBackColor = true;
@@ -894,7 +956,7 @@
             this.tabpage_depDois.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depDois.Name = "tabpage_depDois";
             this.tabpage_depDois.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depDois.Size = new System.Drawing.Size(1065, 662);
+            this.tabpage_depDois.Size = new System.Drawing.Size(1065, 714);
             this.tabpage_depDois.TabIndex = 2;
             this.tabpage_depDois.Text = "Dependente 2";
             this.tabpage_depDois.UseVisualStyleBackColor = true;
@@ -904,7 +966,7 @@
             this.tabpage_depTres.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depTres.Name = "tabpage_depTres";
             this.tabpage_depTres.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depTres.Size = new System.Drawing.Size(1065, 662);
+            this.tabpage_depTres.Size = new System.Drawing.Size(1065, 714);
             this.tabpage_depTres.TabIndex = 3;
             this.tabpage_depTres.Text = "Dependente 3";
             this.tabpage_depTres.UseVisualStyleBackColor = true;
@@ -924,6 +986,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
             this.tableAdapterManager.cad_funTableAdapter = this.cad_funTableAdapter;
+            this.tableAdapterManager.cad_loginTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // panel2
@@ -951,70 +1014,20 @@
             // 
             this.timer2.Enabled = true;
             // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cep", true));
-            this.maskedTextBox4.Location = new System.Drawing.Point(152, 341);
-            this.maskedTextBox4.Mask = "00.000-000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(183, 22);
-            this.maskedTextBox4.TabIndex = 21;
-            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(95, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Login :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(447, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 17);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Senha :";
-            // 
-            // txtbx_lgn
-            // 
-            this.txtbx_lgn.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtbx_lgn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cargo", true));
-            this.txtbx_lgn.Location = new System.Drawing.Point(152, 117);
-            this.txtbx_lgn.MaxLength = 15;
-            this.txtbx_lgn.Name = "txtbx_lgn";
-            this.txtbx_lgn.Size = new System.Drawing.Size(198, 22);
-            this.txtbx_lgn.TabIndex = 7;
-            // 
-            // txtbx_snh
-            // 
-            this.txtbx_snh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cargo", true));
-            this.txtbx_snh.Location = new System.Drawing.Point(510, 117);
-            this.txtbx_snh.MaxLength = 20;
-            this.txtbx_snh.Name = "txtbx_snh";
-            this.txtbx_snh.PasswordChar = '*';
-            this.txtbx_snh.Size = new System.Drawing.Size(161, 22);
-            this.txtbx_snh.TabIndex = 8;
-            // 
-            // ver_senha
-            // 
-            this.ver_senha.AutoSize = true;
-            this.ver_senha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "ativo", true));
-            this.ver_senha.Location = new System.Drawing.Point(677, 120);
-            this.ver_senha.Name = "ver_senha";
-            this.ver_senha.Size = new System.Drawing.Size(18, 17);
-            this.ver_senha.TabIndex = 41;
-            this.ver_senha.UseVisualStyleBackColor = true;
-            this.ver_senha.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // timersnh
             // 
             this.timersnh.Enabled = true;
             this.timersnh.Interval = 10;
             this.timersnh.Tick += new System.EventHandler(this.timersnh_Tick);
+            // 
+            // cad_loginBindingSource
+            // 
+            this.cad_loginBindingSource.DataMember = "cad_login";
+            this.cad_loginBindingSource.DataSource = this.glturfreDeployDataSet;
+            // 
+            // cad_loginTableAdapter
+            // 
+            this.cad_loginTableAdapter.ClearBeforeFill = true;
             // 
             // frm_cadFunc
             // 
@@ -1042,6 +1055,7 @@
             this.group_DadosPessoais.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1126,5 +1140,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timersnh;
+        private System.Windows.Forms.BindingSource cad_loginBindingSource;
+        private glturfreDeployDataSetTableAdapters.cad_loginTableAdapter cad_loginTableAdapter;
     }
 }

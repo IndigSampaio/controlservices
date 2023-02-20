@@ -57,6 +57,8 @@ namespace control_services
 
         private void frm_cadFunc_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_login'. Você pode movê-la ou removê-la conforme necessário.
+            this.cad_loginTableAdapter.Fill(this.glturfreDeployDataSet.cad_login);
             // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_fun'. Você pode movê-la ou removê-la conforme necessário.
             this.cad_funTableAdapter.Fill(this.glturfreDeployDataSet.cad_fun);
 
@@ -88,6 +90,7 @@ namespace control_services
             {
                 this.Validate();
                 this.cadfunBindingSource.EndEdit();
+                this.cad_loginBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.glturfreDeployDataSet);
                 MessageBox.Show("Funcionario Cadastrado com Sucesso", "Sucesso", MessageBoxButtons.OK);
             }

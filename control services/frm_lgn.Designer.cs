@@ -41,14 +41,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cad_funBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
-            this.cad_funTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_funTableAdapter();
+            this.cad_loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cad_loginTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_loginTableAdapter();
             this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +112,7 @@
             this.txtbx_lgn.Location = new System.Drawing.Point(99, 256);
             this.txtbx_lgn.Name = "txtbx_lgn";
             this.txtbx_lgn.Size = new System.Drawing.Size(234, 30);
-            this.txtbx_lgn.TabIndex = 4;
+            this.txtbx_lgn.TabIndex = 1;
             // 
             // txtbx_snh
             // 
@@ -121,7 +121,7 @@
             this.txtbx_snh.Name = "txtbx_snh";
             this.txtbx_snh.PasswordChar = '*';
             this.txtbx_snh.Size = new System.Drawing.Size(234, 30);
-            this.txtbx_snh.TabIndex = 5;
+            this.txtbx_snh.TabIndex = 2;
             // 
             // ver_senha
             // 
@@ -137,7 +137,7 @@
             this.button1.Location = new System.Drawing.Point(23, 438);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 52);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 3;
             this.button1.Text = "&Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -147,7 +147,7 @@
             this.button2.Location = new System.Drawing.Point(222, 438);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 52);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 4;
             this.button2.Text = "&Sair";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -157,24 +157,26 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cad_funBindingSource
-            // 
-            this.cad_funBindingSource.DataMember = "cad_fun";
-            this.cad_funBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
             // glturfreDeployDataSet
             // 
             this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
             this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cad_funTableAdapter
+            // cad_loginBindingSource
             // 
-            this.cad_funTableAdapter.ClearBeforeFill = true;
+            this.cad_loginBindingSource.DataMember = "cad_login";
+            this.cad_loginBindingSource.DataSource = this.glturfreDeployDataSet;
+            // 
+            // cad_loginTableAdapter
+            // 
+            this.cad_loginTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.cad_funTableAdapter = this.cad_funTableAdapter;
+            this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
+            this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.cad_loginTableAdapter = this.cad_loginTableAdapter;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frm_lgn
@@ -200,8 +202,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,8 +224,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
         private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource cad_funBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_funTableAdapter cad_funTableAdapter;
+        private System.Windows.Forms.BindingSource cad_loginBindingSource;
+        private glturfreDeployDataSetTableAdapters.cad_loginTableAdapter cad_loginTableAdapter;
         private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

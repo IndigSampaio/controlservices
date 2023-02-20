@@ -85,7 +85,8 @@ namespace control_services
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            frm_cadCli cadCli = new frm_cadCli();
+            cadCli.ShowDialog();
         }
 
         private void funcionarioToolStripMenuItem_Click_1(object sender, EventArgs e)
