@@ -56,6 +56,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.valorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarValorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarValorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -80,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 741);
+            this.panel1.Size = new System.Drawing.Size(1140, 741);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -100,7 +103,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1017, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1140, 27);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -119,6 +122,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
+            this.valorToolStripMenuItem,
             this.orcamentoToolStripMenuItem,
             this.agendamentoToolStripMenuItem,
             this.agendaToolStripMenuItem,
@@ -127,7 +131,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1017, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1140, 28);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,20 +148,21 @@
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click_1);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             // 
             // orcamentoToolStripMenuItem
@@ -287,11 +292,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // valorToolStripMenuItem
+            // 
+            this.valorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.atualizarValorToolStripMenuItem,
+            this.consultarValorToolStripMenuItem});
+            this.valorToolStripMenuItem.Name = "valorToolStripMenuItem";
+            this.valorToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.valorToolStripMenuItem.Text = "Valor";
+            // 
+            // atualizarValorToolStripMenuItem
+            // 
+            this.atualizarValorToolStripMenuItem.Name = "atualizarValorToolStripMenuItem";
+            this.atualizarValorToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.atualizarValorToolStripMenuItem.Text = "Atualizar Valor";
+            // 
+            // consultarValorToolStripMenuItem
+            // 
+            this.consultarValorToolStripMenuItem.Name = "consultarValorToolStripMenuItem";
+            this.consultarValorToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.consultarValorToolStripMenuItem.Text = "Consultar Valor";
+            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 741);
+            this.ClientSize = new System.Drawing.Size(1140, 741);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -337,5 +363,8 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem valorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarValorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarValorToolStripMenuItem;
     }
 }

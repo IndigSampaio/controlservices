@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>http://goldturismoefretamentos.online/|ftp://goldturismoefretamentos.online/|ftp://goldturismoefretamentos.online/deploy_ControlService/control services/|ftp://89.117.7.121/|C:\Users\Gabriel\Desktop\ctrl service\control services\</PublishUrlHistory>
-    <InstallUrlHistory>http://goldturismoefretamentos.online/|http://localhost:10043/|https://gldturfre.000webhostapp.com/control%2520services%2520novo/|https://gldturfre.000webhostapp.com/control%2520services/|https://gldturfre.000webhostapp.com/</InstallUrlHistory>
+    <PublishUrlHistory>C:\Users\Gabriel\Desktop\ctrl service\control services\|http://www.goldturismoefretamentos.online/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/|ftp://89.117.7.121/|C:\Users\Gabriel\Desktop\</PublishUrlHistory>
+    <InstallUrlHistory>http://goldturismoefretamentos.online/control_services/|http://www.goldturismoefretamentos.online/|https://bit.ly/atualizacaogold/|https://goldturismoefretamentos.online/index.php/atualizacao/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory>https://gldturfre.000webhostapp.com/control%2520services/</UpdateUrlHistory>
+    <UpdateUrlHistory>http://goldturismoefretamentos.online/control_services/|http://www.goldturismoefretamentos.online/|https://bit.ly/atualizacaogold/|https://goldturismoefretamentos.online/index.php/atualizacao/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/</UpdateUrlHistory>
     <BootstrapperUrlHistory>https://gldturfre.000webhostapp.com/pre%2520requisitos/</BootstrapperUrlHistory>
     <ErrorReportUrlHistory />
     <FallbackCulture>pt-BR</FallbackCulture>

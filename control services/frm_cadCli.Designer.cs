@@ -53,11 +53,24 @@
             this.txtbx_nome = new System.Windows.Forms.TextBox();
             this.cmbbx_cpf_cnpj = new System.Windows.Forms.ComboBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtbx_email = new System.Windows.Forms.TextBox();
+            this.txtbx_endereco = new System.Windows.Forms.TextBox();
+            this.txtbx_num_ende = new System.Windows.Forms.TextBox();
+            this.txtbx_compl = new System.Windows.Forms.TextBox();
+            this.txtbx_bairro = new System.Windows.Forms.TextBox();
+            this.txtbx_cidade = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.msktxbx_tel = new System.Windows.Forms.MaskedTextBox();
+            this.glturfreDeployDataSet1 = new control_services.glturfreDeployDataSet();
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estadosTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.estadosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_cadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // glturfreDeployDataSet
@@ -97,14 +110,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 85);
+            this.panel1.Size = new System.Drawing.Size(721, 85);
             this.panel1.TabIndex = 11;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_sair);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(710, 0);
+            this.panel2.Location = new System.Drawing.Point(631, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(90, 85);
             this.panel2.TabIndex = 0;
@@ -122,6 +135,14 @@
             // 
             // panel_cadastro
             // 
+            this.panel_cadastro.Controls.Add(this.msktxbx_tel);
+            this.panel_cadastro.Controls.Add(this.comboBox1);
+            this.panel_cadastro.Controls.Add(this.txtbx_cidade);
+            this.panel_cadastro.Controls.Add(this.txtbx_bairro);
+            this.panel_cadastro.Controls.Add(this.txtbx_compl);
+            this.panel_cadastro.Controls.Add(this.txtbx_num_ende);
+            this.panel_cadastro.Controls.Add(this.txtbx_endereco);
+            this.panel_cadastro.Controls.Add(this.txtbx_email);
             this.panel_cadastro.Controls.Add(this.maskedTextBox1);
             this.panel_cadastro.Controls.Add(this.cmbbx_cpf_cnpj);
             this.panel_cadastro.Controls.Add(this.txtbx_nome);
@@ -138,13 +159,13 @@
             this.panel_cadastro.Enabled = false;
             this.panel_cadastro.Location = new System.Drawing.Point(0, 85);
             this.panel_cadastro.Name = "panel_cadastro";
-            this.panel_cadastro.Size = new System.Drawing.Size(800, 406);
+            this.panel_cadastro.Size = new System.Drawing.Size(721, 406);
             this.panel_cadastro.TabIndex = 12;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(542, 318);
+            this.label10.Location = new System.Drawing.Point(98, 364);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 17);
             this.label10.TabIndex = 19;
@@ -153,7 +174,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(255, 318);
+            this.label9.Location = new System.Drawing.Point(386, 318);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 17);
             this.label9.TabIndex = 18;
@@ -162,7 +183,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 318);
+            this.label8.Location = new System.Drawing.Point(104, 318);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 17);
             this.label8.TabIndex = 17;
@@ -171,7 +192,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(344, 250);
+            this.label7.Location = new System.Drawing.Point(344, 265);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 17);
             this.label7.TabIndex = 16;
@@ -180,7 +201,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 265);
+            this.label6.Location = new System.Drawing.Point(92, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 17);
             this.label6.TabIndex = 15;
@@ -189,7 +210,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 219);
+            this.label5.Location = new System.Drawing.Point(81, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 17);
             this.label5.TabIndex = 14;
@@ -198,7 +219,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 164);
+            this.label4.Location = new System.Drawing.Point(95, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 13;
@@ -207,7 +228,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(530, 139);
+            this.label3.Location = new System.Drawing.Point(374, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 12;
@@ -269,23 +290,107 @@
             this.cmbbx_cpf_cnpj.Items.AddRange(new object[] {
             "CPF",
             "CNPJ"});
-            this.cmbbx_cpf_cnpj.Location = new System.Drawing.Point(15, 107);
+            this.cmbbx_cpf_cnpj.Location = new System.Drawing.Point(37, 107);
             this.cmbbx_cpf_cnpj.Name = "cmbbx_cpf_cnpj";
             this.cmbbx_cpf_cnpj.Size = new System.Drawing.Size(121, 24);
             this.cmbbx_cpf_cnpj.TabIndex = 21;
             // 
             // maskedTextBox1
             // 
+            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cpf_cnpj", true));
             this.maskedTextBox1.Location = new System.Drawing.Point(164, 107);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(282, 22);
             this.maskedTextBox1.TabIndex = 22;
             // 
+            // txtbx_email
+            // 
+            this.txtbx_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "email", true));
+            this.txtbx_email.Location = new System.Drawing.Point(164, 161);
+            this.txtbx_email.Name = "txtbx_email";
+            this.txtbx_email.Size = new System.Drawing.Size(282, 22);
+            this.txtbx_email.TabIndex = 23;
+            // 
+            // txtbx_endereco
+            // 
+            this.txtbx_endereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "endereco", true));
+            this.txtbx_endereco.Location = new System.Drawing.Point(164, 216);
+            this.txtbx_endereco.Name = "txtbx_endereco";
+            this.txtbx_endereco.Size = new System.Drawing.Size(542, 22);
+            this.txtbx_endereco.TabIndex = 24;
+            // 
+            // txtbx_num_ende
+            // 
+            this.txtbx_num_ende.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "num_endereco", true));
+            this.txtbx_num_ende.Location = new System.Drawing.Point(164, 262);
+            this.txtbx_num_ende.Name = "txtbx_num_ende";
+            this.txtbx_num_ende.Size = new System.Drawing.Size(142, 22);
+            this.txtbx_num_ende.TabIndex = 25;
+            // 
+            // txtbx_compl
+            // 
+            this.txtbx_compl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "complemento", true));
+            this.txtbx_compl.Location = new System.Drawing.Point(452, 262);
+            this.txtbx_compl.Name = "txtbx_compl";
+            this.txtbx_compl.Size = new System.Drawing.Size(254, 22);
+            this.txtbx_compl.TabIndex = 26;
+            // 
+            // txtbx_bairro
+            // 
+            this.txtbx_bairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "bairro", true));
+            this.txtbx_bairro.Location = new System.Drawing.Point(164, 315);
+            this.txtbx_bairro.Name = "txtbx_bairro";
+            this.txtbx_bairro.Size = new System.Drawing.Size(142, 22);
+            this.txtbx_bairro.TabIndex = 27;
+            this.txtbx_bairro.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // txtbx_cidade
+            // 
+            this.txtbx_cidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cidade", true));
+            this.txtbx_cidade.Location = new System.Drawing.Point(452, 315);
+            this.txtbx_cidade.Name = "txtbx_cidade";
+            this.txtbx_cidade.Size = new System.Drawing.Size(254, 22);
+            this.txtbx_cidade.TabIndex = 28;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "estado", true));
+            this.comboBox1.DataSource = this.estadosBindingSource;
+            this.comboBox1.DisplayMember = "sigla_estado";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(164, 361);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 29;
+            // 
+            // msktxbx_tel
+            // 
+            this.msktxbx_tel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "telefone", true));
+            this.msktxbx_tel.Location = new System.Drawing.Point(452, 361);
+            this.msktxbx_tel.Mask = "00000-9999";
+            this.msktxbx_tel.Name = "msktxbx_tel";
+            this.msktxbx_tel.Size = new System.Drawing.Size(254, 22);
+            this.msktxbx_tel.TabIndex = 30;
+            // 
+            // glturfreDeployDataSet1
+            // 
+            this.glturfreDeployDataSet1.DataSetName = "glturfreDeployDataSet";
+            this.glturfreDeployDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataMember = "estados";
+            this.estadosBindingSource.DataSource = this.glturfreDeployDataSet1;
+            // 
+            // estadosTableAdapter
+            // 
+            this.estadosTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_cadCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 491);
+            this.ClientSize = new System.Drawing.Size(721, 491);
             this.ControlBox = false;
             this.Controls.Add(this.panel_cadastro);
             this.Controls.Add(this.panel1);
@@ -299,6 +404,8 @@
             this.panel2.ResumeLayout(false);
             this.panel_cadastro.ResumeLayout(false);
             this.panel_cadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,5 +435,16 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.ComboBox cmbbx_cpf_cnpj;
         private System.Windows.Forms.TextBox txtbx_nome;
+        private System.Windows.Forms.TextBox txtbx_bairro;
+        private System.Windows.Forms.TextBox txtbx_compl;
+        private System.Windows.Forms.TextBox txtbx_num_ende;
+        private System.Windows.Forms.TextBox txtbx_endereco;
+        private System.Windows.Forms.TextBox txtbx_email;
+        private System.Windows.Forms.MaskedTextBox msktxbx_tel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtbx_cidade;
+        private glturfreDeployDataSet glturfreDeployDataSet1;
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        private glturfreDeployDataSetTableAdapters.estadosTableAdapter estadosTableAdapter;
     }
 }

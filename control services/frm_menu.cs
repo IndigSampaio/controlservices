@@ -97,8 +97,14 @@ namespace control_services
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_novo_orcamento novo_Orcamento = new frm_novo_orcamento();
-            novo_Orcamento.ShowDialog();
+            //frm_novo_orcamento novo_Orcamento = new frm_novo_orcamento();
+            //novo_Orcamento.ShowDialog();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_cadCli cadCli = new frm_cadCli();
+            cadCli.ShowDialog();
         }
     }
 }

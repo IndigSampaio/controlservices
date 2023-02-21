@@ -25,8 +25,21 @@ namespace control_services
 
         private void frm_cadCli_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet1.estados'. Você pode movê-la ou removê-la conforme necessário.
+            this.estadosTableAdapter.Fill(this.glturfreDeployDataSet1.estados);
             // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_cli'. Você pode movê-la ou removê-la conforme necessário.
             this.cad_cliTableAdapter.Fill(this.glturfreDeployDataSet.cad_cli);
+
+            txtbx_email.Text = "";
+            txtbx_endereco.Text = "";
+            txtbx_nome.Text = "";
+            txtbx_num_ende.Text = "";
+            maskedTextBox1.Text = "";
+            msktxbx_tel.Text = "";
+            txtbx_bairro.Text = "";
+            txtbx_cidade.Text = "";
+            txtbx_compl.Text = "";
+            comboBox1.Text = "";
 
         }
 
@@ -66,10 +79,15 @@ namespace control_services
         {
             if (panel_cadastro.Enabled == true)
             {
-                if(MessageBox.Show("Os dados ainda nao foram salvos.\n DESEJA REALMENTE SAIR?\n Os dados nao salvos serao perdidos", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if(MessageBox.Show(" Os dados ainda nao foram salvos.\n DESEJA REALMENTE SAIR?\n Os dados nao salvos serao perdidos", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     this.Close();
                 }
+            }
+
+            else
+            {
+                this.Close();
             }
         }
 
@@ -89,6 +107,11 @@ namespace control_services
         private void btn_consulta_cliente_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Area em desenvolvimento");
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
