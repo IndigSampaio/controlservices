@@ -105,7 +105,29 @@
             this.tableAdapterManager.cad_loginTableAdapter = null;
             this.tableAdapterManager.categ_veiculoTableAdapter = null;
             this.tableAdapterManager.estadosTableAdapter = null;
+            this.tableAdapterManager.ferpro_carroTableAdapter = null;
+            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
+            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
+            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
+            this.tableAdapterManager.fimsem_carroTableAdapter = null;
+            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
+            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
+            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
             // 
             // batevolta_dd60LTableAdapter
             // 
@@ -199,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 515);
+            this.ClientSize = new System.Drawing.Size(822, 654);
             this.Controls.Add(this.txtbox_valor);
             this.Controls.Add(this.chkbxDD64);
             this.Controls.Add(this.chkbxDD60);

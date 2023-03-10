@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button button2;
             System.Windows.Forms.Button btnSalvar;
             System.Windows.Forms.Button btnAdd;
             System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadFunc));
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.group_info_contrato = new System.Windows.Forms.GroupBox();
             this.ver_senha = new System.Windows.Forms.CheckBox();
-            this.cadfunBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
             this.txtbx_snh = new System.Windows.Forms.TextBox();
             this.txtbx_lgn = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,31 +105,40 @@
             this.tabpage_depUm = new System.Windows.Forms.TabPage();
             this.tabpage_depDois = new System.Windows.Forms.TabPage();
             this.tabpage_depTres = new System.Windows.Forms.TabPage();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cad_funTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_funTableAdapter();
-            this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timersnh = new System.Windows.Forms.Timer(this.components);
-            this.cad_loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cad_loginTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_loginTableAdapter();
             button2 = new System.Windows.Forms.Button();
             btnSalvar = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.group_info_contrato.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cadfunBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             this.group_documentos.SuspendLayout();
             this.group_DadosPessoais.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(btnSalvar);
+            this.panel2.Controls.Add(btnAdd);
+            this.panel2.Controls.Add(button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1034, 85);
+            this.panel2.TabIndex = 43;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(button2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(945, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(89, 85);
+            this.panel3.TabIndex = 46;
             // 
             // button2
             // 
@@ -143,7 +151,6 @@
             button2.Tag = "Salvar";
             button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnSalvar
             // 
@@ -156,7 +163,6 @@
             btnSalvar.Tag = "Salvar";
             btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnAdd
             // 
@@ -169,7 +175,6 @@
             btnAdd.Tag = "Inserir";
             btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // button1
             // 
@@ -182,7 +187,6 @@
             button1.Tag = "Consultar";
             button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl1
             // 
@@ -191,11 +195,11 @@
             this.tabControl1.Controls.Add(this.tabpage_depDois);
             this.tabControl1.Controls.Add(this.tabpage_depTres);
             this.tabControl1.Enabled = false;
-            this.tabControl1.Location = new System.Drawing.Point(0, 95);
+            this.tabControl1.Location = new System.Drawing.Point(0, 91);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1073, 743);
-            this.tabControl1.TabIndex = 41;
+            this.tabControl1.Size = new System.Drawing.Size(1038, 820);
+            this.tabControl1.TabIndex = 44;
             // 
             // tabPage1
             // 
@@ -203,7 +207,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1065, 714);
+            this.tabPage1.Size = new System.Drawing.Size(1030, 791);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Funcionario";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -217,7 +221,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1059, 708);
+            this.panel1.Size = new System.Drawing.Size(1024, 785);
             this.panel1.TabIndex = 40;
             // 
             // group_info_contrato
@@ -242,7 +246,7 @@
             this.group_info_contrato.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_info_contrato.Location = new System.Drawing.Point(0, 0);
             this.group_info_contrato.Name = "group_info_contrato";
-            this.group_info_contrato.Size = new System.Drawing.Size(1059, 161);
+            this.group_info_contrato.Size = new System.Drawing.Size(1024, 161);
             this.group_info_contrato.TabIndex = 36;
             this.group_info_contrato.TabStop = false;
             this.group_info_contrato.Text = "Informacoes para contratacao";
@@ -250,27 +254,14 @@
             // ver_senha
             // 
             this.ver_senha.AutoSize = true;
-            this.ver_senha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "ativo", true));
             this.ver_senha.Location = new System.Drawing.Point(677, 120);
             this.ver_senha.Name = "ver_senha";
             this.ver_senha.Size = new System.Drawing.Size(18, 17);
             this.ver_senha.TabIndex = 41;
             this.ver_senha.UseVisualStyleBackColor = true;
-            this.ver_senha.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // cadfunBindingSource
-            // 
-            this.cadfunBindingSource.DataMember = "cad_fun";
-            this.cadfunBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // glturfreDeployDataSet
-            // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtbx_snh
             // 
-            this.txtbx_snh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "snh", true));
             this.txtbx_snh.Location = new System.Drawing.Point(510, 117);
             this.txtbx_snh.MaxLength = 20;
             this.txtbx_snh.Name = "txtbx_snh";
@@ -281,7 +272,6 @@
             // txtbx_lgn
             // 
             this.txtbx_lgn.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtbx_lgn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "lgn", true));
             this.txtbx_lgn.Location = new System.Drawing.Point(152, 117);
             this.txtbx_lgn.MaxLength = 15;
             this.txtbx_lgn.Name = "txtbx_lgn";
@@ -309,7 +299,6 @@
             // chkbx_ativo
             // 
             this.chkbx_ativo.AutoSize = true;
-            this.chkbx_ativo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "ativo", true));
             this.chkbx_ativo.Location = new System.Drawing.Point(817, 38);
             this.chkbx_ativo.Name = "chkbx_ativo";
             this.chkbx_ativo.Size = new System.Drawing.Size(18, 17);
@@ -319,7 +308,6 @@
             // chkbx_vt
             // 
             this.chkbx_vt.AutoSize = true;
-            this.chkbx_vt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "vt", true));
             this.chkbx_vt.Location = new System.Drawing.Point(569, 40);
             this.chkbx_vt.Name = "chkbx_vt";
             this.chkbx_vt.Size = new System.Drawing.Size(18, 17);
@@ -328,7 +316,6 @@
             // 
             // txtbx_cargo
             // 
-            this.txtbx_cargo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cargo", true));
             this.txtbx_cargo.Location = new System.Drawing.Point(510, 76);
             this.txtbx_cargo.Name = "txtbx_cargo";
             this.txtbx_cargo.Size = new System.Drawing.Size(161, 22);
@@ -336,7 +323,6 @@
             // 
             // txtbx_salario
             // 
-            this.txtbx_salario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "salario", true));
             this.txtbx_salario.Location = new System.Drawing.Point(817, 78);
             this.txtbx_salario.Name = "txtbx_salario";
             this.txtbx_salario.Size = new System.Drawing.Size(99, 22);
@@ -344,7 +330,6 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "data_adm", true));
             this.maskedTextBox1.Location = new System.Drawing.Point(152, 76);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -354,7 +339,6 @@
             // 
             // cmbbx_tip_contrato
             // 
-            this.cmbbx_tip_contrato.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "tipo_contrato", true));
             this.cmbbx_tip_contrato.FormattingEnabled = true;
             this.cmbbx_tip_contrato.Items.AddRange(new object[] {
             "CLT",
@@ -443,7 +427,6 @@
             // 
             // msktxtbx_cpf
             // 
-            this.msktxtbx_cpf.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cpf", true));
             this.msktxtbx_cpf.Location = new System.Drawing.Point(125, 41);
             this.msktxtbx_cpf.Mask = "000.000.000-00";
             this.msktxtbx_cpf.Name = "msktxtbx_cpf";
@@ -453,7 +436,6 @@
             // 
             // textBox13
             // 
-            this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cnh", true));
             this.textBox13.Location = new System.Drawing.Point(125, 90);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(210, 22);
@@ -461,7 +443,6 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "categ", true));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "A",
@@ -481,7 +462,6 @@
             // 
             // textBox12
             // 
-            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "pis", true));
             this.textBox12.Location = new System.Drawing.Point(808, 90);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(177, 22);
@@ -489,7 +469,6 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "org_emiss", true));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "AC",
@@ -525,7 +504,6 @@
             // 
             // textBox11
             // 
-            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "rg", true));
             this.textBox11.Location = new System.Drawing.Point(473, 39);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(193, 22);
@@ -625,11 +603,9 @@
             this.group_DadosPessoais.TabIndex = 37;
             this.group_DadosPessoais.TabStop = false;
             this.group_DadosPessoais.Text = "Dados Pessoais";
-            this.group_DadosPessoais.Enter += new System.EventHandler(this.group_DadosPessoais_Enter);
             // 
             // maskedTextBox4
             // 
-            this.maskedTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cep", true));
             this.maskedTextBox4.Location = new System.Drawing.Point(152, 341);
             this.maskedTextBox4.Mask = "00.000-000";
             this.maskedTextBox4.Name = "maskedTextBox4";
@@ -639,7 +615,6 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "estado", true));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "AC",
@@ -675,7 +650,6 @@
             // 
             // textBox9
             // 
-            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "num_casa", true));
             this.textBox9.Location = new System.Drawing.Point(851, 307);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(127, 22);
@@ -683,7 +657,6 @@
             // 
             // textBox8
             // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "cidade", true));
             this.textBox8.Location = new System.Drawing.Point(473, 307);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(193, 22);
@@ -691,7 +664,6 @@
             // 
             // textBox7
             // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "bairro", true));
             this.textBox7.Location = new System.Drawing.Point(152, 307);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(183, 22);
@@ -699,7 +671,6 @@
             // 
             // textBox6
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "endereco", true));
             this.textBox6.Location = new System.Drawing.Point(152, 271);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(826, 22);
@@ -707,7 +678,6 @@
             // 
             // textBox5
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "nome_pai", true));
             this.textBox5.Location = new System.Drawing.Point(152, 226);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(826, 22);
@@ -715,7 +685,6 @@
             // 
             // textBox4
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "nome_mae", true));
             this.textBox4.Location = new System.Drawing.Point(152, 187);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(826, 22);
@@ -723,7 +692,6 @@
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "email", true));
             this.textBox3.Location = new System.Drawing.Point(152, 150);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(532, 22);
@@ -731,7 +699,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "escola", true));
             this.textBox2.Location = new System.Drawing.Point(470, 109);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(214, 22);
@@ -739,7 +706,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "natural", true));
             this.textBox1.Location = new System.Drawing.Point(152, 109);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 22);
@@ -747,7 +713,6 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "sexo", true));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Masculino",
@@ -760,7 +725,6 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "data_nasc", true));
             this.maskedTextBox2.Location = new System.Drawing.Point(152, 69);
             this.maskedTextBox2.Mask = "00/00/0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
@@ -770,7 +734,6 @@
             // 
             // txtbx_nome
             // 
-            this.txtbx_nome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadfunBindingSource, "nome_completo", true));
             this.txtbx_nome.Location = new System.Drawing.Point(152, 31);
             this.txtbx_nome.Name = "txtbx_nome";
             this.txtbx_nome.Size = new System.Drawing.Size(826, 22);
@@ -946,7 +909,7 @@
             this.tabpage_depUm.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depUm.Name = "tabpage_depUm";
             this.tabpage_depUm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depUm.Size = new System.Drawing.Size(1065, 714);
+            this.tabpage_depUm.Size = new System.Drawing.Size(1030, 791);
             this.tabpage_depUm.TabIndex = 1;
             this.tabpage_depUm.Text = "Dependente 1";
             this.tabpage_depUm.UseVisualStyleBackColor = true;
@@ -956,7 +919,7 @@
             this.tabpage_depDois.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depDois.Name = "tabpage_depDois";
             this.tabpage_depDois.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depDois.Size = new System.Drawing.Size(1065, 714);
+            this.tabpage_depDois.Size = new System.Drawing.Size(1030, 791);
             this.tabpage_depDois.TabIndex = 2;
             this.tabpage_depDois.Text = "Dependente 2";
             this.tabpage_depDois.UseVisualStyleBackColor = true;
@@ -966,105 +929,51 @@
             this.tabpage_depTres.Location = new System.Drawing.Point(4, 25);
             this.tabpage_depTres.Name = "tabpage_depTres";
             this.tabpage_depTres.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage_depTres.Size = new System.Drawing.Size(1065, 714);
+            this.tabpage_depTres.Size = new System.Drawing.Size(1030, 791);
             this.tabpage_depTres.TabIndex = 3;
             this.tabpage_depTres.Text = "Dependente 3";
             this.tabpage_depTres.UseVisualStyleBackColor = true;
-            this.tabpage_depTres.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // cad_funTableAdapter
-            // 
-            this.cad_funTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
-            this.tableAdapterManager.cad_funTableAdapter = this.cad_funTableAdapter;
-            this.tableAdapterManager.cad_loginTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(btnSalvar);
-            this.panel2.Controls.Add(btnAdd);
-            this.panel2.Controls.Add(button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1015, 85);
-            this.panel2.TabIndex = 42;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(button2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(926, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 85);
-            this.panel3.TabIndex = 46;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            // 
-            // timersnh
-            // 
-            this.timersnh.Enabled = true;
-            this.timersnh.Interval = 10;
-            this.timersnh.Tick += new System.EventHandler(this.timersnh_Tick);
-            // 
-            // cad_loginBindingSource
-            // 
-            this.cad_loginBindingSource.DataMember = "cad_login";
-            this.cad_loginBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // cad_loginTableAdapter
-            // 
-            this.cad_loginTableAdapter.ClearBeforeFill = true;
-            // 
-            // frm_cadFunc
+            // frm_cadFunc2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 850);
+            this.ClientSize = new System.Drawing.Size(1034, 909);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "frm_cadFunc";
+            this.Controls.Add(this.panel2);
+            this.Name = "frm_cadFunc2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_cadFunc";
-            this.Load += new System.EventHandler(this.frm_cadFunc_Load);
+            this.Text = "Cadastrar Funcionario";
+            this.Load += new System.EventHandler(this.frm_cadFunc2_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.group_info_contrato.ResumeLayout(false);
             this.group_info_contrato.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cadfunBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
             this.group_documentos.ResumeLayout(false);
             this.group_documentos.PerformLayout();
             this.group_DadosPessoais.ResumeLayout(false);
             this.group_DadosPessoais.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox group_info_contrato;
+        private System.Windows.Forms.CheckBox ver_senha;
+        private System.Windows.Forms.TextBox txtbx_snh;
+        private System.Windows.Forms.TextBox txtbx_lgn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkbx_ativo;
         private System.Windows.Forms.CheckBox chkbx_vt;
         private System.Windows.Forms.TextBox txtbx_cargo;
@@ -1078,6 +987,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox group_documentos;
+        private System.Windows.Forms.MaskedTextBox msktxtbx_cpf;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1085,6 +1000,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox group_DadosPessoais;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.TextBox txtbx_nome;
         private System.Windows.Forms.CheckBox chkbx_TresDep;
         private System.Windows.Forms.CheckBox chkbx_DoisDep;
@@ -1107,40 +1035,5 @@
         private System.Windows.Forms.TabPage tabpage_depUm;
         private System.Windows.Forms.TabPage tabpage_depDois;
         private System.Windows.Forms.TabPage tabpage_depTres;
-        private System.Windows.Forms.Timer timer1;
-        private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource cadfunBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_funTableAdapter cad_funTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox11;
-        private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox msktxtbx_cpf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.CheckBox ver_senha;
-        private System.Windows.Forms.TextBox txtbx_snh;
-        private System.Windows.Forms.TextBox txtbx_lgn;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Timer timersnh;
-        private System.Windows.Forms.BindingSource cad_loginBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_loginTableAdapter cad_loginTableAdapter;
     }
 }

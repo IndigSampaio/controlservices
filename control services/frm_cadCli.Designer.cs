@@ -35,9 +35,25 @@
             this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_consulta_cliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_sair = new System.Windows.Forms.Button();
             this.panel_cadastro = new System.Windows.Forms.Panel();
+            this.msktxbx_tel = new System.Windows.Forms.MaskedTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.glturfreDeployDataSet1 = new control_services.glturfreDeployDataSet();
+            this.txtbx_cidade = new System.Windows.Forms.TextBox();
+            this.txtbx_bairro = new System.Windows.Forms.TextBox();
+            this.txtbx_compl = new System.Windows.Forms.TextBox();
+            this.txtbx_num_ende = new System.Windows.Forms.TextBox();
+            this.txtbx_endereco = new System.Windows.Forms.TextBox();
+            this.txtbx_email = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cmbbx_cpf_cnpj = new System.Windows.Forms.ComboBox();
+            this.txtbx_nome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,30 +63,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_consulta_cliente = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.txtbx_nome = new System.Windows.Forms.TextBox();
-            this.cmbbx_cpf_cnpj = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtbx_email = new System.Windows.Forms.TextBox();
-            this.txtbx_endereco = new System.Windows.Forms.TextBox();
-            this.txtbx_num_ende = new System.Windows.Forms.TextBox();
-            this.txtbx_compl = new System.Windows.Forms.TextBox();
-            this.txtbx_bairro = new System.Windows.Forms.TextBox();
-            this.txtbx_cidade = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.msktxbx_tel = new System.Windows.Forms.MaskedTextBox();
-            this.glturfreDeployDataSet1 = new control_services.glturfreDeployDataSet();
-            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadosTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.estadosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_cadastro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // glturfreDeployDataSet
@@ -90,11 +90,44 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.batevolta_carroTableAdapter = null;
+            this.tableAdapterManager.batevolta_conv47LTableAdapter = null;
+            this.tableAdapterManager.batevolta_dd60LTableAdapter = null;
             this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
+            this.tableAdapterManager.batevolta_exec46LTableAdapter = null;
+            this.tableAdapterManager.batevolta_exec50LTableAdapter = null;
+            this.tableAdapterManager.batevolta_micro32LTableAdapter = null;
+            this.tableAdapterManager.batevolta_semi46LTableAdapter = null;
+            this.tableAdapterManager.batevolta_van15LTableAdapter = null;
+            this.tableAdapterManager.batevolta_van18LTableAdapter = null;
             this.tableAdapterManager.cad_cliTableAdapter = this.cad_cliTableAdapter;
             this.tableAdapterManager.cad_funTableAdapter = null;
             this.tableAdapterManager.cad_loginTableAdapter = null;
+            this.tableAdapterManager.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager.estadosTableAdapter = null;
+            this.tableAdapterManager.ferpro_carroTableAdapter = null;
+            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
+            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
+            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
+            this.tableAdapterManager.fimsem_carroTableAdapter = null;
+            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
+            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
+            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
             // 
             // timer1
             // 
@@ -112,6 +145,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 85);
             this.panel1.TabIndex = 11;
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_salvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
+            this.btn_salvar.Location = new System.Drawing.Point(180, 0);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(90, 85);
+            this.btn_salvar.TabIndex = 3;
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.Image = global::control_services.Properties.Resources._002_inserir;
+            this.btn_add.Location = new System.Drawing.Point(90, 0);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(90, 85);
+            this.btn_add.TabIndex = 2;
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_consulta_cliente
+            // 
+            this.btn_consulta_cliente.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_consulta_cliente.Image = global::control_services.Properties.Resources._001_analytic;
+            this.btn_consulta_cliente.Location = new System.Drawing.Point(0, 0);
+            this.btn_consulta_cliente.Name = "btn_consulta_cliente";
+            this.btn_consulta_cliente.Size = new System.Drawing.Size(90, 85);
+            this.btn_consulta_cliente.TabIndex = 1;
+            this.btn_consulta_cliente.UseVisualStyleBackColor = true;
+            this.btn_consulta_cliente.Click += new System.EventHandler(this.btn_consulta_cliente_Click);
             // 
             // panel2
             // 
@@ -161,6 +227,113 @@
             this.panel_cadastro.Name = "panel_cadastro";
             this.panel_cadastro.Size = new System.Drawing.Size(721, 406);
             this.panel_cadastro.TabIndex = 12;
+            // 
+            // msktxbx_tel
+            // 
+            this.msktxbx_tel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "telefone", true));
+            this.msktxbx_tel.Location = new System.Drawing.Point(452, 361);
+            this.msktxbx_tel.Mask = "00000-9999";
+            this.msktxbx_tel.Name = "msktxbx_tel";
+            this.msktxbx_tel.Size = new System.Drawing.Size(254, 22);
+            this.msktxbx_tel.TabIndex = 30;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "estado", true));
+            this.comboBox1.DataSource = this.estadosBindingSource;
+            this.comboBox1.DisplayMember = "sigla_estado";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(164, 361);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 29;
+            // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataMember = "estados";
+            this.estadosBindingSource.DataSource = this.glturfreDeployDataSet1;
+            // 
+            // glturfreDeployDataSet1
+            // 
+            this.glturfreDeployDataSet1.DataSetName = "glturfreDeployDataSet";
+            this.glturfreDeployDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtbx_cidade
+            // 
+            this.txtbx_cidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cidade", true));
+            this.txtbx_cidade.Location = new System.Drawing.Point(452, 315);
+            this.txtbx_cidade.Name = "txtbx_cidade";
+            this.txtbx_cidade.Size = new System.Drawing.Size(254, 22);
+            this.txtbx_cidade.TabIndex = 28;
+            // 
+            // txtbx_bairro
+            // 
+            this.txtbx_bairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "bairro", true));
+            this.txtbx_bairro.Location = new System.Drawing.Point(164, 315);
+            this.txtbx_bairro.Name = "txtbx_bairro";
+            this.txtbx_bairro.Size = new System.Drawing.Size(142, 22);
+            this.txtbx_bairro.TabIndex = 27;
+            this.txtbx_bairro.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // txtbx_compl
+            // 
+            this.txtbx_compl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "complemento", true));
+            this.txtbx_compl.Location = new System.Drawing.Point(452, 262);
+            this.txtbx_compl.Name = "txtbx_compl";
+            this.txtbx_compl.Size = new System.Drawing.Size(254, 22);
+            this.txtbx_compl.TabIndex = 26;
+            // 
+            // txtbx_num_ende
+            // 
+            this.txtbx_num_ende.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "num_endereco", true));
+            this.txtbx_num_ende.Location = new System.Drawing.Point(164, 262);
+            this.txtbx_num_ende.Name = "txtbx_num_ende";
+            this.txtbx_num_ende.Size = new System.Drawing.Size(142, 22);
+            this.txtbx_num_ende.TabIndex = 25;
+            // 
+            // txtbx_endereco
+            // 
+            this.txtbx_endereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "endereco", true));
+            this.txtbx_endereco.Location = new System.Drawing.Point(164, 216);
+            this.txtbx_endereco.Name = "txtbx_endereco";
+            this.txtbx_endereco.Size = new System.Drawing.Size(542, 22);
+            this.txtbx_endereco.TabIndex = 24;
+            // 
+            // txtbx_email
+            // 
+            this.txtbx_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "email", true));
+            this.txtbx_email.Location = new System.Drawing.Point(164, 161);
+            this.txtbx_email.Name = "txtbx_email";
+            this.txtbx_email.Size = new System.Drawing.Size(282, 22);
+            this.txtbx_email.TabIndex = 23;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cpf_cnpj", true));
+            this.maskedTextBox1.Location = new System.Drawing.Point(164, 107);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(282, 22);
+            this.maskedTextBox1.TabIndex = 22;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // cmbbx_cpf_cnpj
+            // 
+            this.cmbbx_cpf_cnpj.FormattingEnabled = true;
+            this.cmbbx_cpf_cnpj.Items.AddRange(new object[] {
+            "CPF",
+            "CNPJ"});
+            this.cmbbx_cpf_cnpj.Location = new System.Drawing.Point(37, 107);
+            this.cmbbx_cpf_cnpj.Name = "cmbbx_cpf_cnpj";
+            this.cmbbx_cpf_cnpj.Size = new System.Drawing.Size(121, 24);
+            this.cmbbx_cpf_cnpj.TabIndex = 21;
+            // 
+            // txtbx_nome
+            // 
+            this.txtbx_nome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "nome_razao_social", true));
+            this.txtbx_nome.Location = new System.Drawing.Point(164, 68);
+            this.txtbx_nome.Name = "txtbx_nome";
+            this.txtbx_nome.Size = new System.Drawing.Size(542, 22);
+            this.txtbx_nome.TabIndex = 20;
             // 
             // label10
             // 
@@ -243,145 +416,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Nome / Razao social :";
             // 
-            // btn_consulta_cliente
-            // 
-            this.btn_consulta_cliente.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_consulta_cliente.Image = global::control_services.Properties.Resources._001_analytic;
-            this.btn_consulta_cliente.Location = new System.Drawing.Point(0, 0);
-            this.btn_consulta_cliente.Name = "btn_consulta_cliente";
-            this.btn_consulta_cliente.Size = new System.Drawing.Size(90, 85);
-            this.btn_consulta_cliente.TabIndex = 1;
-            this.btn_consulta_cliente.UseVisualStyleBackColor = true;
-            this.btn_consulta_cliente.Click += new System.EventHandler(this.btn_consulta_cliente_Click);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_add.Image = global::control_services.Properties.Resources._002_inserir;
-            this.btn_add.Location = new System.Drawing.Point(90, 0);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(90, 85);
-            this.btn_add.TabIndex = 2;
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_salvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
-            this.btn_salvar.Location = new System.Drawing.Point(180, 0);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(90, 85);
-            this.btn_salvar.TabIndex = 3;
-            this.btn_salvar.UseVisualStyleBackColor = true;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
-            // 
-            // txtbx_nome
-            // 
-            this.txtbx_nome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "nome_razao_social", true));
-            this.txtbx_nome.Location = new System.Drawing.Point(164, 68);
-            this.txtbx_nome.Name = "txtbx_nome";
-            this.txtbx_nome.Size = new System.Drawing.Size(542, 22);
-            this.txtbx_nome.TabIndex = 20;
-            // 
-            // cmbbx_cpf_cnpj
-            // 
-            this.cmbbx_cpf_cnpj.FormattingEnabled = true;
-            this.cmbbx_cpf_cnpj.Items.AddRange(new object[] {
-            "CPF",
-            "CNPJ"});
-            this.cmbbx_cpf_cnpj.Location = new System.Drawing.Point(37, 107);
-            this.cmbbx_cpf_cnpj.Name = "cmbbx_cpf_cnpj";
-            this.cmbbx_cpf_cnpj.Size = new System.Drawing.Size(121, 24);
-            this.cmbbx_cpf_cnpj.TabIndex = 21;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cpf_cnpj", true));
-            this.maskedTextBox1.Location = new System.Drawing.Point(164, 107);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(282, 22);
-            this.maskedTextBox1.TabIndex = 22;
-            // 
-            // txtbx_email
-            // 
-            this.txtbx_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "email", true));
-            this.txtbx_email.Location = new System.Drawing.Point(164, 161);
-            this.txtbx_email.Name = "txtbx_email";
-            this.txtbx_email.Size = new System.Drawing.Size(282, 22);
-            this.txtbx_email.TabIndex = 23;
-            // 
-            // txtbx_endereco
-            // 
-            this.txtbx_endereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "endereco", true));
-            this.txtbx_endereco.Location = new System.Drawing.Point(164, 216);
-            this.txtbx_endereco.Name = "txtbx_endereco";
-            this.txtbx_endereco.Size = new System.Drawing.Size(542, 22);
-            this.txtbx_endereco.TabIndex = 24;
-            // 
-            // txtbx_num_ende
-            // 
-            this.txtbx_num_ende.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "num_endereco", true));
-            this.txtbx_num_ende.Location = new System.Drawing.Point(164, 262);
-            this.txtbx_num_ende.Name = "txtbx_num_ende";
-            this.txtbx_num_ende.Size = new System.Drawing.Size(142, 22);
-            this.txtbx_num_ende.TabIndex = 25;
-            // 
-            // txtbx_compl
-            // 
-            this.txtbx_compl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "complemento", true));
-            this.txtbx_compl.Location = new System.Drawing.Point(452, 262);
-            this.txtbx_compl.Name = "txtbx_compl";
-            this.txtbx_compl.Size = new System.Drawing.Size(254, 22);
-            this.txtbx_compl.TabIndex = 26;
-            // 
-            // txtbx_bairro
-            // 
-            this.txtbx_bairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "bairro", true));
-            this.txtbx_bairro.Location = new System.Drawing.Point(164, 315);
-            this.txtbx_bairro.Name = "txtbx_bairro";
-            this.txtbx_bairro.Size = new System.Drawing.Size(142, 22);
-            this.txtbx_bairro.TabIndex = 27;
-            this.txtbx_bairro.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // txtbx_cidade
-            // 
-            this.txtbx_cidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cidade", true));
-            this.txtbx_cidade.Location = new System.Drawing.Point(452, 315);
-            this.txtbx_cidade.Name = "txtbx_cidade";
-            this.txtbx_cidade.Size = new System.Drawing.Size(254, 22);
-            this.txtbx_cidade.TabIndex = 28;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "estado", true));
-            this.comboBox1.DataSource = this.estadosBindingSource;
-            this.comboBox1.DisplayMember = "sigla_estado";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 361);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 24);
-            this.comboBox1.TabIndex = 29;
-            // 
-            // msktxbx_tel
-            // 
-            this.msktxbx_tel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "telefone", true));
-            this.msktxbx_tel.Location = new System.Drawing.Point(452, 361);
-            this.msktxbx_tel.Mask = "00000-9999";
-            this.msktxbx_tel.Name = "msktxbx_tel";
-            this.msktxbx_tel.Size = new System.Drawing.Size(254, 22);
-            this.msktxbx_tel.TabIndex = 30;
-            // 
-            // glturfreDeployDataSet1
-            // 
-            this.glturfreDeployDataSet1.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estadosBindingSource
-            // 
-            this.estadosBindingSource.DataMember = "estados";
-            this.estadosBindingSource.DataSource = this.glturfreDeployDataSet1;
-            // 
             // estadosTableAdapter
             // 
             this.estadosTableAdapter.ClearBeforeFill = true;
@@ -396,7 +430,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm_cadCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_cadCli";
+            this.Text = "Cadastrar Cliente";
             this.Load += new System.EventHandler(this.frm_cadCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).EndInit();
@@ -404,8 +438,8 @@
             this.panel2.ResumeLayout(false);
             this.panel_cadastro.ResumeLayout(false);
             this.panel_cadastro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

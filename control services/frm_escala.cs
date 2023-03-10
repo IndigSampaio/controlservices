@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace control_services
 {
-    public partial class frm_cadFunc : Form
+    public partial class frm_escala : Form
     {
-        public frm_cadFunc()
+        public frm_escala()
         {
             InitializeComponent();
-        }
-
-        private void frm_cadFunc2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

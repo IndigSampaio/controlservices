@@ -30,7 +30,7 @@
     <MinimumRequiredVersion>1.0.0.20</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -98,6 +98,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultDistancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultDistancia.Designer.cs">
+      <DependentUpon>frm_consultDistancia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_cadCli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +116,29 @@
     <Compile Include="frm_cadFunc.Designer.cs">
       <DependentUpon>frm_cadFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_cadLgn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cadLgn.Designer.cs">
+      <DependentUpon>frm_cadLgn.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_consultaValor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_consultaValor.Designer.cs">
       <DependentUpon>frm_consultaValor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultCidade.Designer.cs">
+      <DependentUpon>frm_consultCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultCli.Designer.cs">
+      <DependentUpon>frm_consultCli.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_consult_cadFunc.cs">
       <SubType>Form</SubType>
@@ -122,11 +146,23 @@
     <Compile Include="frm_consult_cadFunc.Designer.cs">
       <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_escalaViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_escalaViagem.Designer.cs">
+      <DependentUpon>frm_escalaViagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_menu.Designer.cs">
       <DependentUpon>frm_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Orc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Orc.Designer.cs">
+      <DependentUpon>frm_Orc.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_orcNovo.cs">
       <SubType>Form</SubType>
@@ -159,20 +195,38 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultDistancia.resx">
+      <DependentUpon>frm_consultDistancia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_cadCli.resx">
       <DependentUpon>frm_cadCli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cadFunc.resx">
       <DependentUpon>frm_cadFunc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_cadLgn.resx">
+      <DependentUpon>frm_cadLgn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_consultaValor.resx">
       <DependentUpon>frm_consultaValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultCidade.resx">
+      <DependentUpon>frm_consultCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultCli.resx">
+      <DependentUpon>frm_consultCli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consult_cadFunc.resx">
       <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_escalaViagem.resx">
+      <DependentUpon>frm_escalaViagem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Orc.resx">
+      <DependentUpon>frm_Orc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_orcNovo.resx">
       <DependentUpon>frm_orcNovo.cs</DependentUpon>
@@ -269,6 +323,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NDP461-KB3102436-x86-x64-AllOS-PTG.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-whatsapp-computer-icons-whatsapp-cdr-logo-monochrome-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-whatsapp-computer-icons-whatsapp-cdr-logo-monochrome-thumbnail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

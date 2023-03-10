@@ -42,18 +42,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_BateVolta = new System.Windows.Forms.TabPage();
-            this.tabPage_FimSemana = new System.Windows.Forms.TabPage();
-            this.tabPage_FeriadoProlongado = new System.Windows.Forms.TabPage();
-            this.chkBx_BateVolta_DD64L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_DD60L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Semi46L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Exec50L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Exec46L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Conv47L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Micro32L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Van18L = new System.Windows.Forms.CheckBox();
-            this.chkBx_BateVolta_Van15L = new System.Windows.Forms.CheckBox();
             this.chkBx_BateVolta_Carro = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Van15L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Van18L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Micro32L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Conv47L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Exec46L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Exec50L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_Semi46L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_DD60L = new System.Windows.Forms.CheckBox();
+            this.chkBx_BateVolta_DD64L = new System.Windows.Forms.CheckBox();
+            this.tabPage_FimSemana = new System.Windows.Forms.TabPage();
             this.chkBx_FimSem_Carro = new System.Windows.Forms.CheckBox();
             this.chkBx_FimSem_Van15L = new System.Windows.Forms.CheckBox();
             this.chkBx_FimSem_Van18L = new System.Windows.Forms.CheckBox();
@@ -66,6 +65,7 @@
             this.chkBx_FimSem_Semi46L = new System.Windows.Forms.CheckBox();
             this.chkBx_FimSem_DD60L = new System.Windows.Forms.CheckBox();
             this.chkBx_FimSem_DD64L = new System.Windows.Forms.CheckBox();
+            this.tabPage_FeriadoProlongado = new System.Windows.Forms.TabPage();
             this.chkBx_FerPro_Carro = new System.Windows.Forms.CheckBox();
             this.chkBx_FerPro_Van15L = new System.Windows.Forms.CheckBox();
             this.chkBx_FerPro_Van18L = new System.Windows.Forms.CheckBox();
@@ -79,6 +79,7 @@
             this.chkBx_FerPro_DD60L = new System.Windows.Forms.CheckBox();
             this.chkBx_FerPro_DD64L = new System.Windows.Forms.CheckBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batevolta_dd64LBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batevolta_dd60LBindingSource)).BeginInit();
@@ -120,7 +121,29 @@
             this.tableAdapterManager.cad_loginTableAdapter = null;
             this.tableAdapterManager.categ_veiculoTableAdapter = null;
             this.tableAdapterManager.estadosTableAdapter = null;
+            this.tableAdapterManager.ferpro_carroTableAdapter = null;
+            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
+            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
+            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
+            this.tableAdapterManager.fimsem_carroTableAdapter = null;
+            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
+            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
+            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
             // 
             // batevolta_dd60LTableAdapter
             // 
@@ -204,6 +227,107 @@
             this.tabPage_BateVolta.Text = "Bate / Volta";
             this.tabPage_BateVolta.UseVisualStyleBackColor = true;
             // 
+            // chkBx_BateVolta_Carro
+            // 
+            this.chkBx_BateVolta_Carro.AutoSize = true;
+            this.chkBx_BateVolta_Carro.Location = new System.Drawing.Point(220, 190);
+            this.chkBx_BateVolta_Carro.Name = "chkBx_BateVolta_Carro";
+            this.chkBx_BateVolta_Carro.Size = new System.Drawing.Size(65, 21);
+            this.chkBx_BateVolta_Carro.TabIndex = 9;
+            this.chkBx_BateVolta_Carro.Text = "Carro";
+            this.chkBx_BateVolta_Carro.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Van15L
+            // 
+            this.chkBx_BateVolta_Van15L.AutoSize = true;
+            this.chkBx_BateVolta_Van15L.Location = new System.Drawing.Point(220, 150);
+            this.chkBx_BateVolta_Van15L.Name = "chkBx_BateVolta_Van15L";
+            this.chkBx_BateVolta_Van15L.Size = new System.Drawing.Size(83, 21);
+            this.chkBx_BateVolta_Van15L.TabIndex = 8;
+            this.chkBx_BateVolta_Van15L.Text = "Van 15L";
+            this.chkBx_BateVolta_Van15L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Van18L
+            // 
+            this.chkBx_BateVolta_Van18L.AutoSize = true;
+            this.chkBx_BateVolta_Van18L.Location = new System.Drawing.Point(220, 110);
+            this.chkBx_BateVolta_Van18L.Name = "chkBx_BateVolta_Van18L";
+            this.chkBx_BateVolta_Van18L.Size = new System.Drawing.Size(83, 21);
+            this.chkBx_BateVolta_Van18L.TabIndex = 7;
+            this.chkBx_BateVolta_Van18L.Text = "Van 18L";
+            this.chkBx_BateVolta_Van18L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Micro32L
+            // 
+            this.chkBx_BateVolta_Micro32L.AutoSize = true;
+            this.chkBx_BateVolta_Micro32L.Location = new System.Drawing.Point(220, 70);
+            this.chkBx_BateVolta_Micro32L.Name = "chkBx_BateVolta_Micro32L";
+            this.chkBx_BateVolta_Micro32L.Size = new System.Drawing.Size(92, 21);
+            this.chkBx_BateVolta_Micro32L.TabIndex = 6;
+            this.chkBx_BateVolta_Micro32L.Text = "Micro 32L";
+            this.chkBx_BateVolta_Micro32L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Conv47L
+            // 
+            this.chkBx_BateVolta_Conv47L.AutoSize = true;
+            this.chkBx_BateVolta_Conv47L.Location = new System.Drawing.Point(220, 30);
+            this.chkBx_BateVolta_Conv47L.Name = "chkBx_BateVolta_Conv47L";
+            this.chkBx_BateVolta_Conv47L.Size = new System.Drawing.Size(94, 21);
+            this.chkBx_BateVolta_Conv47L.TabIndex = 5;
+            this.chkBx_BateVolta_Conv47L.Text = "Conv. 47L";
+            this.chkBx_BateVolta_Conv47L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Exec46L
+            // 
+            this.chkBx_BateVolta_Exec46L.AutoSize = true;
+            this.chkBx_BateVolta_Exec46L.Location = new System.Drawing.Point(45, 190);
+            this.chkBx_BateVolta_Exec46L.Name = "chkBx_BateVolta_Exec46L";
+            this.chkBx_BateVolta_Exec46L.Size = new System.Drawing.Size(92, 21);
+            this.chkBx_BateVolta_Exec46L.TabIndex = 4;
+            this.chkBx_BateVolta_Exec46L.Text = "Exec. 46L";
+            this.chkBx_BateVolta_Exec46L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Exec50L
+            // 
+            this.chkBx_BateVolta_Exec50L.AutoSize = true;
+            this.chkBx_BateVolta_Exec50L.Location = new System.Drawing.Point(45, 150);
+            this.chkBx_BateVolta_Exec50L.Name = "chkBx_BateVolta_Exec50L";
+            this.chkBx_BateVolta_Exec50L.Size = new System.Drawing.Size(92, 21);
+            this.chkBx_BateVolta_Exec50L.TabIndex = 3;
+            this.chkBx_BateVolta_Exec50L.Text = "Exec. 50L";
+            this.chkBx_BateVolta_Exec50L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_Semi46L
+            // 
+            this.chkBx_BateVolta_Semi46L.AutoSize = true;
+            this.chkBx_BateVolta_Semi46L.Location = new System.Drawing.Point(45, 110);
+            this.chkBx_BateVolta_Semi46L.Name = "chkBx_BateVolta_Semi46L";
+            this.chkBx_BateVolta_Semi46L.Size = new System.Drawing.Size(89, 21);
+            this.chkBx_BateVolta_Semi46L.TabIndex = 2;
+            this.chkBx_BateVolta_Semi46L.Text = "Semi 46L";
+            this.chkBx_BateVolta_Semi46L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_DD60L
+            // 
+            this.chkBx_BateVolta_DD60L.AutoSize = true;
+            this.chkBx_BateVolta_DD60L.Location = new System.Drawing.Point(45, 70);
+            this.chkBx_BateVolta_DD60L.Name = "chkBx_BateVolta_DD60L";
+            this.chkBx_BateVolta_DD60L.Size = new System.Drawing.Size(78, 21);
+            this.chkBx_BateVolta_DD60L.TabIndex = 1;
+            this.chkBx_BateVolta_DD60L.Text = "DD 60L";
+            this.chkBx_BateVolta_DD60L.UseVisualStyleBackColor = true;
+            // 
+            // chkBx_BateVolta_DD64L
+            // 
+            this.chkBx_BateVolta_DD64L.AutoSize = true;
+            this.chkBx_BateVolta_DD64L.Location = new System.Drawing.Point(45, 30);
+            this.chkBx_BateVolta_DD64L.Name = "chkBx_BateVolta_DD64L";
+            this.chkBx_BateVolta_DD64L.Size = new System.Drawing.Size(78, 21);
+            this.chkBx_BateVolta_DD64L.TabIndex = 0;
+            this.chkBx_BateVolta_DD64L.Text = "DD 64L";
+            this.chkBx_BateVolta_DD64L.UseVisualStyleBackColor = true;
+            this.chkBx_BateVolta_DD64L.CheckedChanged += new System.EventHandler(this.chkBx_BateVolta_DD64L_CheckedChanged);
+            // 
             // tabPage_FimSemana
             // 
             this.tabPage_FimSemana.Controls.Add(this.chkBx_FimSem_Carro);
@@ -225,129 +349,6 @@
             this.tabPage_FimSemana.TabIndex = 1;
             this.tabPage_FimSemana.Text = "Fim de Semana";
             this.tabPage_FimSemana.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_FeriadoProlongado
-            // 
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Carro);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Van15L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Van18L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Micro32L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Conv47L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.label4);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Exec46L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.txtbx_valorFerPro);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Exec50L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Semi46L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_DD60L);
-            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_DD64L);
-            this.tabPage_FeriadoProlongado.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_FeriadoProlongado.Name = "tabPage_FeriadoProlongado";
-            this.tabPage_FeriadoProlongado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_FeriadoProlongado.Size = new System.Drawing.Size(388, 323);
-            this.tabPage_FeriadoProlongado.TabIndex = 2;
-            this.tabPage_FeriadoProlongado.Text = "Feriado Prolongado";
-            this.tabPage_FeriadoProlongado.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_DD64L
-            // 
-            this.chkBx_BateVolta_DD64L.AutoSize = true;
-            this.chkBx_BateVolta_DD64L.Location = new System.Drawing.Point(45, 30);
-            this.chkBx_BateVolta_DD64L.Name = "chkBx_BateVolta_DD64L";
-            this.chkBx_BateVolta_DD64L.Size = new System.Drawing.Size(78, 21);
-            this.chkBx_BateVolta_DD64L.TabIndex = 0;
-            this.chkBx_BateVolta_DD64L.Text = "DD 64L";
-            this.chkBx_BateVolta_DD64L.UseVisualStyleBackColor = true;
-            this.chkBx_BateVolta_DD64L.CheckedChanged += new System.EventHandler(this.chkBx_BateVolta_DD64L_CheckedChanged);
-            // 
-            // chkBx_BateVolta_DD60L
-            // 
-            this.chkBx_BateVolta_DD60L.AutoSize = true;
-            this.chkBx_BateVolta_DD60L.Location = new System.Drawing.Point(45, 70);
-            this.chkBx_BateVolta_DD60L.Name = "chkBx_BateVolta_DD60L";
-            this.chkBx_BateVolta_DD60L.Size = new System.Drawing.Size(78, 21);
-            this.chkBx_BateVolta_DD60L.TabIndex = 1;
-            this.chkBx_BateVolta_DD60L.Text = "DD 60L";
-            this.chkBx_BateVolta_DD60L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Semi46L
-            // 
-            this.chkBx_BateVolta_Semi46L.AutoSize = true;
-            this.chkBx_BateVolta_Semi46L.Location = new System.Drawing.Point(45, 110);
-            this.chkBx_BateVolta_Semi46L.Name = "chkBx_BateVolta_Semi46L";
-            this.chkBx_BateVolta_Semi46L.Size = new System.Drawing.Size(89, 21);
-            this.chkBx_BateVolta_Semi46L.TabIndex = 2;
-            this.chkBx_BateVolta_Semi46L.Text = "Semi 46L";
-            this.chkBx_BateVolta_Semi46L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Exec50L
-            // 
-            this.chkBx_BateVolta_Exec50L.AutoSize = true;
-            this.chkBx_BateVolta_Exec50L.Location = new System.Drawing.Point(45, 150);
-            this.chkBx_BateVolta_Exec50L.Name = "chkBx_BateVolta_Exec50L";
-            this.chkBx_BateVolta_Exec50L.Size = new System.Drawing.Size(92, 21);
-            this.chkBx_BateVolta_Exec50L.TabIndex = 3;
-            this.chkBx_BateVolta_Exec50L.Text = "Exec. 50L";
-            this.chkBx_BateVolta_Exec50L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Exec46L
-            // 
-            this.chkBx_BateVolta_Exec46L.AutoSize = true;
-            this.chkBx_BateVolta_Exec46L.Location = new System.Drawing.Point(45, 190);
-            this.chkBx_BateVolta_Exec46L.Name = "chkBx_BateVolta_Exec46L";
-            this.chkBx_BateVolta_Exec46L.Size = new System.Drawing.Size(92, 21);
-            this.chkBx_BateVolta_Exec46L.TabIndex = 4;
-            this.chkBx_BateVolta_Exec46L.Text = "Exec. 46L";
-            this.chkBx_BateVolta_Exec46L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Conv47L
-            // 
-            this.chkBx_BateVolta_Conv47L.AutoSize = true;
-            this.chkBx_BateVolta_Conv47L.Location = new System.Drawing.Point(220, 30);
-            this.chkBx_BateVolta_Conv47L.Name = "chkBx_BateVolta_Conv47L";
-            this.chkBx_BateVolta_Conv47L.Size = new System.Drawing.Size(94, 21);
-            this.chkBx_BateVolta_Conv47L.TabIndex = 5;
-            this.chkBx_BateVolta_Conv47L.Text = "Conv. 47L";
-            this.chkBx_BateVolta_Conv47L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Micro32L
-            // 
-            this.chkBx_BateVolta_Micro32L.AutoSize = true;
-            this.chkBx_BateVolta_Micro32L.Location = new System.Drawing.Point(220, 70);
-            this.chkBx_BateVolta_Micro32L.Name = "chkBx_BateVolta_Micro32L";
-            this.chkBx_BateVolta_Micro32L.Size = new System.Drawing.Size(92, 21);
-            this.chkBx_BateVolta_Micro32L.TabIndex = 6;
-            this.chkBx_BateVolta_Micro32L.Text = "Micro 32L";
-            this.chkBx_BateVolta_Micro32L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Van18L
-            // 
-            this.chkBx_BateVolta_Van18L.AutoSize = true;
-            this.chkBx_BateVolta_Van18L.Location = new System.Drawing.Point(220, 110);
-            this.chkBx_BateVolta_Van18L.Name = "chkBx_BateVolta_Van18L";
-            this.chkBx_BateVolta_Van18L.Size = new System.Drawing.Size(83, 21);
-            this.chkBx_BateVolta_Van18L.TabIndex = 7;
-            this.chkBx_BateVolta_Van18L.Text = "Van 18L";
-            this.chkBx_BateVolta_Van18L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Van15L
-            // 
-            this.chkBx_BateVolta_Van15L.AutoSize = true;
-            this.chkBx_BateVolta_Van15L.Location = new System.Drawing.Point(220, 150);
-            this.chkBx_BateVolta_Van15L.Name = "chkBx_BateVolta_Van15L";
-            this.chkBx_BateVolta_Van15L.Size = new System.Drawing.Size(83, 21);
-            this.chkBx_BateVolta_Van15L.TabIndex = 8;
-            this.chkBx_BateVolta_Van15L.Text = "Van 15L";
-            this.chkBx_BateVolta_Van15L.UseVisualStyleBackColor = true;
-            // 
-            // chkBx_BateVolta_Carro
-            // 
-            this.chkBx_BateVolta_Carro.AutoSize = true;
-            this.chkBx_BateVolta_Carro.Location = new System.Drawing.Point(220, 190);
-            this.chkBx_BateVolta_Carro.Name = "chkBx_BateVolta_Carro";
-            this.chkBx_BateVolta_Carro.Size = new System.Drawing.Size(65, 21);
-            this.chkBx_BateVolta_Carro.TabIndex = 9;
-            this.chkBx_BateVolta_Carro.Text = "Carro";
-            this.chkBx_BateVolta_Carro.UseVisualStyleBackColor = true;
             // 
             // chkBx_FimSem_Carro
             // 
@@ -464,6 +465,28 @@
             this.chkBx_FimSem_DD64L.TabIndex = 10;
             this.chkBx_FimSem_DD64L.Text = "DD 64L";
             this.chkBx_FimSem_DD64L.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_FeriadoProlongado
+            // 
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Carro);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Van15L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Van18L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Micro32L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Conv47L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.label4);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Exec46L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.txtbx_valorFerPro);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Exec50L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_Semi46L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_DD60L);
+            this.tabPage_FeriadoProlongado.Controls.Add(this.chkBx_FerPro_DD64L);
+            this.tabPage_FeriadoProlongado.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_FeriadoProlongado.Name = "tabPage_FeriadoProlongado";
+            this.tabPage_FeriadoProlongado.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_FeriadoProlongado.Size = new System.Drawing.Size(388, 323);
+            this.tabPage_FeriadoProlongado.TabIndex = 2;
+            this.tabPage_FeriadoProlongado.Text = "Feriado Prolongado";
+            this.tabPage_FeriadoProlongado.UseVisualStyleBackColor = true;
             // 
             // chkBx_FerPro_Carro
             // 
@@ -590,11 +613,22 @@
             this.valorTextBox.TabIndex = 5;
             this.valorTextBox.TextChanged += new System.EventHandler(this.valorTextBox_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(59, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_consultaValor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 555);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBox1);
@@ -668,5 +702,6 @@
         private System.Windows.Forms.CheckBox chkBx_FerPro_DD60L;
         private System.Windows.Forms.CheckBox chkBx_FerPro_DD64L;
         private System.Windows.Forms.TextBox valorTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }

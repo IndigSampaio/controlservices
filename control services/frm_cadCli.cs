@@ -65,14 +65,23 @@ namespace control_services
                 this.Validate();
                 this.cad_cliBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.glturfreDeployDataSet);
+                MessageBox.Show("Cadastro Salvo com sucesso!", "Salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.cad_cliBindingSource.AddNew();
-            panel_cadastro.Enabled = true;
+            if (panel_cadastro.Enabled == false)
+            {
+                this.Validate();
+                this.cad_cliBindingSource.AddNew();
+                panel_cadastro.Enabled = true;
+            }
+
+            else if (panel_cadastro.Enabled == true)
+            {
+                MessageBox.Show("Para inserir um novo cadastro, e necessario finalizar o atual", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
         private void btn_sair_Click(object sender, EventArgs e)
@@ -110,6 +119,11 @@ namespace control_services
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

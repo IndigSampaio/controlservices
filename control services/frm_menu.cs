@@ -97,14 +97,62 @@ namespace control_services
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frm_novo_orcamento novo_Orcamento = new frm_novo_orcamento();
-            //novo_Orcamento.ShowDialog();
+            if (MessageBox.Show("Deseja cadastrar um cliente antes?", "Cadastrar um cliente?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                frm_cadCli cadCli = new frm_cadCli();
+                cadCli.ShowDialog();
+            }
+
+            else
+            {
+                frm_orcNovo orcNovo = new frm_orcNovo();
+                orcNovo.ShowDialog();
+            }
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_cadCli cadCli = new frm_cadCli();
             cadCli.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frm_orcNovo orcNovo= new frm_orcNovo();
+            orcNovo.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_cadLgn cadLgn = new frm_cadLgn();
+            cadLgn.ShowDialog();
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"Chrome.exe", "https://web.whatsapp.com/send?phone=5511984062207");
+        }
+
+        private void frm_menu_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.orcamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.orcamentoTableAdapter.Fill(this.glturfreDeployDataSet.orcamento);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -39,8 +39,8 @@ namespace control_services
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.batevolta_dd64LTableAdapter.FillByCidadeDD64(this.glturfreDeployDataSet.batevolta_dd64L, textBox1.Text);
-            this.batevolta_dd60LTableAdapter.FillByCidadeDD60(this.glturfreDeployDataSet.batevolta_dd60L, textBox1.Text);
+            this.batevolta_dd64LTableAdapter.FillByBateVolta_DD64(this.glturfreDeployDataSet.batevolta_dd64L, textBox1.Text);
+            this.batevolta_dd60LTableAdapter.FillByBateVolta_DD60(this.glturfreDeployDataSet.batevolta_dd60L, textBox1.Text);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
