@@ -47,3 +47,53 @@ C:\Users\Gabriel\Desktop\controlservices-main\control services\obj\Debug\control
 C:\Users\Gabriel\Desktop\controlservices-main\control services\obj\Debug\control_services.frm_consultCli.resources
 C:\Users\Gabriel\Desktop\controlservices-main\control services\obj\Debug\control_services.frm_consultCidade.resources
 C:\Users\Gabriel\Desktop\controlservices-main\control services\obj\Debug\control_services.frm_consultDistancia.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.csprojAssemblyReference.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consultDistancia.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_cadCli.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_cadFunc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_cadLgn.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consultaValor.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consultCidade.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consultCli.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consult_cadFunc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_menu.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.splash.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_lgn.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.csproj.GenerateResource.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.exe
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.pdb
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\bin\Debug\control services.exe.config
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\bin\Debug\control services.exe.manifest
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\bin\Debug\control services.application
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\bin\Debug\control services.exe
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\bin\Debug\control services.pdb
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.TrustInfo.xml
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.exe.manifest
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control services.application
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_consultOrc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_escala.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_OrcTabela.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\controlservices-main\control services\obj\Debug\control_services.frm_OrcForaTabela.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control services.csprojAssemblyReference.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consultDistancia.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_cadCli.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_cadFunc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_cadLgn.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consultaValor.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consultCidade.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consultCli.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consultOrc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_consult_cadFunc.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_escala.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_menu.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_OrcForaTabela.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_OrcTabela.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.splash.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.frm_lgn.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control_services.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control services.csproj.GenerateResource.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control services.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control services.exe
+C:\Users\Gabriel\Desktop\Nova pasta (5)\backup\controlservices-main\control services\obj\Debug\control services.pdb

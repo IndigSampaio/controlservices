@@ -44,5 +44,16 @@ namespace control_services.Properties {
                 return ((string)(this["glturfreDeployConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mssql-115648-0.cloudclusters.net,10046;Initial Catalog=gldturfreDeplo" +
+            "y;Persist Security Info=True;User ID=PedroSampaio;Password=DanielePedro1!")]
+        public string gldturfreDeployConnectionString {
+            get {
+                return ((string)(this["gldturfreDeployConnectionString"]));
+            }
+        }
     }
 }
