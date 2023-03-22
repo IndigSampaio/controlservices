@@ -117,64 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="button3.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="button2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="btnSalvar.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="statusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="btnAdd.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="button1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="txtbx_lgn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        2AAAAdgB+lymcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPqSURBVHhe7Zu5
+        qxRBEIefiQaKf4AH3lciHmDiAWaKibd4IJqqGHllYuT7K8xVvAI18gi8wSNSMVRBPBA88ET094MtKIrp
+        nZ6e6nnjvvngg7c1O9XTszPV3bP7hjo6OjoyMQ4ehPfgV/i3Ydkm2z4Ax8JGmQyfwKIDGwkfQx5TI/CT
+        b1PnxUewkSuBl33RAbTB/TA796Fu9DKcApuGbV6B+ljuwux8gbrRkei8MBXqY/kMs6MbpKmsg6/hK7iW
+        gR5V417HE41Xg+yI5HjJQI+qcYmJ2fFqMJTHK54NrwZDebzi2fBqMJTHK54NrwZDebzi2fBqcNQXQQ5l
+        7BQ7s4aBHlXjXscTTeMNltD48TTeYAmNH49tsG1mp6jRNpkdXY3baHakGhc13gZHHd0JMGZlCTwBb8Bn
+        kE9mKf9mjNv4nhj+m+cBY+Bm+BzaxkLyvZsg9w2h60jMlDcUl5joygzI52y2kVhvw+mwCPtewStem+Xw
+        LbQNVPUDXA0t9n2CV7wWq+BPaJMzdhpuh/Pg+J78mzFuC+3HnBr7HsErngwv+/fQJj4HZ8IyZsHz0O7/
+        DjK3YLcLXvEkWLTsPf8HHoZVOQK5r87FmiCFsZVFcAu0CQ/BVI5Cm28jJKH1fdW4zZ8MPxk71PGyr8sF
+        qHM+hZ7o3DSZpVAnYuHi/VwX1g1bGBdBL3RemgxncToRK7oXZ6HOfRwKMsPT2+uYDKeyOhGHNS92Qp37
+        GhR0cfMwmRdQJ5oDveA8QedmrRFacwLst74ToBfMpXOzLUGqu95ex2RsofI8AROhzv0JeqHz0mTeQJ1o
+        LvSi3y1QF52XJnMT6kQ7oBe7oM7NIti65wHDUCfKPQzq+z5myhuKS0xMZgXUibwmQhxNfkGdmxMh/ZoK
+        XvHKcCpsh0Ku6urAnJegzilTYR2jgle8MlwI/YY2YcpKUDgGbb71kNi44BWvxDZY1HnKJS2XtlXgJ8+V
+        oF0O34KCjlPBKx5Nv85ruaqbDcvgPX8R2v35QGQaFFpRBIs6z9ccEb6pmMhixorOuf18yMkSXQA51HGb
+        LXiUBXUl1ITW91Xjtq1oQp1nnNhhMVV+8rbzXiT/UHIr7Nf52NuiTN7z+rL3hJ2/CnV7d2Api+EPqHcs
+        6zxf2yGynxzqNkDivd7v5z5YCh9z6Z1iOi/b+V3BSXgdcu3AE8mVHb8a4/SWMzz7tEcXr5w+hFE/l/8I
+        9Y57ICnrfCpNnAB2fhKMwlb3ZXAvzNF5ItVb5/aQVx7veV72lf5R4gEsSqj16nwr4SVf1GlxoDtPOE09
+        BYs6/x1yiBx4eBJ2Q/77C2sCv8E9AxfCjo6OjgFhaOgfT3gt38vcRhMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="cad_clieBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>235, 17</value>
   </metadata>
-  <metadata name="txtbx_snh.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ver_senha.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>154, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>897, 17</value>
+  <metadata name="cad_clieBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>235, 17</value>
   </metadata>
   <metadata name="gldturfreDeployDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1103, 17</value>
+    <value>17, 17</value>
   </metadata>
-  <metadata name="cad_funBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>285, 19</value>
+  <metadata name="gldturfreDeployDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="cad_funTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>493, 19</value>
+  <metadata name="cad_clieTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>443, 17</value>
   </metadata>
-  <metadata name="tableAdapterManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>694, 19</value>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>644, 17</value>
   </metadata>
-  <metadata name="lgn_usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>850, 17</value>
+  </metadata>
+  <metadata name="sfdSalvar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>951, 17</value>
+  </metadata>
+  <metadata name="orcamentoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 60</value>
   </metadata>
-  <metadata name="lgn_usersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>235, 60</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="orcamentoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>246, 60</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>186</value>
+    <value>284</value>
   </metadata>
 </root>

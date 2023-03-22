@@ -1244,7 +1244,7 @@ namespace control_services
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frm_orcNovo testando = new frm_orcNovo();
+            frm_consultOrc testando = new frm_consultOrc();
             testando.ShowDialog();
         }
     }

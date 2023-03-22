@@ -41,14 +41,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
-            this.cad_loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cad_loginTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_loginTableAdapter();
             this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
+            this.cad_funBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cad_funTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.cad_funTableAdapter();
+            this.tableAdapterManager1 = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.lgn_usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lgn_usersTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.lgn_usersTableAdapter();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lgn_usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -157,27 +161,87 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // glturfreDeployDataSet
-            // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cad_loginBindingSource
-            // 
-            this.cad_loginBindingSource.DataMember = "cad_login";
-            this.cad_loginBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // cad_loginTableAdapter
-            // 
-            this.cad_loginTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.batevolta_carroTableAdapter = null;
+            this.tableAdapterManager.batevolta_conv47LTableAdapter = null;
+            this.tableAdapterManager.batevolta_dd60LTableAdapter = null;
             this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
+            this.tableAdapterManager.batevolta_exec46LTableAdapter = null;
+            this.tableAdapterManager.batevolta_exec50LTableAdapter = null;
+            this.tableAdapterManager.batevolta_micro32LTableAdapter = null;
+            this.tableAdapterManager.batevolta_semi46LTableAdapter = null;
+            this.tableAdapterManager.batevolta_van15LTableAdapter = null;
+            this.tableAdapterManager.batevolta_van18LTableAdapter = null;
+            this.tableAdapterManager.cad_cliTableAdapter = null;
             this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.cad_loginTableAdapter = this.cad_loginTableAdapter;
+            this.tableAdapterManager.cad_loginTableAdapter = null;
+            this.tableAdapterManager.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.estadosTableAdapter = null;
+            this.tableAdapterManager.ferpro_carroTableAdapter = null;
+            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
+            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
+            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
+            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
+            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
+            this.tableAdapterManager.fimsem_carroTableAdapter = null;
+            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
+            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
+            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
+            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
+            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
+            // 
+            // gldturfreDeployDataSet
+            // 
+            this.gldturfreDeployDataSet.DataSetName = "gldturfreDeployDataSet";
+            this.gldturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cad_funBindingSource
+            // 
+            this.cad_funBindingSource.DataMember = "cad_fun";
+            this.cad_funBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
+            // cad_funTableAdapter
+            // 
+            this.cad_funTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.cad_clieTableAdapter = null;
+            this.tableAdapterManager1.cad_funTableAdapter = this.cad_funTableAdapter;
+            this.tableAdapterManager1.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager1.estadoTableAdapter = null;
+            this.tableAdapterManager1.lgn_usersTableAdapter = null;
+            this.tableAdapterManager1.orcamentoTableAdapter = null;
+            this.tableAdapterManager1.tabela_BateVoltaTableAdapter = null;
+            this.tableAdapterManager1.tabela_FerProTableAdapter = null;
+            this.tableAdapterManager1.tabela_FimSemTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.veiculoTableAdapter = null;
+            this.tableAdapterManager1.viagem_fechadaTableAdapter = null;
+            // 
+            // lgn_usersBindingSource
+            // 
+            this.lgn_usersBindingSource.DataMember = "lgn_users";
+            this.lgn_usersBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
+            // lgn_usersTableAdapter
+            // 
+            this.lgn_usersTableAdapter.ClearBeforeFill = true;
             // 
             // frm_lgn
             // 
@@ -202,8 +266,9 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_funBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lgn_usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,9 +288,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
-        private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource cad_loginBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_loginTableAdapter cad_loginTableAdapter;
         private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private gldturfreDeployDataSet gldturfreDeployDataSet;
+        private System.Windows.Forms.BindingSource cad_funBindingSource;
+        private gldturfreDeployDataSetTableAdapters.cad_funTableAdapter cad_funTableAdapter;
+        private gldturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource lgn_usersBindingSource;
+        private gldturfreDeployDataSetTableAdapters.lgn_usersTableAdapter lgn_usersTableAdapter;
     }
 }

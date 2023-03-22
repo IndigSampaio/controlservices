@@ -30,7 +30,7 @@
     <MinimumRequiredVersion>1.0.0.20</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationRevision>32</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -92,12 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_consultDistancia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,17 +134,23 @@
     <Compile Include="frm_consultCli.Designer.cs">
       <DependentUpon>frm_consultCli.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultOrc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultOrc.Designer.cs">
+      <DependentUpon>frm_consultOrc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_consult_cadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_consult_cadFunc.Designer.cs">
       <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_escalaViagem.cs">
+    <Compile Include="frm_escala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_escalaViagem.Designer.cs">
-      <DependentUpon>frm_escalaViagem.cs</DependentUpon>
+    <Compile Include="frm_escala.Designer.cs">
+      <DependentUpon>frm_escala.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
@@ -158,17 +158,25 @@
     <Compile Include="frm_menu.Designer.cs">
       <DependentUpon>frm_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Orc.cs">
+    <Compile Include="frm_OrcForaTabela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Orc.Designer.cs">
-      <DependentUpon>frm_Orc.cs</DependentUpon>
+    <Compile Include="frm_OrcForaTabela.Designer.cs">
+      <DependentUpon>frm_OrcForaTabela.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_orcNovo.cs">
+    <Compile Include="frm_OrcTabela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_orcNovo.Designer.cs">
-      <DependentUpon>frm_orcNovo.cs</DependentUpon>
+    <Compile Include="frm_OrcTabela.Designer.cs">
+      <DependentUpon>frm_OrcTabela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gldturfreDeployDataSet.cs">
+      <DependentUpon>gldturfreDeployDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gldturfreDeployDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gldturfreDeployDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="glturfreDeployDataSet.cs">
       <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
@@ -178,11 +186,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="splah.cs">
+    <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splah.Designer.cs">
-      <DependentUpon>splah.cs</DependentUpon>
+    <Compile Include="frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_lgn.cs">
       <SubType>Form</SubType>
@@ -192,9 +200,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_consultDistancia.resx">
       <DependentUpon>frm_consultDistancia.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,23 +221,26 @@
     <EmbeddedResource Include="frm_consultCli.resx">
       <DependentUpon>frm_consultCli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultOrc.resx">
+      <DependentUpon>frm_consultOrc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_consult_cadFunc.resx">
       <DependentUpon>frm_consult_cadFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_escalaViagem.resx">
-      <DependentUpon>frm_escalaViagem.cs</DependentUpon>
+    <EmbeddedResource Include="frm_escala.resx">
+      <DependentUpon>frm_escala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Orc.resx">
-      <DependentUpon>frm_Orc.cs</DependentUpon>
+    <EmbeddedResource Include="frm_OrcForaTabela.resx">
+      <DependentUpon>frm_OrcForaTabela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_orcNovo.resx">
-      <DependentUpon>frm_orcNovo.cs</DependentUpon>
+    <EmbeddedResource Include="frm_OrcTabela.resx">
+      <DependentUpon>frm_OrcTabela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="splah.resx">
-      <DependentUpon>splah.cs</DependentUpon>
+    <EmbeddedResource Include="frm_splash.resx">
+      <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_lgn.resx">
       <DependentUpon>frm_lgn.cs</DependentUpon>
@@ -248,6 +256,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="control services_TemporaryKey.pfx" />
+    <None Include="gldturfreDeployDataSet.xsc">
+      <DependentUpon>gldturfreDeployDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gldturfreDeployDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gldturfreDeployDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gldturfreDeployDataSet.xss">
+      <DependentUpon>gldturfreDeployDataSet.xsd</DependentUpon>
+    </None>
     <None Include="glturfreDeployDataSet.xsc">
       <DependentUpon>glturfreDeployDataSet.xsd</DependentUpon>
     </None>

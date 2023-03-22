@@ -105,7 +105,7 @@ namespace control_services
 
             else
             {
-                frm_orcNovo orcNovo = new frm_orcNovo();
+                frm_consultOrc orcNovo = new frm_consultOrc();
                 orcNovo.ShowDialog();
             }
         }
@@ -118,7 +118,7 @@ namespace control_services
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frm_orcNovo orcNovo= new frm_orcNovo();
+            frm_consultOrc orcNovo= new frm_consultOrc();
             orcNovo.ShowDialog();
         }
 
@@ -145,8 +145,6 @@ namespace control_services
 
         private void frm_menu_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.orcamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.orcamentoTableAdapter.Fill(this.glturfreDeployDataSet.orcamento);
 
         }
 

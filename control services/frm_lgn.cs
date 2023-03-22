@@ -42,12 +42,8 @@ namespace control_services
 
         private void frm_lgn_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_login'. Você pode movê-la ou removê-la conforme necessário.
-            this.cad_loginTableAdapter.Fill(this.glturfreDeployDataSet.cad_login);
-
-            //TODO: esta linha de codigo carrega dados da tablea 'gldturfreDeployDataSet.cad_fun'. Voce pode move-la ou remove-la conforme necessario.
-            //this.cad_funTableAdapter.Fill(this.glturfreDeployDataSet.cad_fun);
-            this.cad_loginTableAdapter.Fill(this.glturfreDeployDataSet.cad_login);
+            // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.lgn_users'. Você pode movê-la ou removê-la conforme necessário.
+            this.lgn_usersTableAdapter.Fill(this.gldturfreDeployDataSet.lgn_users);
 
         }
 
@@ -61,8 +57,8 @@ namespace control_services
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //int result = cad_funTableAdapter.loginFillBy(glturfreDeployDataSet.cad_fun, txtbx_lgn.Text, txtbx_snh.Text);
-            int result = cad_loginTableAdapter.loginFillBy(glturfreDeployDataSet.cad_login, txtbx_lgn.Text, txtbx_snh.Text);
+            //int result = this.cad_funTableAdapter.FillByLogin(gldturfreDeployDataSet.cad_fun, txtbx_lgn.Text, txtbx_snh.Text);
+            int result = this.lgn_usersTableAdapter.FillByLgn(gldturfreDeployDataSet.lgn_users, txtbx_lgn.Text, txtbx_snh.Text);
 
             if (result == 1)
             {
@@ -122,12 +118,5 @@ namespace control_services
 
         }
 
-        private void cad_loginBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cad_loginBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.glturfreDeployDataSet);
-
-        }
     }
 }
