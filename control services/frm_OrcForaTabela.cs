@@ -20,7 +20,7 @@ namespace control_services
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-            double km_ida, km_volta, km_total, valor_calc;
+           double km_ida, km_volta, km_total, valor_calc;
             lbl_totalKm.Text = "";
             lbl_ValorCalculo.Text = "";
 
@@ -47,14 +47,13 @@ namespace control_services
             {
                 km_ida = Convert.ToDouble(txtbx_kmIda.Text);
                 km_volta = Convert.ToDouble(txtbx_kmVolta.Text);
-
                 km_total = km_ida + km_volta;
                 lbl_totalKm.Text = Convert.ToString(km_total);
 
             }
 
             if (cmbbx_PeriodoViagem.Text == "FIM DE SEMANA")
-            {
+            {                                                      
                 km_total = Convert.ToInt16(lbl_totalKm.Text);
 
                 switch (cmbbx_CatVeiculo.Text)
@@ -584,37 +583,37 @@ namespace control_services
 
                         else if (km_total >= 176 && km_total <= 200)
                         {
-                            valor_calc = (km_total * 7.5) + 1200;
+                            valor_calc = (km_total * 8) + 1200;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 201 && km_total <= 250)
                         {
-                            valor_calc = (km_total * 6.5) + 1200;
+                            valor_calc = (km_total * 7.5) + 1200;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 251 && km_total <= 300)
                         {
-                            valor_calc = (km_total * 6) + 1200;
+                            valor_calc = (km_total * 6.5) + 1200;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 301 && km_total <= 400)
                         {
-                            valor_calc = (km_total * 5) + 1200;
+                            valor_calc = (km_total * 6) + 1200;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 400)
                         {
-                            valor_calc = (km_total * 8.5) + 500;
+                            valor_calc = (km_total * 5) + 500;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else
                         {
-
+                            
                         }
                         break;
 
@@ -1385,31 +1384,31 @@ namespace control_services
 
                         else if (km_total >= 176 && km_total <= 200)
                         {
-                            valor_calc = (km_total * 7.5) + 1600;
+                            valor_calc = (km_total * 8) + 1600;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 201 && km_total <= 250)
                         {
-                            valor_calc = (km_total * 6.5) + 1600;
+                            valor_calc = (km_total * 7.5) + 1600;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 251 && km_total <= 300)
                         {
-                            valor_calc = (km_total * 6) + 1600;
+                            valor_calc = (km_total * 6.5) + 1600;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 301 && km_total <= 400)
                         {
-                            valor_calc = (km_total * 5) + 1600;
+                            valor_calc = (km_total * 6) + 1600;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 400)
                         {
-                            valor_calc = (km_total * 8.5) + 1600;
+                            valor_calc = (km_total * 5) + 1600;
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
@@ -2184,31 +2183,31 @@ namespace control_services
 
                         else if (km_total >= 176 && km_total <= 200)
                         {
-                            valor_calc = (km_total * 7.5);
+                            valor_calc = (km_total * 8);
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 201 && km_total <= 250)
                         {
-                            valor_calc = (km_total * 6.5);
+                            valor_calc = (km_total * 7.5);
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 251 && km_total <= 300)
                         {
-                            valor_calc = (km_total * 6);
+                            valor_calc = (km_total * 6.5);
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 301 && km_total <= 400)
                         {
-                            valor_calc = (km_total * 5);
+                            valor_calc = (km_total * 6);
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
                         else if (km_total >= 400)
                         {
-                            valor_calc = (km_total * 8.5);
+                            valor_calc = (km_total * 5);
                             lbl_ValorCalculo.Text = Convert.ToString(valor_calc) + ",00";
                         }
 
@@ -2462,72 +2461,78 @@ namespace control_services
 
         private void btn_SelecionarCliente_Click(object sender, EventArgs e)
         {
-            this.cad_clieTableAdapter.FillByConsultCliente(this.gldturfreDeployDataSet.cad_clie, msktxbx_CpfCnpj.Text);
+            this.cad_cliTableAdapter.FillByConsultaCpfCnpj(this.gldturfreDeployDataSet.cad_cli, msktxbx_CpfCnpj.Text);
+            nome_razao_socialLabel2.Text = nome_razao_socialTextBox.Text;
+            telefoneLabel2.Text = telefoneTextBox.Text;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string dirSalvar;
-            sfdSalvar.Title = "Salvar Documento";
-            sfdSalvar.Filter = "TXT (.txt) | *.txt | HTML (.html) |*.html";
-
-            if (sfdSalvar.ShowDialog() == DialogResult.OK)
+            if (grpbx_InfCliente.Enabled == false)
             {
-                dirSalvar = sfdSalvar.FileName;
-                StreamWriter sr = new StreamWriter(dirSalvar);
+                string dirSalvar;
+                sfdSalvar.Title = "Salvar Documento";
+                sfdSalvar.Filter = "TXT (.txt) | *.txt | PDF (.pdf) |*.pdf";
 
-                sr.WriteLine("Segue seu orçamento baseado nos dados enviados:");
-                sr.WriteLine("Data de ida: " + txtbx_DataPartida.Text);
-                sr.WriteLine("Horario: " + txtbx_HoraPartida.Text);
-                sr.WriteLine("Data de retorno: " + txtbx_DataRetorno.Text);
-                sr.WriteLine("Horario: " + txtbx_HoraRetorno.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Locais de embarque: " + txtbx_cidadePartida.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Local 1° embarque: " + txtbx_embarque1.Text);
-                sr.WriteLine("Horario 1° embarque: " + msktxbx_Embarque1.Text);
-                sr.WriteLine("Local 2° embarque: " + txtbx_embarque2.Text);
-                sr.WriteLine("Horario 2° embarque: " + msktxbx_Embarque2.Text);
-                sr.WriteLine("Local 3° embarque: " + txtbx_embarque3.Text);
-                sr.WriteLine("Horario 3° embarque: " + msktxbx_Embarque3.Text);
-                sr.WriteLine("Local 4° embarque: " + txtbx_embarque4.Text);
-                sr.WriteLine("Horario 4° embarque: " + msktxbx_Embarque4.Text);
-                sr.WriteLine("Local 5° embarque: " + txtbx_embarque5.Text);
-                sr.WriteLine("Horario 5° embarque: " + msktxbx_Embarque5.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Destino: " + txtbx_CidadeDestino.Text);
-                sr.WriteLine("");
-                sr.WriteLine("City Tour / Passeios: ");
-                sr.WriteLine("");
-                sr.WriteLine("Roteiro do Dia 1: " + textBox5.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Roteiro do Dia 2: " + textBox4.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Roteiro do Dia 3: " + textBox3.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Roteiro do Dia 4: " + textBox2.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Roteiro do Dia 5: " + textBox1.Text);
-                sr.WriteLine("");
-                sr.WriteLine("Valor R$ " + txtbx_Fechamento.Text);
-                sr.WriteLine("");
-                sr.WriteLine("🚨 ATENÇÃO 🚨");
-                sr.WriteLine("Orçamento com validade de 30 dias sujeito a alteração caso haja mudança no valor do diesel ou outras despesas da viagem.");
-                sr.WriteLine("Pedido de orçamento não é válido como viagem fechada, reserva será efetivada somente após assinatura do contrato mediante a apresentação do comprovante de sinal de 10%.");
-                sr.WriteLine("");
-                sr.WriteLine("🚨 ATENÇÃO 🚨");
-                sr.WriteLine("");
-                sr.WriteLine("Em algumas cidades, principalmente no litoral, é necessário autorização de entrada, é por conta do contratante fazer o pedido e a retirada da autorização. Pedimos que antes de fechar o serviço conosco entre em contato com a prefeitura da cidade de destino da viagem para que se informe sobre o assunto. ");
-                sr.WriteLine("");
-                sr.WriteLine("Qualquer dúvida estou a disposição ☺");
-                sr.WriteLine("");
-                sr.WriteLine("");
+                if (sfdSalvar.ShowDialog() == DialogResult.OK)
+                {
+                    dirSalvar = sfdSalvar.FileName;
+                    StreamWriter sr = new StreamWriter(dirSalvar);
 
-                sr.Close();
+                    sr.WriteLine("Segue seu orçamento baseado nos dados enviados:");
+                    //sr.WriteLine("Numero do orcamento: " + id_orcamentoTextBox.Text);
+                    sr.WriteLine("Data de ida: " + txtbx_DataPartida.Text);
+                    sr.WriteLine("Horario: " + txtbx_HoraPartida.Text);
+                    sr.WriteLine("Data de retorno: " + txtbx_DataRetorno.Text);
+                    sr.WriteLine("Horario: " + txtbx_HoraRetorno.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Locais de embarque: " + txtbx_cidadePartida.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Local 1° embarque: " + txtbx_embarque1.Text);
+                    sr.WriteLine("Horario 1° embarque: " + msktxbx_Embarque1.Text);
+                    sr.WriteLine("Local 2° embarque: " + txtbx_embarque2.Text);
+                    sr.WriteLine("Horario 2° embarque: " + msktxbx_Embarque2.Text);
+                    sr.WriteLine("Local 3° embarque: " + txtbx_embarque3.Text);
+                    sr.WriteLine("Horario 3° embarque: " + msktxbx_Embarque3.Text);
+                    sr.WriteLine("Local 4° embarque: " + txtbx_embarque4.Text);
+                    sr.WriteLine("Horario 4° embarque: " + msktxbx_Embarque4.Text);
+                    sr.WriteLine("Local 5° embarque: " + txtbx_embarque5.Text);
+                    sr.WriteLine("Horario 5° embarque: " + msktxbx_Embarque5.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Destino: " + txtbx_CidadeDestino.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("City Tour / Passeios: ");
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 1: " + textBox5.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 2: " + textBox4.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 3: " + textBox3.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 4: " + textBox2.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 5: " + textBox1.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Valor R$ " + txtbx_Fechamento.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("🚨 ATENÇÃO 🚨");
+                    sr.WriteLine("Orçamento com validade de 30 dias sujeito a alteração caso haja mudança no valor do diesel ou outras despesas da viagem.");
+                    sr.WriteLine("Pedido de orçamento não é válido como viagem fechada, reserva será efetivada somente após assinatura do contrato mediante a apresentação do comprovante de sinal de 10%.");
+                    sr.WriteLine("");
+                    sr.WriteLine("🚨 ATENÇÃO 🚨");
+                    sr.WriteLine("");
+                    sr.WriteLine("Em algumas cidades, principalmente no litoral, é necessário autorização de entrada, é por conta do contratante fazer o pedido e a retirada da autorização. Pedimos que antes de fechar o serviço conosco entre em contato com a prefeitura da cidade de destino da viagem para que se informe sobre o assunto. ");
+                    sr.WriteLine("");
+                    sr.WriteLine("Qualquer dúvida estou a disposição ☺");
+                    sr.WriteLine("");
+                    sr.WriteLine("");
 
+                    sr.Close();
+
+                }
             }
 
-            
+
         }
 
         private void cad_clieBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -2548,10 +2553,11 @@ namespace control_services
 
         private void frm_OrcForaTabela_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.cad_cli'. Você pode movê-la ou removê-la conforme necessário.
+            this.cad_cliTableAdapter.Fill(this.gldturfreDeployDataSet.cad_cli);
             // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.orcamento'. Você pode movê-la ou removê-la conforme necessário.
             this.orcamentoTableAdapter.Fill(this.gldturfreDeployDataSet.orcamento);
             // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.cad_clie'. Você pode movê-la ou removê-la conforme necessário.
-            this.cad_clieTableAdapter.Fill(this.gldturfreDeployDataSet.cad_clie);
 
             if (grpbx_InfCliente.Enabled == false)
             {
@@ -2619,7 +2625,7 @@ namespace control_services
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (grpbx_InfCliente.Enabled == true)
+            if (msktxbx_CpfCnpj.Enabled == true)
             {
                 MessageBox.Show("Para adicionar um novo registro, é necessario finalizar o atual", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -2627,6 +2633,7 @@ namespace control_services
             else
             {
                 grpbx_InfCliente.Enabled = true;
+                txtbx_idOrcString.Text = id_orcamentoTextBox.Text;
             }
         }
 
@@ -2677,10 +2684,72 @@ namespace control_services
 
             else
             {
-                this.Validate();
-                this.orcamentoBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.gldturfreDeployDataSet);
+                string dirSalvar;
+                sfdSalvar.Title = "Salvar Documento";
+                sfdSalvar.Filter = "TXT (.txt) | *.txt | HTML (.html) |*.html";
+                sfdSalvar.FilterIndex = 2;
+                sfdSalvar.RestoreDirectory = true;
+
                 MessageBox.Show("Orcamento salvo com sucesso!", "Salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                sfdSalvar.Title = "Salvar Documento";
+                sfdSalvar.Filter = "TXT (.txt) | *.txt | HTML (.html) |*.html";
+
+                if (sfdSalvar.ShowDialog() == DialogResult.OK)
+                {
+                    dirSalvar = sfdSalvar.FileName;
+                    StreamWriter sr = new StreamWriter(dirSalvar);
+
+                    sr.WriteLine("Segue seu orçamento baseado nos dados enviados:");
+                    sr.WriteLine("Numero do orcamento: " + id_orcamentoTextBox.Text);
+                    sr.WriteLine("Data de ida: " + txtbx_DataPartida.Text);
+                    sr.WriteLine("Horario: " + txtbx_HoraPartida.Text);
+                    sr.WriteLine("Data de retorno: " + txtbx_DataRetorno.Text);
+                    sr.WriteLine("Horario: " + txtbx_HoraRetorno.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Locais de embarque: " + txtbx_cidadePartida.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Local 1° embarque: " + txtbx_embarque1.Text);
+                    sr.WriteLine("Horario 1° embarque: " + msktxbx_Embarque1.Text);
+                    sr.WriteLine("Local 2° embarque: " + txtbx_embarque2.Text);
+                    sr.WriteLine("Horario 2° embarque: " + msktxbx_Embarque2.Text);
+                    sr.WriteLine("Local 3° embarque: " + txtbx_embarque3.Text);
+                    sr.WriteLine("Horario 3° embarque: " + msktxbx_Embarque3.Text);
+                    sr.WriteLine("Local 4° embarque: " + txtbx_embarque4.Text);
+                    sr.WriteLine("Horario 4° embarque: " + msktxbx_Embarque4.Text);
+                    sr.WriteLine("Local 5° embarque: " + txtbx_embarque5.Text);
+                    sr.WriteLine("Horario 5° embarque: " + msktxbx_Embarque5.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Destino: " + txtbx_CidadeDestino.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("City Tour / Passeios: ");
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 1: " + textBox5.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 2: " + textBox4.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 3: " + textBox3.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 4: " + textBox2.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Roteiro do Dia 5: " + textBox1.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("Valor R$ " + txtbx_Fechamento.Text);
+                    sr.WriteLine("");
+                    sr.WriteLine("🚨 ATENÇÃO 🚨");
+                    sr.WriteLine("Orçamento com validade de 30 dias sujeito a alteração caso haja mudança no valor do diesel ou outras despesas da viagem.");
+                    sr.WriteLine("Pedido de orçamento não é válido como viagem fechada, reserva será efetivada somente após assinatura do contrato mediante a apresentação do comprovante de sinal de 10%.");
+                    sr.WriteLine("");
+                    sr.WriteLine("🚨 ATENÇÃO 🚨");
+                    sr.WriteLine("");
+                    sr.WriteLine("Em algumas cidades, principalmente no litoral, é necessário autorização de entrada, é por conta do contratante fazer o pedido e a retirada da autorização. Pedimos que antes de fechar o serviço conosco entre em contato com a prefeitura da cidade de destino da viagem para que se informe sobre o assunto. ");
+                    sr.WriteLine("");
+                    sr.WriteLine("Qualquer dúvida estou a disposição ☺");
+                    sr.WriteLine("");
+                    sr.WriteLine("");
+
+                    sr.Close();
+
+                }
                 grpbx_InfCliente.Enabled = false;
             }
         }
@@ -2697,6 +2766,11 @@ namespace control_services
         }
 
         private void sfdSalvar_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void lbl_totalKm_Click(object sender, EventArgs e)
         {
 
         }

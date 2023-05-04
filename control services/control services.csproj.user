@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>C:\Users\Gabriel\Desktop\ctrl service\control services\|http://www.goldturismoefretamentos.online/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/|ftp://89.117.7.121/|C:\Users\Gabriel\Desktop\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\Gabriel\Desktop\WebSite1\|ftp://goldturismoefretamentos.online/control_services/|ftp://goldturismoefretamentos.online/|/control_services/|C:\Users\Gabriel\Desktop\ctrl service\control services\</PublishUrlHistory>
     <InstallUrlHistory>http://goldturismoefretamentos.online/control_services/|http://www.goldturismoefretamentos.online/|https://bit.ly/atualizacaogold/|https://goldturismoefretamentos.online/index.php/atualizacao/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>http://goldturismoefretamentos.online/control_services/|http://www.goldturismoefretamentos.online/|https://bit.ly/atualizacaogold/|https://goldturismoefretamentos.online/index.php/atualizacao/|http://goldturismoefretamentos.online/wp-content/uploads/2023/02/control-services.zip/</UpdateUrlHistory>
     <BootstrapperUrlHistory>https://gldturfre.000webhostapp.com/pre%2520requisitos/</BootstrapperUrlHistory>
     <ErrorReportUrlHistory />
     <FallbackCulture>pt-BR</FallbackCulture>
-    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\</ReferencePath>
   </PropertyGroup>
 </Project>

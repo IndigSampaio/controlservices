@@ -30,9 +30,9 @@
         {
             System.Windows.Forms.Button button2;
             System.Windows.Forms.Button btnSalvar;
-            System.Windows.Forms.Button btnAdd;
             System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadFunc));
+            System.Windows.Forms.Button btnAdd;
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -107,8 +107,8 @@
             this.tabpage_depTres = new System.Windows.Forms.TabPage();
             button2 = new System.Windows.Forms.Button();
             btnSalvar = new System.Windows.Forms.Button();
-            btnAdd = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            btnAdd = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -118,6 +118,55 @@
             this.group_documentos.SuspendLayout();
             this.group_DadosPessoais.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            button2.Dock = System.Windows.Forms.DockStyle.Right;
+            button2.Location = new System.Drawing.Point(-1, 0);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(90, 85);
+            button2.TabIndex = 46;
+            button2.Tag = "Salvar";
+            button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.Dock = System.Windows.Forms.DockStyle.Left;
+            btnSalvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
+            btnSalvar.Location = new System.Drawing.Point(180, 0);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new System.Drawing.Size(90, 85);
+            btnSalvar.TabIndex = 45;
+            btnSalvar.Tag = "Salvar";
+            btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // button1
+            // 
+            button1.Dock = System.Windows.Forms.DockStyle.Left;
+            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            button1.Location = new System.Drawing.Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(90, 85);
+            button1.TabIndex = 43;
+            button1.Tag = "Consultar";
+            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
+            btnAdd.Image = global::control_services.Properties.Resources._002_inserir;
+            btnAdd.Location = new System.Drawing.Point(90, 0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new System.Drawing.Size(90, 85);
+            btnAdd.TabIndex = 44;
+            btnAdd.Tag = "Inserir";
+            btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel2
             // 
@@ -140,54 +189,6 @@
             this.panel3.Size = new System.Drawing.Size(89, 85);
             this.panel3.TabIndex = 46;
             // 
-            // button2
-            // 
-            button2.BackgroundImage = global::control_services.Properties.Resources._001_exit1;
-            button2.Dock = System.Windows.Forms.DockStyle.Right;
-            button2.Location = new System.Drawing.Point(-1, 0);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(90, 85);
-            button2.TabIndex = 46;
-            button2.Tag = "Salvar";
-            button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Dock = System.Windows.Forms.DockStyle.Left;
-            btnSalvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
-            btnSalvar.Location = new System.Drawing.Point(180, 0);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new System.Drawing.Size(90, 85);
-            btnSalvar.TabIndex = 45;
-            btnSalvar.Tag = "Salvar";
-            btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            btnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
-            btnAdd.Image = global::control_services.Properties.Resources._002_inserir;
-            btnAdd.Location = new System.Drawing.Point(90, 0);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new System.Drawing.Size(90, 85);
-            btnAdd.TabIndex = 44;
-            btnAdd.Tag = "Inserir";
-            btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Dock = System.Windows.Forms.DockStyle.Left;
-            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            button1.Location = new System.Drawing.Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(90, 85);
-            button1.TabIndex = 43;
-            button1.Tag = "Consultar";
-            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = true;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -198,7 +199,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 91);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1038, 820);
+            this.tabControl1.Size = new System.Drawing.Size(1034, 820);
             this.tabControl1.TabIndex = 44;
             // 
             // tabPage1
@@ -207,7 +208,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1030, 791);
+            this.tabPage1.Size = new System.Drawing.Size(1026, 791);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Funcionario";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -221,7 +222,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 785);
+            this.panel1.Size = new System.Drawing.Size(1020, 785);
             this.panel1.TabIndex = 40;
             // 
             // group_info_contrato
@@ -246,7 +247,7 @@
             this.group_info_contrato.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_info_contrato.Location = new System.Drawing.Point(0, 0);
             this.group_info_contrato.Name = "group_info_contrato";
-            this.group_info_contrato.Size = new System.Drawing.Size(1024, 161);
+            this.group_info_contrato.Size = new System.Drawing.Size(1020, 161);
             this.group_info_contrato.TabIndex = 36;
             this.group_info_contrato.TabStop = false;
             this.group_info_contrato.Text = "Informacoes para contratacao";
@@ -934,7 +935,7 @@
             this.tabpage_depTres.Text = "Dependente 3";
             this.tabpage_depTres.UseVisualStyleBackColor = true;
             // 
-            // frm_cadFunc2
+            // frm_cadFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -942,7 +943,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
-            this.Name = "frm_cadFunc2";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frm_cadFunc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Funcionario";
             this.Load += new System.EventHandler(this.frm_cadFunc2_Load);

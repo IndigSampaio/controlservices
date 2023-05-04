@@ -143,7 +143,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.cad_clieTableAdapter = null;
             this.tableAdapterManager.cad_funTableAdapter = null;
             this.tableAdapterManager.categ_veiculoTableAdapter = null;
             this.tableAdapterManager.estadoTableAdapter = null;
@@ -187,7 +186,10 @@
             // 
             // bindingNavigatorSeparator
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Name = "bindingNavig" +
+                "" +
+                "" +
+                "atorSeparator";
             this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem

@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
-            this.batevoltadd64LBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.batevolta_dd64LTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.batevolta_dd64LTableAdapter();
+            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -41,8 +39,6 @@
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.batevoltadd64LBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +51,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cidadeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.batevoltadd64LBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 18);
             this.dataGridView1.Name = "dataGridView1";
@@ -77,19 +72,7 @@
             // 
             // glturfreDeployDataSet
             // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // batevoltadd64LBindingSource
-            // 
-            this.batevoltadd64LBindingSource.DataMember = "batevolta_dd64L";
-            this.batevoltadd64LBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // batevolta_dd64LTableAdapter
-            // 
-            this.batevolta_dd64LTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox1
+            //textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(32, 63);
             this.textBox1.Name = "textBox1";
@@ -141,8 +124,6 @@
             this.Load += new System.EventHandler(this.frm_consultCidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.batevoltadd64LBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -153,9 +134,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource batevoltadd64LBindingSource;
-        private glturfreDeployDataSetTableAdapters.batevolta_dd64LTableAdapter batevolta_dd64LTableAdapter;
+        private gldturfreDeployDataSet gldturfreDeployDataSet;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;

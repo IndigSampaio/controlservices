@@ -29,307 +29,103 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Button button2;
-            System.Windows.Forms.Button btnSalvar;
-            System.Windows.Forms.Button btnAdd;
-            System.Windows.Forms.Button button1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadLgn));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_consulta_cliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel_cadLgn = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbx_lgn = new System.Windows.Forms.TextBox();
-            this.txtbx_snh = new System.Windows.Forms.TextBox();
-            this.txtbx_ConfSnh = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chkbx_VerSnh = new System.Windows.Forms.CheckBox();
-            this.chkbx_VerConfSnh = new System.Windows.Forms.CheckBox();
-            this.chkbx_ativo = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.timer_ConfSenhaErrado = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
-            this.cad_loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cad_loginTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_loginTableAdapter();
-            this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
-            this.timer_ConfVerSnh = new System.Windows.Forms.Timer(this.components);
-            this.timer_VerSnh = new System.Windows.Forms.Timer(this.components);
+            this.btn_sair = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            button2 = new System.Windows.Forms.Button();
-            btnSalvar = new System.Windows.Forms.Button();
-            btnAdd = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
+            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
+            this.lgn_usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lgn_usersTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.lgn_usersTableAdapter();
+            this.tableAdapterManager = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rdbt_ConfSenha = new System.Windows.Forms.RadioButton();
+            this.rdbt_Senha = new System.Windows.Forms.RadioButton();
+            this.ativoCheckBox = new System.Windows.Forms.CheckBox();
+            this.txtbx_ConfSnh = new System.Windows.Forms.TextBox();
+            this.txtbx_Snh = new System.Windows.Forms.TextBox();
+            this.txtbx_Lgn = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel_cadLgn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lgn_usersBindingSource)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_salvar);
+            this.panel1.Controls.Add(this.btn_add);
+            this.panel1.Controls.Add(this.btn_consulta_cliente);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(476, 85);
+            this.panel1.TabIndex = 12;
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_salvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
+            this.btn_salvar.Location = new System.Drawing.Point(180, 0);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(90, 85);
+            this.btn_salvar.TabIndex = 3;
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.Image = global::control_services.Properties.Resources._002_inserir;
+            this.btn_add.Location = new System.Drawing.Point(90, 0);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(90, 85);
+            this.btn_add.TabIndex = 2;
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_consulta_cliente
+            // 
+            this.btn_consulta_cliente.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_consulta_cliente.Image = global::control_services.Properties.Resources._001_analytic;
+            this.btn_consulta_cliente.Location = new System.Drawing.Point(0, 0);
+            this.btn_consulta_cliente.Name = "btn_consulta_cliente";
+            this.btn_consulta_cliente.Size = new System.Drawing.Size(90, 85);
+            this.btn_consulta_cliente.TabIndex = 1;
+            this.btn_consulta_cliente.UseVisualStyleBackColor = true;
+            this.btn_consulta_cliente.Click += new System.EventHandler(this.btn_consulta_cliente_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(btnSalvar);
-            this.panel2.Controls.Add(btnAdd);
-            this.panel2.Controls.Add(button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Controls.Add(this.btn_sair);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(386, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 85);
-            this.panel2.TabIndex = 44;
+            this.panel2.Size = new System.Drawing.Size(90, 85);
+            this.panel2.TabIndex = 0;
             // 
-            // panel3
+            // btn_sair
             // 
-            this.panel3.Controls.Add(button2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(563, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 85);
-            this.panel3.TabIndex = 46;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = global::control_services.Properties.Resources._001_exit1;
-            button2.Dock = System.Windows.Forms.DockStyle.Right;
-            button2.Location = new System.Drawing.Point(-1, 0);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(90, 85);
-            button2.TabIndex = 46;
-            button2.Tag = "Salvar";
-            button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Dock = System.Windows.Forms.DockStyle.Left;
-            btnSalvar.Image = global::control_services.Properties.Resources._003_ponto_de_verificacao;
-            btnSalvar.Location = new System.Drawing.Point(180, 0);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new System.Drawing.Size(90, 85);
-            btnSalvar.TabIndex = 45;
-            btnSalvar.Tag = "Salvar";
-            btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnAdd
-            // 
-            btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
-            btnAdd.Image = global::control_services.Properties.Resources._002_inserir;
-            btnAdd.Location = new System.Drawing.Point(90, 0);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new System.Drawing.Size(90, 85);
-            btnAdd.TabIndex = 44;
-            btnAdd.Tag = "Inserir";
-            btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // button1
-            // 
-            button1.Dock = System.Windows.Forms.DockStyle.Left;
-            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            button1.Location = new System.Drawing.Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(90, 85);
-            button1.TabIndex = 43;
-            button1.Tag = "Consultar";
-            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // panel_cadLgn
-            // 
-            this.panel_cadLgn.Controls.Add(this.label4);
-            this.panel_cadLgn.Controls.Add(this.chkbx_ativo);
-            this.panel_cadLgn.Controls.Add(this.chkbx_VerConfSnh);
-            this.panel_cadLgn.Controls.Add(this.chkbx_VerSnh);
-            this.panel_cadLgn.Controls.Add(this.txtbx_ConfSnh);
-            this.panel_cadLgn.Controls.Add(this.label1);
-            this.panel_cadLgn.Controls.Add(this.txtbx_snh);
-            this.panel_cadLgn.Controls.Add(this.txtbx_lgn);
-            this.panel_cadLgn.Controls.Add(this.label3);
-            this.panel_cadLgn.Controls.Add(this.label2);
-            this.panel_cadLgn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_cadLgn.Location = new System.Drawing.Point(0, 85);
-            this.panel_cadLgn.Name = "panel_cadLgn";
-            this.panel_cadLgn.Size = new System.Drawing.Size(652, 321);
-            this.panel_cadLgn.TabIndex = 45;
-            this.panel_cadLgn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cadLgn_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Login do Usuario :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Senha do Usuario :";
-            // 
-            // txtbx_lgn
-            // 
-            this.txtbx_lgn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "lgn", true));
-            this.txtbx_lgn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_lgn.Location = new System.Drawing.Point(189, 38);
-            this.txtbx_lgn.Name = "txtbx_lgn";
-            this.txtbx_lgn.Size = new System.Drawing.Size(234, 28);
-            this.txtbx_lgn.TabIndex = 4;
-            // 
-            // txtbx_snh
-            // 
-            this.txtbx_snh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_loginBindingSource, "snh", true));
-            this.txtbx_snh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_snh.Location = new System.Drawing.Point(189, 102);
-            this.txtbx_snh.Name = "txtbx_snh";
-            this.txtbx_snh.Size = new System.Drawing.Size(234, 28);
-            this.txtbx_snh.TabIndex = 5;
-            // 
-            // txtbx_ConfSnh
-            // 
-            this.txtbx_ConfSnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_ConfSnh.Location = new System.Drawing.Point(189, 142);
-            this.txtbx_ConfSnh.Name = "txtbx_ConfSnh";
-            this.txtbx_ConfSnh.Size = new System.Drawing.Size(234, 28);
-            this.txtbx_ConfSnh.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Confirmar Senha :";
-            // 
-            // chkbx_VerSnh
-            // 
-            this.chkbx_VerSnh.AutoSize = true;
-            this.chkbx_VerSnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbx_VerSnh.Location = new System.Drawing.Point(429, 104);
-            this.chkbx_VerSnh.Name = "chkbx_VerSnh";
-            this.chkbx_VerSnh.Size = new System.Drawing.Size(96, 22);
-            this.chkbx_VerSnh.TabIndex = 8;
-            this.chkbx_VerSnh.Text = "Ver senha";
-            this.chkbx_VerSnh.UseVisualStyleBackColor = true;
-            // 
-            // chkbx_VerConfSnh
-            // 
-            this.chkbx_VerConfSnh.AutoSize = true;
-            this.chkbx_VerConfSnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbx_VerConfSnh.Location = new System.Drawing.Point(429, 144);
-            this.chkbx_VerConfSnh.Name = "chkbx_VerConfSnh";
-            this.chkbx_VerConfSnh.Size = new System.Drawing.Size(203, 22);
-            this.chkbx_VerConfSnh.TabIndex = 9;
-            this.chkbx_VerConfSnh.Text = "Ver confirmacao de senha";
-            this.chkbx_VerConfSnh.UseVisualStyleBackColor = true;
-            // 
-            // chkbx_ativo
-            // 
-            this.chkbx_ativo.AutoSize = true;
-            this.chkbx_ativo.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.cad_loginBindingSource, "ativo", true));
-            this.chkbx_ativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbx_ativo.Location = new System.Drawing.Point(79, 215);
-            this.chkbx_ativo.Name = "chkbx_ativo";
-            this.chkbx_ativo.Size = new System.Drawing.Size(18, 17);
-            this.chkbx_ativo.TabIndex = 10;
-            this.chkbx_ativo.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 24);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Ativo :";
-            // 
-            // timer_ConfSenhaErrado
-            // 
-            this.timer_ConfSenhaErrado.Enabled = true;
-            this.timer_ConfSenhaErrado.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // glturfreDeployDataSet
-            // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cad_loginBindingSource
-            // 
-            this.cad_loginBindingSource.DataMember = "cad_login";
-            this.cad_loginBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // cad_loginTableAdapter
-            // 
-            this.cad_loginTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.batevolta_carroTableAdapter = null;
-            this.tableAdapterManager.batevolta_conv47LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd60LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec50LTableAdapter = null;
-            this.tableAdapterManager.batevolta_micro32LTableAdapter = null;
-            this.tableAdapterManager.batevolta_semi46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van15LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van18LTableAdapter = null;
-            this.tableAdapterManager.cad_cliTableAdapter = null;
-            this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.cad_loginTableAdapter = this.cad_loginTableAdapter;
-            this.tableAdapterManager.categ_veiculoTableAdapter = null;
-            this.tableAdapterManager.estadosTableAdapter = null;
-            this.tableAdapterManager.ferpro_carroTableAdapter = null;
-            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
-            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
-            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
-            this.tableAdapterManager.fimsem_carroTableAdapter = null;
-            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
-            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
-            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
-            this.tableAdapterManager.orcamentoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.veiculoTableAdapter = null;
-            // 
-            // timer_ConfVerSnh
-            // 
-            this.timer_ConfVerSnh.Enabled = true;
-            this.timer_ConfVerSnh.Tick += new System.EventHandler(this.timer_ConfVerSnh_Tick);
-            // 
-            // timer_VerSnh
-            // 
-            this.timer_VerSnh.Enabled = true;
-            this.timer_VerSnh.Tick += new System.EventHandler(this.timer_VerSnh_Tick);
+            this.btn_sair.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_sair.Image = global::control_services.Properties.Resources._001_exit1;
+            this.btn_sair.Location = new System.Drawing.Point(0, 0);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Size = new System.Drawing.Size(90, 85);
+            this.btn_sair.TabIndex = 0;
+            this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             // 
             // statusStrip1
             // 
@@ -337,10 +133,10 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 381);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 352);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(652, 25);
-            this.statusStrip1.TabIndex = 46;
+            this.statusStrip1.Size = new System.Drawing.Size(476, 25);
+            this.statusStrip1.TabIndex = 32;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -351,32 +147,179 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(344, 20);
-            this.toolStripStatusLabel2.Text = "Precisa de ajuda? Clique aqui e fale com o suporte";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(124, 20);
+            this.toolStripStatusLabel2.Text = "Precisa de ajuda?";
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            // 
+            // gldturfreDeployDataSet
+            // 
+            this.gldturfreDeployDataSet.DataSetName = "gldturfreDeployDataSet";
+            this.gldturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lgn_usersBindingSource
+            // 
+            this.lgn_usersBindingSource.DataMember = "lgn_users";
+            this.lgn_usersBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
+            // lgn_usersTableAdapter
+            // 
+            this.lgn_usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cad_cliTableAdapter = null;
+            this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager.estadoTableAdapter = null;
+            this.tableAdapterManager.lgn_usersTableAdapter = this.lgn_usersTableAdapter;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
+            this.tableAdapterManager.tabela_BateVoltaTableAdapter = null;
+            this.tableAdapterManager.tabela_FerProTableAdapter = null;
+            this.tableAdapterManager.tabela_FimSemTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
+            this.tableAdapterManager.viagem_fechadaTableAdapter = null;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rdbt_ConfSenha);
+            this.panel3.Controls.Add(this.rdbt_Senha);
+            this.panel3.Controls.Add(this.ativoCheckBox);
+            this.panel3.Controls.Add(this.txtbx_ConfSnh);
+            this.panel3.Controls.Add(this.txtbx_Snh);
+            this.panel3.Controls.Add(this.txtbx_Lgn);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(0, 85);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(476, 267);
+            this.panel3.TabIndex = 34;
+            // 
+            // rdbt_ConfSenha
+            // 
+            this.rdbt_ConfSenha.AutoSize = true;
+            this.rdbt_ConfSenha.Location = new System.Drawing.Point(369, 141);
+            this.rdbt_ConfSenha.Name = "rdbt_ConfSenha";
+            this.rdbt_ConfSenha.Size = new System.Drawing.Size(17, 16);
+            this.rdbt_ConfSenha.TabIndex = 51;
+            this.rdbt_ConfSenha.TabStop = true;
+            this.rdbt_ConfSenha.UseVisualStyleBackColor = true;
+            // 
+            // rdbt_Senha
+            // 
+            this.rdbt_Senha.AutoSize = true;
+            this.rdbt_Senha.Location = new System.Drawing.Point(369, 93);
+            this.rdbt_Senha.Name = "rdbt_Senha";
+            this.rdbt_Senha.Size = new System.Drawing.Size(17, 16);
+            this.rdbt_Senha.TabIndex = 50;
+            this.rdbt_Senha.TabStop = true;
+            this.rdbt_Senha.UseVisualStyleBackColor = true;
+            // 
+            // ativoCheckBox
+            // 
+            this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.lgn_usersBindingSource, "ativo", true));
+            this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ativoCheckBox.Location = new System.Drawing.Point(158, 190);
+            this.ativoCheckBox.Name = "ativoCheckBox";
+            this.ativoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.ativoCheckBox.TabIndex = 49;
+            this.ativoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // txtbx_ConfSnh
+            // 
+            this.txtbx_ConfSnh.Location = new System.Drawing.Point(158, 140);
+            this.txtbx_ConfSnh.Name = "txtbx_ConfSnh";
+            this.txtbx_ConfSnh.Size = new System.Drawing.Size(205, 22);
+            this.txtbx_ConfSnh.TabIndex = 48;
+            // 
+            // txtbx_Snh
+            // 
+            this.txtbx_Snh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lgn_usersBindingSource, "snh", true));
+            this.txtbx_Snh.Location = new System.Drawing.Point(158, 92);
+            this.txtbx_Snh.Name = "txtbx_Snh";
+            this.txtbx_Snh.Size = new System.Drawing.Size(205, 22);
+            this.txtbx_Snh.TabIndex = 47;
+            // 
+            // txtbx_Lgn
+            // 
+            this.txtbx_Lgn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lgn_usersBindingSource, "lgn", true));
+            this.txtbx_Lgn.Location = new System.Drawing.Point(158, 42);
+            this.txtbx_Lgn.Name = "txtbx_Lgn";
+            this.txtbx_Lgn.Size = new System.Drawing.Size(205, 22);
+            this.txtbx_Lgn.TabIndex = 46;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Ativo: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Conf. Senha:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Senha: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Login: ";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_cadLgn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 406);
+            this.ClientSize = new System.Drawing.Size(476, 377);
             this.ControlBox = false;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.panel_cadLgn);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_cadLgn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Login";
             this.Load += new System.EventHandler(this.frm_cadLgn_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel_cadLgn.ResumeLayout(false);
-            this.panel_cadLgn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_loginBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lgn_usersBindingSource)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,29 +327,30 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_consulta_cliente;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel_cadLgn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chkbx_ativo;
-        private System.Windows.Forms.CheckBox chkbx_VerConfSnh;
-        private System.Windows.Forms.CheckBox chkbx_VerSnh;
-        private System.Windows.Forms.TextBox txtbx_ConfSnh;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtbx_snh;
-        private System.Windows.Forms.TextBox txtbx_lgn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer_ConfSenhaErrado;
-        private System.Windows.Forms.Timer timer2;
-        private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource cad_loginBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_loginTableAdapter cad_loginTableAdapter;
-        private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Timer timer_ConfVerSnh;
-        private System.Windows.Forms.Timer timer_VerSnh;
+        private System.Windows.Forms.Button btn_sair;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private gldturfreDeployDataSet gldturfreDeployDataSet;
+        private System.Windows.Forms.BindingSource lgn_usersBindingSource;
+        private gldturfreDeployDataSetTableAdapters.lgn_usersTableAdapter lgn_usersTableAdapter;
+        private gldturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox ativoCheckBox;
+        private System.Windows.Forms.TextBox txtbx_ConfSnh;
+        private System.Windows.Forms.TextBox txtbx_Snh;
+        private System.Windows.Forms.TextBox txtbx_Lgn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RadioButton rdbt_ConfSenha;
+        private System.Windows.Forms.RadioButton rdbt_Senha;
     }
 }

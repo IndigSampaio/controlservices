@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,28 +44,47 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.veiculoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fecharVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarValorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bateVoltaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.feriadoProlongadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fimDeSemanaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarValorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bateVoltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feriadoProlongadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fimDeSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orcamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valorForaDaTabelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EscalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.whatsAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.orcamentoTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.orcamentoTableAdapter();
+            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.glturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
+            this.orcamentoTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.orcamentoTableAdapter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -83,16 +100,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1528, 741);
             this.panel1.TabIndex = 1;
-            // 
-            // orcamentoBindingSource
-            // 
-            this.orcamentoBindingSource.DataMember = "orcamento";
-            this.orcamentoBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // glturfreDeployDataSet
-            // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -136,6 +144,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Contrato";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -155,6 +164,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "Calendario";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -171,13 +181,16 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
+            this.consultarToolStripMenuItem,
+            this.vendaToolStripMenuItem,
             this.valorToolStripMenuItem,
             this.orcamentoToolStripMenuItem,
-            this.agendamentoToolStripMenuItem,
+            this.EscalarToolStripMenuItem,
             this.agendaToolStripMenuItem,
             this.financeiroToolStripMenuItem,
             this.sairToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.whatsAppToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1528, 28);
@@ -197,30 +210,90 @@
             // 
             // funcionarioToolStripMenuItem
             // 
+            this.funcionarioToolStripMenuItem.Enabled = false;
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click_1);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcionarioToolStripMenuItem1,
+            this.clienteToolStripMenuItem1,
+            this.veiculoToolStripMenuItem1,
+            this.loginToolStripMenuItem1});
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // funcionarioToolStripMenuItem1
+            // 
+            this.funcionarioToolStripMenuItem1.Name = "funcionarioToolStripMenuItem1";
+            this.funcionarioToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.funcionarioToolStripMenuItem1.Text = "Funcionario";
+            // 
+            // clienteToolStripMenuItem1
+            // 
+            this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.clienteToolStripMenuItem1.Text = "Cliente";
+            this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
+            // 
+            // veiculoToolStripMenuItem1
+            // 
+            this.veiculoToolStripMenuItem1.Name = "veiculoToolStripMenuItem1";
+            this.veiculoToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.veiculoToolStripMenuItem1.Text = "Veiculo";
+            // 
+            // loginToolStripMenuItem1
+            // 
+            this.loginToolStripMenuItem1.Name = "loginToolStripMenuItem1";
+            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.loginToolStripMenuItem1.Text = "Login";
+            this.loginToolStripMenuItem1.Click += new System.EventHandler(this.loginToolStripMenuItem1_Click);
+            // 
+            // vendaToolStripMenuItem
+            // 
+            this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fecharVendasToolStripMenuItem,
+            this.consultarVendasToolStripMenuItem});
+            this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.vendaToolStripMenuItem.Text = "Venda";
+            // 
+            // fecharVendasToolStripMenuItem
+            // 
+            this.fecharVendasToolStripMenuItem.Name = "fecharVendasToolStripMenuItem";
+            this.fecharVendasToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.fecharVendasToolStripMenuItem.Text = "Fechar Vendas";
+            this.fecharVendasToolStripMenuItem.Click += new System.EventHandler(this.fecharVendasToolStripMenuItem_Click);
+            // 
+            // consultarVendasToolStripMenuItem
+            // 
+            this.consultarVendasToolStripMenuItem.Name = "consultarVendasToolStripMenuItem";
+            this.consultarVendasToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.consultarVendasToolStripMenuItem.Text = "Consultar Vendas";
             // 
             // valorToolStripMenuItem
             // 
@@ -233,20 +306,68 @@
             // 
             // atualizarValorToolStripMenuItem
             // 
+            this.atualizarValorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bateVoltaToolStripMenuItem1,
+            this.feriadoProlongadoToolStripMenuItem1,
+            this.fimDeSemanaToolStripMenuItem1});
             this.atualizarValorToolStripMenuItem.Name = "atualizarValorToolStripMenuItem";
             this.atualizarValorToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.atualizarValorToolStripMenuItem.Text = "Atualizar Valor";
             // 
+            // bateVoltaToolStripMenuItem1
+            // 
+            this.bateVoltaToolStripMenuItem1.Name = "bateVoltaToolStripMenuItem1";
+            this.bateVoltaToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.bateVoltaToolStripMenuItem1.Text = "Bate / Volta";
+            // 
+            // feriadoProlongadoToolStripMenuItem1
+            // 
+            this.feriadoProlongadoToolStripMenuItem1.Name = "feriadoProlongadoToolStripMenuItem1";
+            this.feriadoProlongadoToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.feriadoProlongadoToolStripMenuItem1.Text = "Feriado Prolongado";
+            // 
+            // fimDeSemanaToolStripMenuItem1
+            // 
+            this.fimDeSemanaToolStripMenuItem1.Name = "fimDeSemanaToolStripMenuItem1";
+            this.fimDeSemanaToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.fimDeSemanaToolStripMenuItem1.Text = "Fim de Semana";
+            // 
             // consultarValorToolStripMenuItem
             // 
+            this.consultarValorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bateVoltaToolStripMenuItem,
+            this.feriadoProlongadoToolStripMenuItem,
+            this.fimDeSemanaToolStripMenuItem});
             this.consultarValorToolStripMenuItem.Name = "consultarValorToolStripMenuItem";
             this.consultarValorToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.consultarValorToolStripMenuItem.Text = "Consultar Valor";
             // 
+            // bateVoltaToolStripMenuItem
+            // 
+            this.bateVoltaToolStripMenuItem.Name = "bateVoltaToolStripMenuItem";
+            this.bateVoltaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.bateVoltaToolStripMenuItem.Text = "Bate / Volta";
+            this.bateVoltaToolStripMenuItem.Click += new System.EventHandler(this.bateVoltaToolStripMenuItem_Click);
+            // 
+            // feriadoProlongadoToolStripMenuItem
+            // 
+            this.feriadoProlongadoToolStripMenuItem.Name = "feriadoProlongadoToolStripMenuItem";
+            this.feriadoProlongadoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.feriadoProlongadoToolStripMenuItem.Text = "Feriado Prolongado";
+            this.feriadoProlongadoToolStripMenuItem.Click += new System.EventHandler(this.feriadoProlongadoToolStripMenuItem_Click);
+            // 
+            // fimDeSemanaToolStripMenuItem
+            // 
+            this.fimDeSemanaToolStripMenuItem.Name = "fimDeSemanaToolStripMenuItem";
+            this.fimDeSemanaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.fimDeSemanaToolStripMenuItem.Text = "Fim de Semana";
+            this.fimDeSemanaToolStripMenuItem.Click += new System.EventHandler(this.fimDeSemanaToolStripMenuItem_Click);
+            // 
             // orcamentoToolStripMenuItem
             // 
             this.orcamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoToolStripMenuItem});
+            this.novoToolStripMenuItem,
+            this.valorForaDaTabelaToolStripMenuItem});
             this.orcamentoToolStripMenuItem.Name = "orcamentoToolStripMenuItem";
             this.orcamentoToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.orcamentoToolStripMenuItem.Text = "Orcamento";
@@ -254,21 +375,30 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
-            this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.novoToolStripMenuItem.Text = "Valor Tabela";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
-            // agendamentoToolStripMenuItem
+            // valorForaDaTabelaToolStripMenuItem
             // 
-            this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
-            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.agendamentoToolStripMenuItem.Text = "Agendamento";
+            this.valorForaDaTabelaToolStripMenuItem.Name = "valorForaDaTabelaToolStripMenuItem";
+            this.valorForaDaTabelaToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.valorForaDaTabelaToolStripMenuItem.Text = "Valor Fora da Tabela";
+            this.valorForaDaTabelaToolStripMenuItem.Click += new System.EventHandler(this.valorForaDaTabelaToolStripMenuItem_Click);
+            // 
+            // EscalarToolStripMenuItem
+            // 
+            this.EscalarToolStripMenuItem.Name = "EscalarToolStripMenuItem";
+            this.EscalarToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.EscalarToolStripMenuItem.Text = "Escalar";
+            this.EscalarToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
             // agendaToolStripMenuItem
             // 
             this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
             this.agendaToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.agendaToolStripMenuItem.Text = "Calendario";
+            this.agendaToolStripMenuItem.Click += new System.EventHandler(this.agendaToolStripMenuItem_Click);
             // 
             // financeiroToolStripMenuItem
             // 
@@ -307,6 +437,13 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 24);
             this.toolStripMenuItem1.Text = ".";
             // 
+            // whatsAppToolStripMenuItem
+            // 
+            this.whatsAppToolStripMenuItem.Name = "whatsAppToolStripMenuItem";
+            this.whatsAppToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.whatsAppToolStripMenuItem.Text = "WhatsApp";
+            this.whatsAppToolStripMenuItem.Click += new System.EventHandler(this.whatsAppToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -332,9 +469,24 @@
             this.toolStripStatusLabel2.Text = "Precisa de ajuda? Clique aqui e fale com o suporte";
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
+            // orcamentoBindingSource
+            // 
+            this.orcamentoBindingSource.DataMember = "orcamento";
+            this.orcamentoBindingSource.DataSource = this.glturfreDeployDataSet;
+            // 
+            // glturfreDeployDataSet
+            // 
+            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
+            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // orcamentoTableAdapter
             // 
             this.orcamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_menu
             // 
@@ -344,7 +496,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "frm_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Service";
@@ -352,13 +504,13 @@
             this.Load += new System.EventHandler(this.frm_menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +532,7 @@
         private System.Windows.Forms.ToolStripMenuItem veiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orcamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EscalarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financeiroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
@@ -394,9 +546,26 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private glturfreDeployDataSet glturfreDeployDataSet;
+        private gldturfreDeployDataSet glturfreDeployDataSet;
         private System.Windows.Forms.BindingSource orcamentoBindingSource;
-        private glturfreDeployDataSetTableAdapters.orcamentoTableAdapter orcamentoTableAdapter;
+        private gldturfreDeployDataSetTableAdapters.orcamentoTableAdapter orcamentoTableAdapter;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem valorForaDaTabelaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bateVoltaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem feriadoProlongadoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fimDeSemanaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bateVoltaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem feriadoProlongadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fimDeSemanaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem veiculoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fecharVendasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarVendasToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem whatsAppToolStripMenuItem;
     }
 }

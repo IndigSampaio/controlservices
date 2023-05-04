@@ -35,6 +35,19 @@
             System.Windows.Forms.Button btnAdd;
             System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_OrcForaTabela));
+            System.Windows.Forms.Label id_orcamentoLabel;
+            System.Windows.Forms.Label label14;
+            System.Windows.Forms.Label id_cliLabel;
+            System.Windows.Forms.Label nome_razao_socialLabel;
+            System.Windows.Forms.Label cpf_cnpjLabel;
+            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label telefoneLabel;
+            System.Windows.Forms.Label enderecoLabel;
+            System.Windows.Forms.Label num_enderecoLabel;
+            System.Windows.Forms.Label complementoLabel;
+            System.Windows.Forms.Label bairroLabel;
+            System.Windows.Forms.Label cidadeLabel;
+            System.Windows.Forms.Label estadoLabel;
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -44,6 +57,8 @@
             this.txtbx_kmVolta = new System.Windows.Forms.TextBox();
             this.txtbx_kmIda = new System.Windows.Forms.TextBox();
             this.txtbx_CidadeDestino = new System.Windows.Forms.TextBox();
+            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
             this.txtbx_cidadePartida = new System.Windows.Forms.TextBox();
             this.chkbx_UsarValorCalculo = new System.Windows.Forms.CheckBox();
             this.lbl_ValorCalculo = new System.Windows.Forms.Label();
@@ -64,8 +79,6 @@
             this.cmbbx_PeriodoViagem = new System.Windows.Forms.ComboBox();
             this.grpbx_InfCliente = new System.Windows.Forms.GroupBox();
             this.telefoneLabel2 = new System.Windows.Forms.Label();
-            this.cad_clieBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
             this.nome_razao_socialLabel2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -74,16 +87,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.msktxbx_CpfCnpj = new System.Windows.Forms.MaskedTextBox();
             this.cmbbx_mask_CpfCnpj = new System.Windows.Forms.ComboBox();
+            this.cad_clieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.id_cliTextBox = new System.Windows.Forms.TextBox();
+            this.cad_cliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nome_razao_socialTextBox = new System.Windows.Forms.TextBox();
+            this.cpf_cnpjTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.telefoneTextBox = new System.Windows.Forms.TextBox();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.num_enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.complementoTextBox = new System.Windows.Forms.TextBox();
+            this.bairroTextBox = new System.Windows.Forms.TextBox();
+            this.cidadeTextBox = new System.Windows.Forms.TextBox();
+            this.estadoTextBox = new System.Windows.Forms.TextBox();
+            this.txtbx_HoraRetorno = new System.Windows.Forms.MaskedTextBox();
+            this.txtbx_DataRetorno = new System.Windows.Forms.MaskedTextBox();
+            this.txtbx_HoraPartida = new System.Windows.Forms.MaskedTextBox();
+            this.txtbx_DataPartida = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.cad_clieTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.cad_clieTableAdapter();
-            this.tableAdapterManager = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.sfdSalvar = new System.Windows.Forms.SaveFileDialog();
-            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orcamentoTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.orcamentoTableAdapter();
             this.txtbx_embarque5 = new System.Windows.Forms.TextBox();
             this.txtbx_embarque4 = new System.Windows.Forms.TextBox();
             this.txtbx_embarque3 = new System.Windows.Forms.TextBox();
@@ -104,14 +132,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtbx_HoraRetorno = new System.Windows.Forms.MaskedTextBox();
-            this.txtbx_DataRetorno = new System.Windows.Forms.MaskedTextBox();
-            this.txtbx_HoraPartida = new System.Windows.Forms.MaskedTextBox();
-            this.txtbx_DataPartida = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -142,22 +163,45 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            //this.cad_clieTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.-cad_clieTableAdapter();
+            this.tableAdapterManager = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.sfdSalvar = new System.Windows.Forms.SaveFileDialog();
+            this.orcamentoTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.orcamentoTableAdapter();
+            this.id_orcamentoTextBox = new System.Windows.Forms.TextBox();
+            this.txtbx_idOrcString = new System.Windows.Forms.TextBox();
+            this.cad_cliTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.cad_cliTableAdapter();
             button3 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             btnSalvar = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            id_orcamentoLabel = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
+            id_cliLabel = new System.Windows.Forms.Label();
+            nome_razao_socialLabel = new System.Windows.Forms.Label();
+            cpf_cnpjLabel = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
+            telefoneLabel = new System.Windows.Forms.Label();
+            enderecoLabel = new System.Windows.Forms.Label();
+            num_enderecoLabel = new System.Windows.Forms.Label();
+            complementoLabel = new System.Windows.Forms.Label();
+            bairroLabel = new System.Windows.Forms.Label();
+            cidadeLabel = new System.Windows.Forms.Label();
+            estadoLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).BeginInit();
             this.grpbx_InfCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cad_clieBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -225,6 +269,123 @@
             button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             button1.UseVisualStyleBackColor = true;
             // 
+            // id_orcamentoLabel
+            // 
+            id_orcamentoLabel.AutoSize = true;
+            id_orcamentoLabel.Location = new System.Drawing.Point(70, 843);
+            id_orcamentoLabel.Name = "id_orcamentoLabel";
+            id_orcamentoLabel.Size = new System.Drawing.Size(94, 17);
+            id_orcamentoLabel.TabIndex = 58;
+            id_orcamentoLabel.Text = "id orcamento:";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(27, 871);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(137, 17);
+            label14.TabIndex = 61;
+            label14.Text = "id orcamento_string:";
+            // 
+            // id_cliLabel
+            // 
+            id_cliLabel.AutoSize = true;
+            id_cliLabel.Location = new System.Drawing.Point(33, 52);
+            id_cliLabel.Name = "id_cliLabel";
+            id_cliLabel.Size = new System.Drawing.Size(40, 17);
+            id_cliLabel.TabIndex = 0;
+            id_cliLabel.Text = "id cli:";
+            // 
+            // nome_razao_socialLabel
+            // 
+            nome_razao_socialLabel.AutoSize = true;
+            nome_razao_socialLabel.Location = new System.Drawing.Point(33, 80);
+            nome_razao_socialLabel.Name = "nome_razao_socialLabel";
+            nome_razao_socialLabel.Size = new System.Drawing.Size(127, 17);
+            nome_razao_socialLabel.TabIndex = 2;
+            nome_razao_socialLabel.Text = "nome razao social:";
+            // 
+            // cpf_cnpjLabel
+            // 
+            cpf_cnpjLabel.AutoSize = true;
+            cpf_cnpjLabel.Location = new System.Drawing.Point(33, 108);
+            cpf_cnpjLabel.Name = "cpf_cnpjLabel";
+            cpf_cnpjLabel.Size = new System.Drawing.Size(61, 17);
+            cpf_cnpjLabel.TabIndex = 4;
+            cpf_cnpjLabel.Text = "cpf cnpj:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(33, 136);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(45, 17);
+            emailLabel.TabIndex = 6;
+            emailLabel.Text = "email:";
+            // 
+            // telefoneLabel
+            // 
+            telefoneLabel.AutoSize = true;
+            telefoneLabel.Location = new System.Drawing.Point(33, 164);
+            telefoneLabel.Name = "telefoneLabel";
+            telefoneLabel.Size = new System.Drawing.Size(63, 17);
+            telefoneLabel.TabIndex = 8;
+            telefoneLabel.Text = "telefone:";
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(33, 192);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(72, 17);
+            enderecoLabel.TabIndex = 10;
+            enderecoLabel.Text = "endereco:";
+            // 
+            // num_enderecoLabel
+            // 
+            num_enderecoLabel.AutoSize = true;
+            num_enderecoLabel.Location = new System.Drawing.Point(33, 220);
+            num_enderecoLabel.Name = "num_enderecoLabel";
+            num_enderecoLabel.Size = new System.Drawing.Size(103, 17);
+            num_enderecoLabel.TabIndex = 12;
+            num_enderecoLabel.Text = "num endereco:";
+            // 
+            // complementoLabel
+            // 
+            complementoLabel.AutoSize = true;
+            complementoLabel.Location = new System.Drawing.Point(33, 248);
+            complementoLabel.Name = "complementoLabel";
+            complementoLabel.Size = new System.Drawing.Size(96, 17);
+            complementoLabel.TabIndex = 14;
+            complementoLabel.Text = "complemento:";
+            // 
+            // bairroLabel
+            // 
+            bairroLabel.AutoSize = true;
+            bairroLabel.Location = new System.Drawing.Point(33, 276);
+            bairroLabel.Name = "bairroLabel";
+            bairroLabel.Size = new System.Drawing.Size(49, 17);
+            bairroLabel.TabIndex = 16;
+            bairroLabel.Text = "bairro:";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(33, 304);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(54, 17);
+            cidadeLabel.TabIndex = 18;
+            cidadeLabel.Text = "cidade:";
+            // 
+            // estadoLabel
+            // 
+            estadoLabel.AutoSize = true;
+            estadoLabel.Location = new System.Drawing.Point(33, 332);
+            estadoLabel.Name = "estadoLabel";
+            estadoLabel.Size = new System.Drawing.Size(55, 17);
+            estadoLabel.TabIndex = 20;
+            estadoLabel.Text = "estado:";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(button3);
@@ -235,14 +396,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 85);
+            this.panel2.Size = new System.Drawing.Size(1052, 85);
             this.panel2.TabIndex = 46;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(969, 0);
+            this.panel3.Location = new System.Drawing.Point(963, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(89, 85);
             this.panel3.TabIndex = 46;
@@ -327,13 +488,25 @@
             // 
             // txtbx_CidadeDestino
             // 
+            this.txtbx_CidadeDestino.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "destino", true));
             this.txtbx_CidadeDestino.Location = new System.Drawing.Point(180, 102);
             this.txtbx_CidadeDestino.Name = "txtbx_CidadeDestino";
             this.txtbx_CidadeDestino.Size = new System.Drawing.Size(153, 22);
             this.txtbx_CidadeDestino.TabIndex = 0;
             // 
+            // orcamentoBindingSource
+            // 
+            this.orcamentoBindingSource.DataMember = "orcamento";
+            this.orcamentoBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
+            // gldturfreDeployDataSet
+            // 
+            this.gldturfreDeployDataSet.DataSetName = "gldturfreDeployDataSet";
+            this.gldturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtbx_cidadePartida
             // 
+            this.txtbx_cidadePartida.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "partida", true));
             this.txtbx_cidadePartida.Location = new System.Drawing.Point(180, 66);
             this.txtbx_cidadePartida.Name = "txtbx_cidadePartida";
             this.txtbx_cidadePartida.Size = new System.Drawing.Size(153, 22);
@@ -385,6 +558,7 @@
             this.lbl_totalKm.Size = new System.Drawing.Size(57, 17);
             this.lbl_totalKm.TabIndex = 5;
             this.lbl_totalKm.Text = "total km";
+            this.lbl_totalKm.Click += new System.EventHandler(this.lbl_totalKm_Click);
             // 
             // label19
             // 
@@ -397,6 +571,7 @@
             // 
             // txtbx_Fechamento
             // 
+            this.txtbx_Fechamento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "valor", true));
             this.txtbx_Fechamento.Location = new System.Drawing.Point(178, 477);
             this.txtbx_Fechamento.Name = "txtbx_Fechamento";
             this.txtbx_Fechamento.Size = new System.Drawing.Size(104, 22);
@@ -467,6 +642,7 @@
             // 
             // cmbbx_CatVeiculo
             // 
+            this.cmbbx_CatVeiculo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "categ_veiculo", true));
             this.cmbbx_CatVeiculo.FormattingEnabled = true;
             this.cmbbx_CatVeiculo.Items.AddRange(new object[] {
             "DD 64L",
@@ -495,6 +671,7 @@
             // 
             // cmbbx_PeriodoViagem
             // 
+            this.cmbbx_PeriodoViagem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "periodo", true));
             this.cmbbx_PeriodoViagem.FormattingEnabled = true;
             this.cmbbx_PeriodoViagem.Items.AddRange(new object[] {
             "FIM DE SEMANA",
@@ -527,7 +704,7 @@
             // 
             // telefoneLabel2
             // 
-            this.telefoneLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_clieBindingSource, "telefone", true));
+            this.telefoneLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "tel_cliente", true));
             this.telefoneLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefoneLabel2.Location = new System.Drawing.Point(101, 104);
             this.telefoneLabel2.Name = "telefoneLabel2";
@@ -535,19 +712,9 @@
             this.telefoneLabel2.TabIndex = 13;
             this.telefoneLabel2.Text = "label7";
             // 
-            // cad_clieBindingSource
-            // 
-            this.cad_clieBindingSource.DataMember = "cad_clie";
-            this.cad_clieBindingSource.DataSource = this.gldturfreDeployDataSet;
-            // 
-            // gldturfreDeployDataSet
-            // 
-            this.gldturfreDeployDataSet.DataSetName = "gldturfreDeployDataSet";
-            this.gldturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // nome_razao_socialLabel2
             // 
-            this.nome_razao_socialLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_clieBindingSource, "nome_razao_social", true));
+            this.nome_razao_socialLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "nome_cliente", true));
             this.nome_razao_socialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome_razao_socialLabel2.Location = new System.Drawing.Point(103, 73);
             this.nome_razao_socialLabel2.Name = "nome_razao_socialLabel2";
@@ -607,6 +774,8 @@
             // 
             // msktxbx_CpfCnpj
             // 
+            this.msktxbx_CpfCnpj.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "cpf_cnpj_cliente", true));
+            this.msktxbx_CpfCnpj.Enabled = false;
             this.msktxbx_CpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msktxbx_CpfCnpj.Location = new System.Drawing.Point(103, 31);
             this.msktxbx_CpfCnpj.Name = "msktxbx_CpfCnpj";
@@ -625,21 +794,27 @@
             this.cmbbx_mask_CpfCnpj.Size = new System.Drawing.Size(91, 26);
             this.cmbbx_mask_CpfCnpj.TabIndex = 0;
             // 
+            // cad_clieBindingSource
+            // 
+            this.cad_clieBindingSource.DataMember = "cad_clie";
+            this.cad_clieBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabControl1.Location = new System.Drawing.Point(469, 85);
+            this.tabControl1.Location = new System.Drawing.Point(463, 85);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(589, 723);
+            this.tabControl1.Size = new System.Drawing.Size(589, 970);
             this.tabControl1.TabIndex = 58;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtbx_HoraRetorno);
             this.tabPage1.Controls.Add(this.txtbx_DataRetorno);
             this.tabPage1.Controls.Add(this.txtbx_HoraPartida);
@@ -651,9 +826,217 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(581, 722);
+            this.tabPage1.Size = new System.Drawing.Size(581, 941);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data da Viagem";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(id_cliLabel);
+            this.groupBox1.Controls.Add(this.id_cliTextBox);
+            this.groupBox1.Controls.Add(nome_razao_socialLabel);
+            this.groupBox1.Controls.Add(this.nome_razao_socialTextBox);
+            this.groupBox1.Controls.Add(cpf_cnpjLabel);
+            this.groupBox1.Controls.Add(this.cpf_cnpjTextBox);
+            this.groupBox1.Controls.Add(emailLabel);
+            this.groupBox1.Controls.Add(this.emailTextBox);
+            this.groupBox1.Controls.Add(telefoneLabel);
+            this.groupBox1.Controls.Add(this.telefoneTextBox);
+            this.groupBox1.Controls.Add(enderecoLabel);
+            this.groupBox1.Controls.Add(this.enderecoTextBox);
+            this.groupBox1.Controls.Add(num_enderecoLabel);
+            this.groupBox1.Controls.Add(this.num_enderecoTextBox);
+            this.groupBox1.Controls.Add(complementoLabel);
+            this.groupBox1.Controls.Add(this.complementoTextBox);
+            this.groupBox1.Controls.Add(bairroLabel);
+            this.groupBox1.Controls.Add(this.bairroTextBox);
+            this.groupBox1.Controls.Add(cidadeLabel);
+            this.groupBox1.Controls.Add(this.cidadeTextBox);
+            this.groupBox1.Controls.Add(estadoLabel);
+            this.groupBox1.Controls.Add(this.estadoTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(97, 427);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(357, 455);
+            this.groupBox1.TabIndex = 52;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // id_cliTextBox
+            // 
+            this.id_cliTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "id_cli", true));
+            this.id_cliTextBox.Location = new System.Drawing.Point(166, 49);
+            this.id_cliTextBox.Name = "id_cliTextBox";
+            this.id_cliTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_cliTextBox.TabIndex = 1;
+            // 
+            // cad_cliBindingSource
+            // 
+            this.cad_cliBindingSource.DataMember = "cad_cli";
+            this.cad_cliBindingSource.DataSource = this.gldturfreDeployDataSet;
+            // 
+            // nome_razao_socialTextBox
+            // 
+            this.nome_razao_socialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "nome_razao_social", true));
+            this.nome_razao_socialTextBox.Location = new System.Drawing.Point(166, 77);
+            this.nome_razao_socialTextBox.Name = "nome_razao_socialTextBox";
+            this.nome_razao_socialTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nome_razao_socialTextBox.TabIndex = 3;
+            // 
+            // cpf_cnpjTextBox
+            // 
+            this.cpf_cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cpf_cnpj", true));
+            this.cpf_cnpjTextBox.Location = new System.Drawing.Point(166, 105);
+            this.cpf_cnpjTextBox.Name = "cpf_cnpjTextBox";
+            this.cpf_cnpjTextBox.Size = new System.Drawing.Size(100, 22);
+            this.cpf_cnpjTextBox.TabIndex = 5;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(166, 133);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(100, 22);
+            this.emailTextBox.TabIndex = 7;
+            // 
+            // telefoneTextBox
+            // 
+            this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "telefone", true));
+            this.telefoneTextBox.Location = new System.Drawing.Point(166, 161);
+            this.telefoneTextBox.Name = "telefoneTextBox";
+            this.telefoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.telefoneTextBox.TabIndex = 9;
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(166, 189);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.enderecoTextBox.TabIndex = 11;
+            // 
+            // num_enderecoTextBox
+            // 
+            this.num_enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "num_endereco", true));
+            this.num_enderecoTextBox.Location = new System.Drawing.Point(166, 217);
+            this.num_enderecoTextBox.Name = "num_enderecoTextBox";
+            this.num_enderecoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.num_enderecoTextBox.TabIndex = 13;
+            // 
+            // complementoTextBox
+            // 
+            this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "complemento", true));
+            this.complementoTextBox.Location = new System.Drawing.Point(166, 245);
+            this.complementoTextBox.Name = "complementoTextBox";
+            this.complementoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.complementoTextBox.TabIndex = 15;
+            // 
+            // bairroTextBox
+            // 
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "bairro", true));
+            this.bairroTextBox.Location = new System.Drawing.Point(166, 273);
+            this.bairroTextBox.Name = "bairroTextBox";
+            this.bairroTextBox.Size = new System.Drawing.Size(100, 22);
+            this.bairroTextBox.TabIndex = 17;
+            // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cidade", true));
+            this.cidadeTextBox.Location = new System.Drawing.Point(166, 301);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.cidadeTextBox.TabIndex = 19;
+            // 
+            // estadoTextBox
+            // 
+            this.estadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "estado", true));
+            this.estadoTextBox.Location = new System.Drawing.Point(166, 329);
+            this.estadoTextBox.Name = "estadoTextBox";
+            this.estadoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.estadoTextBox.TabIndex = 21;
+            // 
+            // txtbx_HoraRetorno
+            // 
+            this.txtbx_HoraRetorno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_retorno", true));
+            this.txtbx_HoraRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_HoraRetorno.Location = new System.Drawing.Point(174, 262);
+            this.txtbx_HoraRetorno.Mask = "00:00";
+            this.txtbx_HoraRetorno.Name = "txtbx_HoraRetorno";
+            this.txtbx_HoraRetorno.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_HoraRetorno.TabIndex = 51;
+            this.txtbx_HoraRetorno.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtbx_DataRetorno
+            // 
+            this.txtbx_DataRetorno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "data_retorno", true));
+            this.txtbx_DataRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_DataRetorno.Location = new System.Drawing.Point(154, 200);
+            this.txtbx_DataRetorno.Mask = "00/00/0000";
+            this.txtbx_DataRetorno.Name = "txtbx_DataRetorno";
+            this.txtbx_DataRetorno.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_DataRetorno.TabIndex = 50;
+            this.txtbx_DataRetorno.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtbx_HoraPartida
+            // 
+            this.txtbx_HoraPartida.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "hora_partida", true));
+            this.txtbx_HoraPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_HoraPartida.Location = new System.Drawing.Point(168, 99);
+            this.txtbx_HoraPartida.Mask = "00:00";
+            this.txtbx_HoraPartida.Name = "txtbx_HoraPartida";
+            this.txtbx_HoraPartida.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_HoraPartida.TabIndex = 49;
+            this.txtbx_HoraPartida.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtbx_DataPartida
+            // 
+            this.txtbx_DataPartida.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "data_partida", true));
+            this.txtbx_DataPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_DataPartida.Location = new System.Drawing.Point(148, 47);
+            this.txtbx_DataPartida.Mask = "00/00/0000";
+            this.txtbx_DataPartida.Name = "txtbx_DataPartida";
+            this.txtbx_DataPartida.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_DataPartida.TabIndex = 48;
+            this.txtbx_DataPartida.ValidatingType = typeof(System.DateTime);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 265);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(162, 20);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Horario de Retorno :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 20);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Horario de Partida :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 20);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Data de Retorno: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 20);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Data de Partida :";
             // 
             // tabPage2
             // 
@@ -681,90 +1064,13 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(581, 722);
+            this.tabPage2.Size = new System.Drawing.Size(581, 941);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informacoes do Embarque";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.label41);
-            this.tabPage3.Controls.Add(this.label42);
-            this.tabPage3.Controls.Add(this.label43);
-            this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.label30);
-            this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.label33);
-            this.tabPage3.Controls.Add(this.label34);
-            this.tabPage3.Controls.Add(this.maskedTextBox10);
-            this.tabPage3.Controls.Add(this.maskedTextBox9);
-            this.tabPage3.Controls.Add(this.maskedTextBox8);
-            this.tabPage3.Controls.Add(this.maskedTextBox7);
-            this.tabPage3.Controls.Add(this.label40);
-            this.tabPage3.Controls.Add(this.maskedTextBox6);
-            this.tabPage3.Controls.Add(this.label39);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.maskedTextBox1);
-            this.tabPage3.Controls.Add(this.maskedTextBox2);
-            this.tabPage3.Controls.Add(this.maskedTextBox3);
-            this.tabPage3.Controls.Add(this.maskedTextBox4);
-            this.tabPage3.Controls.Add(this.maskedTextBox5);
-            this.tabPage3.Controls.Add(this.label35);
-            this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.label37);
-            this.tabPage3.Controls.Add(this.label38);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(581, 694);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "City Tour / Passeios";
-            // 
-            // cad_clieTableAdapter
-            // 
-            this.cad_clieTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.cad_clieTableAdapter = this.cad_clieTableAdapter;
-            this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.categ_veiculoTableAdapter = null;
-            this.tableAdapterManager.estadoTableAdapter = null;
-            this.tableAdapterManager.lgn_usersTableAdapter = null;
-            this.tableAdapterManager.orcamentoTableAdapter = null;
-            this.tableAdapterManager.tabela_BateVoltaTableAdapter = null;
-            this.tableAdapterManager.tabela_FerProTableAdapter = null;
-            this.tableAdapterManager.tabela_FimSemTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.veiculoTableAdapter = null;
-            this.tableAdapterManager.viagem_fechadaTableAdapter = null;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // sfdSalvar
-            // 
-            this.sfdSalvar.FileOk += new System.ComponentModel.CancelEventHandler(this.sfdSalvar_FileOk);
-            // 
-            // orcamentoBindingSource
-            // 
-            this.orcamentoBindingSource.DataMember = "orcamento";
-            this.orcamentoBindingSource.DataSource = this.gldturfreDeployDataSet;
-            // 
-            // orcamentoTableAdapter
-            // 
-            this.orcamentoTableAdapter.ClearBeforeFill = true;
-            // 
             // txtbx_embarque5
             // 
+            this.txtbx_embarque5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "embarque_cinco", true));
             this.txtbx_embarque5.Location = new System.Drawing.Point(220, 452);
             this.txtbx_embarque5.Name = "txtbx_embarque5";
             this.txtbx_embarque5.Size = new System.Drawing.Size(267, 22);
@@ -772,6 +1078,7 @@
             // 
             // txtbx_embarque4
             // 
+            this.txtbx_embarque4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "embarque_quatro", true));
             this.txtbx_embarque4.Location = new System.Drawing.Point(220, 336);
             this.txtbx_embarque4.Name = "txtbx_embarque4";
             this.txtbx_embarque4.Size = new System.Drawing.Size(267, 22);
@@ -779,6 +1086,7 @@
             // 
             // txtbx_embarque3
             // 
+            this.txtbx_embarque3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "embarque_tres", true));
             this.txtbx_embarque3.Location = new System.Drawing.Point(220, 223);
             this.txtbx_embarque3.Name = "txtbx_embarque3";
             this.txtbx_embarque3.Size = new System.Drawing.Size(267, 22);
@@ -786,6 +1094,7 @@
             // 
             // txtbx_embarque2
             // 
+            this.txtbx_embarque2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "embarque_dois", true));
             this.txtbx_embarque2.Location = new System.Drawing.Point(220, 127);
             this.txtbx_embarque2.Name = "txtbx_embarque2";
             this.txtbx_embarque2.Size = new System.Drawing.Size(267, 22);
@@ -793,6 +1102,7 @@
             // 
             // txtbx_embarque1
             // 
+            this.txtbx_embarque1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "embarque_um", true));
             this.txtbx_embarque1.Location = new System.Drawing.Point(220, 25);
             this.txtbx_embarque1.Name = "txtbx_embarque1";
             this.txtbx_embarque1.Size = new System.Drawing.Size(267, 22);
@@ -800,6 +1110,7 @@
             // 
             // msktxbx_Embarque5
             // 
+            this.msktxbx_Embarque5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_embarque_cinco", true));
             this.msktxbx_Embarque5.Location = new System.Drawing.Point(220, 487);
             this.msktxbx_Embarque5.Mask = "00:00";
             this.msktxbx_Embarque5.Name = "msktxbx_Embarque5";
@@ -809,6 +1120,7 @@
             // 
             // msktxbx_Embarque4
             // 
+            this.msktxbx_Embarque4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_embarque_quatro", true));
             this.msktxbx_Embarque4.Location = new System.Drawing.Point(220, 371);
             this.msktxbx_Embarque4.Mask = "00:00";
             this.msktxbx_Embarque4.Name = "msktxbx_Embarque4";
@@ -818,6 +1130,7 @@
             // 
             // msktxbx_Embarque3
             // 
+            this.msktxbx_Embarque3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_embarque_tres", true));
             this.msktxbx_Embarque3.Location = new System.Drawing.Point(220, 260);
             this.msktxbx_Embarque3.Mask = "00:00";
             this.msktxbx_Embarque3.Name = "msktxbx_Embarque3";
@@ -827,6 +1140,7 @@
             // 
             // msktxbx_Embarque2
             // 
+            this.msktxbx_Embarque2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_embarque_dois", true));
             this.msktxbx_Embarque2.Location = new System.Drawing.Point(220, 162);
             this.msktxbx_Embarque2.Mask = "00:00";
             this.msktxbx_Embarque2.Name = "msktxbx_Embarque2";
@@ -836,6 +1150,7 @@
             // 
             // msktxbx_Embarque1
             // 
+            this.msktxbx_Embarque1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "horario_embarque_um", true));
             this.msktxbx_Embarque1.Location = new System.Drawing.Point(220, 60);
             this.msktxbx_Embarque1.Mask = "00:00";
             this.msktxbx_Embarque1.Name = "msktxbx_Embarque1";
@@ -933,85 +1248,45 @@
             this.label13.TabIndex = 20;
             this.label13.Text = "Local do Primeiro Embarque: ";
             // 
-            // txtbx_HoraRetorno
+            // tabPage3
             // 
-            this.txtbx_HoraRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_HoraRetorno.Location = new System.Drawing.Point(174, 262);
-            this.txtbx_HoraRetorno.Mask = "00:00";
-            this.txtbx_HoraRetorno.Name = "txtbx_HoraRetorno";
-            this.txtbx_HoraRetorno.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_HoraRetorno.TabIndex = 51;
-            this.txtbx_HoraRetorno.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtbx_DataRetorno
-            // 
-            this.txtbx_DataRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_DataRetorno.Location = new System.Drawing.Point(154, 200);
-            this.txtbx_DataRetorno.Mask = "00/00/0000";
-            this.txtbx_DataRetorno.Name = "txtbx_DataRetorno";
-            this.txtbx_DataRetorno.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_DataRetorno.TabIndex = 50;
-            this.txtbx_DataRetorno.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtbx_HoraPartida
-            // 
-            this.txtbx_HoraPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_HoraPartida.Location = new System.Drawing.Point(168, 99);
-            this.txtbx_HoraPartida.Mask = "00:00";
-            this.txtbx_HoraPartida.Name = "txtbx_HoraPartida";
-            this.txtbx_HoraPartida.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_HoraPartida.TabIndex = 49;
-            this.txtbx_HoraPartida.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtbx_DataPartida
-            // 
-            this.txtbx_DataPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_DataPartida.Location = new System.Drawing.Point(148, 47);
-            this.txtbx_DataPartida.Mask = "00/00/0000";
-            this.txtbx_DataPartida.Name = "txtbx_DataPartida";
-            this.txtbx_DataPartida.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_DataPartida.TabIndex = 48;
-            this.txtbx_DataPartida.ValidatingType = typeof(System.DateTime);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 265);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 20);
-            this.label6.TabIndex = 47;
-            this.label6.Text = "Horario de Retorno :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 20);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Horario de Partida :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 20);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Data de Retorno: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 20);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Data de Partida :";
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.label41);
+            this.tabPage3.Controls.Add(this.label42);
+            this.tabPage3.Controls.Add(this.label43);
+            this.tabPage3.Controls.Add(this.label29);
+            this.tabPage3.Controls.Add(this.label30);
+            this.tabPage3.Controls.Add(this.label31);
+            this.tabPage3.Controls.Add(this.label32);
+            this.tabPage3.Controls.Add(this.label33);
+            this.tabPage3.Controls.Add(this.label34);
+            this.tabPage3.Controls.Add(this.maskedTextBox10);
+            this.tabPage3.Controls.Add(this.maskedTextBox9);
+            this.tabPage3.Controls.Add(this.maskedTextBox8);
+            this.tabPage3.Controls.Add(this.maskedTextBox7);
+            this.tabPage3.Controls.Add(this.label40);
+            this.tabPage3.Controls.Add(this.maskedTextBox6);
+            this.tabPage3.Controls.Add(this.label39);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.maskedTextBox1);
+            this.tabPage3.Controls.Add(this.maskedTextBox2);
+            this.tabPage3.Controls.Add(this.maskedTextBox3);
+            this.tabPage3.Controls.Add(this.maskedTextBox4);
+            this.tabPage3.Controls.Add(this.maskedTextBox5);
+            this.tabPage3.Controls.Add(this.label35);
+            this.tabPage3.Controls.Add(this.label36);
+            this.tabPage3.Controls.Add(this.label37);
+            this.tabPage3.Controls.Add(this.label38);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(581, 941);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "City Tour / Passeios";
             // 
             // label41
             // 
@@ -1096,6 +1371,7 @@
             // 
             // maskedTextBox10
             // 
+            this.maskedTextBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_cinco_horario", true));
             this.maskedTextBox10.Location = new System.Drawing.Point(220, 598);
             this.maskedTextBox10.Mask = "00:00";
             this.maskedTextBox10.Name = "maskedTextBox10";
@@ -1105,6 +1381,7 @@
             // 
             // maskedTextBox9
             // 
+            this.maskedTextBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_quatro_horario", true));
             this.maskedTextBox9.Location = new System.Drawing.Point(220, 469);
             this.maskedTextBox9.Mask = "00:00";
             this.maskedTextBox9.Name = "maskedTextBox9";
@@ -1114,6 +1391,7 @@
             // 
             // maskedTextBox8
             // 
+            this.maskedTextBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_tres_horario", true));
             this.maskedTextBox8.Location = new System.Drawing.Point(220, 346);
             this.maskedTextBox8.Mask = "00:00";
             this.maskedTextBox8.Name = "maskedTextBox8";
@@ -1123,6 +1401,7 @@
             // 
             // maskedTextBox7
             // 
+            this.maskedTextBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_dois_horario", true));
             this.maskedTextBox7.Location = new System.Drawing.Point(220, 211);
             this.maskedTextBox7.Mask = "00:00";
             this.maskedTextBox7.Name = "maskedTextBox7";
@@ -1141,6 +1420,7 @@
             // 
             // maskedTextBox6
             // 
+            this.maskedTextBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_um_horario", true));
             this.maskedTextBox6.Location = new System.Drawing.Point(220, 88);
             this.maskedTextBox6.Mask = "00:00";
             this.maskedTextBox6.Name = "maskedTextBox6";
@@ -1159,6 +1439,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_cinco_roteiro", true));
             this.textBox1.Location = new System.Drawing.Point(220, 535);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(267, 22);
@@ -1166,6 +1447,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_quatro_roteiro", true));
             this.textBox2.Location = new System.Drawing.Point(220, 406);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(267, 22);
@@ -1173,6 +1455,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_tres_roteiro", true));
             this.textBox3.Location = new System.Drawing.Point(220, 281);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(267, 22);
@@ -1180,6 +1463,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_dois_roteiro", true));
             this.textBox4.Location = new System.Drawing.Point(220, 148);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(267, 22);
@@ -1187,6 +1471,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_um_roteiro", true));
             this.textBox5.Location = new System.Drawing.Point(220, 25);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(267, 22);
@@ -1194,6 +1479,7 @@
             // 
             // maskedTextBox1
             // 
+            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_cinco_data", true));
             this.maskedTextBox1.Location = new System.Drawing.Point(220, 570);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -1203,6 +1489,7 @@
             // 
             // maskedTextBox2
             // 
+            this.maskedTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_quatro_data", true));
             this.maskedTextBox2.Location = new System.Drawing.Point(220, 441);
             this.maskedTextBox2.Mask = "00/00/0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
@@ -1212,6 +1499,7 @@
             // 
             // maskedTextBox3
             // 
+            this.maskedTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_tres_data", true));
             this.maskedTextBox3.Location = new System.Drawing.Point(220, 318);
             this.maskedTextBox3.Mask = "00/00/0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
@@ -1221,6 +1509,7 @@
             // 
             // maskedTextBox4
             // 
+            this.maskedTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_dois_data", true));
             this.maskedTextBox4.Location = new System.Drawing.Point(220, 183);
             this.maskedTextBox4.Mask = "00/00/0000";
             this.maskedTextBox4.Name = "maskedTextBox4";
@@ -1230,6 +1519,7 @@
             // 
             // maskedTextBox5
             // 
+            this.maskedTextBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "roteiro_dia_um_data", true));
             this.maskedTextBox5.Location = new System.Drawing.Point(220, 60);
             this.maskedTextBox5.Mask = "00/00/0000";
             this.maskedTextBox5.Name = "maskedTextBox5";
@@ -1273,12 +1563,71 @@
             this.label38.TabIndex = 59;
             this.label38.Text = "Local do Primeiro Roteiro: ";
             // 
+            // cad_clieTableAdapter
+            // 
+            //this.cad_clieTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            //this.tableAdapterManager.cad_clieTableAdapter = this.cad_clieTableAdapter;
+            this.tableAdapterManager.cad_cliTableAdapter = null;
+            this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager.estadoTableAdapter = null;
+            this.tableAdapterManager.lgn_usersTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
+            this.tableAdapterManager.tabela_BateVoltaTableAdapter = null;
+            this.tableAdapterManager.tabela_FerProTableAdapter = null;
+            this.tableAdapterManager.tabela_FimSemTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
+            this.tableAdapterManager.viagem_fechadaTableAdapter = null;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // sfdSalvar
+            // 
+            this.sfdSalvar.FileOk += new System.ComponentModel.CancelEventHandler(this.sfdSalvar_FileOk);
+            // 
+            // orcamentoTableAdapter
+            // 
+            this.orcamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // id_orcamentoTextBox
+            // 
+            this.id_orcamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "id_orcamento", true));
+            this.id_orcamentoTextBox.Location = new System.Drawing.Point(170, 840);
+            this.id_orcamentoTextBox.Name = "id_orcamentoTextBox";
+            this.id_orcamentoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_orcamentoTextBox.TabIndex = 59;
+            // 
+            // txtbx_idOrcString
+            // 
+            this.txtbx_idOrcString.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orcamentoBindingSource, "id_str", true));
+            this.txtbx_idOrcString.Location = new System.Drawing.Point(170, 868);
+            this.txtbx_idOrcString.Name = "txtbx_idOrcString";
+            this.txtbx_idOrcString.Size = new System.Drawing.Size(100, 22);
+            this.txtbx_idOrcString.TabIndex = 60;
+            // 
+            // cad_cliTableAdapter
+            // 
+            this.cad_cliTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_OrcForaTabela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 808);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1052, 1055);
             this.ControlBox = false;
+            this.Controls.Add(label14);
+            this.Controls.Add(this.txtbx_idOrcString);
+            this.Controls.Add(id_orcamentoLabel);
+            this.Controls.Add(this.id_orcamentoTextBox);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.grpbx_InfCliente);
             this.Controls.Add(this.groupBox6);
@@ -1291,19 +1640,23 @@
             this.panel3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).EndInit();
             this.grpbx_InfCliente.ResumeLayout(false);
             this.grpbx_InfCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cad_clieBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1350,7 +1703,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private gldturfreDeployDataSet gldturfreDeployDataSet;
         private System.Windows.Forms.BindingSource cad_clieBindingSource;
-        private gldturfreDeployDataSetTableAdapters.cad_clieTableAdapter cad_clieTableAdapter;
+        //private gldturfreDeployDataSetTableAdapters.cad_clieTableAdapter cad_clieTableAdapter;
         private gldturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.SaveFileDialog sfdSalvar;
@@ -1416,5 +1769,21 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox id_orcamentoTextBox;
+        private System.Windows.Forms.TextBox txtbx_idOrcString;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.BindingSource cad_cliBindingSource;
+        private gldturfreDeployDataSetTableAdapters.cad_cliTableAdapter cad_cliTableAdapter;
+        private System.Windows.Forms.TextBox id_cliTextBox;
+        private System.Windows.Forms.TextBox nome_razao_socialTextBox;
+        private System.Windows.Forms.TextBox cpf_cnpjTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox telefoneTextBox;
+        private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.TextBox num_enderecoTextBox;
+        private System.Windows.Forms.TextBox complementoTextBox;
+        private System.Windows.Forms.TextBox bairroTextBox;
+        private System.Windows.Forms.TextBox cidadeTextBox;
+        private System.Windows.Forms.TextBox estadoTextBox;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace control_services
 {
@@ -105,8 +106,8 @@ namespace control_services
 
             else
             {
-                frm_consultOrc orcNovo = new frm_consultOrc();
-                orcNovo.ShowDialog();
+                frm_OrcTabela2 orcTabela2 = new frm_OrcTabela2();
+                orcTabela2.ShowDialog();
             }
         }
 
@@ -118,8 +119,8 @@ namespace control_services
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frm_consultOrc orcNovo= new frm_consultOrc();
-            orcNovo.ShowDialog();
+            frm_OrcTabela2 frm_OrcTabela = new frm_OrcTabela2();
+            frm_OrcTabela.ShowDialog();
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,6 +152,83 @@ namespace control_services
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void valorForaDaTabelaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_OrcForaTabela frm_OrcForaTabela = new frm_OrcForaTabela();
+            frm_OrcForaTabela.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frm_contrato contrato = new frm_contrato();
+            contrato.ShowDialog();
+        }
+
+        private void bateVoltaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void feriadoProlongadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fimDeSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_calendario calendario = new frm_calendario();
+            calendario.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frm_calendario calendario = new frm_calendario();
+            calendario.ShowDialog();
+        }
+
+        private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_consultLgn consultLgn = new frm_consultLgn();
+            consultLgn.ShowDialog();
+        }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_consultCli consultCli = new frm_consultCli();
+            consultCli.ShowDialog();
+        }
+
+        private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fecharVendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_fecharVendas fecharVendas = new frm_fecharVendas();
+            fecharVendas.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void whatsAppToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"Chrome.exe", "https://web.whatsapp.com/");
         }
     }
 }

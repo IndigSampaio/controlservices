@@ -41,7 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
             this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
             this.cad_funBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cad_funTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.cad_funTableAdapter();
@@ -164,44 +164,12 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.batevolta_carroTableAdapter = null;
-            this.tableAdapterManager.batevolta_conv47LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd60LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec50LTableAdapter = null;
-            this.tableAdapterManager.batevolta_micro32LTableAdapter = null;
-            this.tableAdapterManager.batevolta_semi46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van15LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van18LTableAdapter = null;
-            this.tableAdapterManager.cad_cliTableAdapter = null;
             this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.cad_loginTableAdapter = null;
+            this.tableAdapterManager.lgn_usersTableAdapter = null;
             this.tableAdapterManager.categ_veiculoTableAdapter = null;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.estadosTableAdapter = null;
-            this.tableAdapterManager.ferpro_carroTableAdapter = null;
-            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
-            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
-            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
-            this.tableAdapterManager.fimsem_carroTableAdapter = null;
-            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
-            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
-            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
             this.tableAdapterManager.orcamentoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.veiculoTableAdapter = null;
             // 
             // gldturfreDeployDataSet
@@ -221,7 +189,6 @@
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.cad_clieTableAdapter = null;
             this.tableAdapterManager1.cad_funTableAdapter = this.cad_funTableAdapter;
             this.tableAdapterManager1.categ_veiculoTableAdapter = null;
             this.tableAdapterManager1.estadoTableAdapter = null;
@@ -288,7 +255,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
-        private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private gldturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private gldturfreDeployDataSet gldturfreDeployDataSet;
         private System.Windows.Forms.BindingSource cad_funBindingSource;
         private gldturfreDeployDataSetTableAdapters.cad_funTableAdapter cad_funTableAdapter;

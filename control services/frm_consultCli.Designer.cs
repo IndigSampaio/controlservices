@@ -29,277 +29,146 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label id_cliLabel;
-            System.Windows.Forms.Label nome_razao_socialLabel;
-            System.Windows.Forms.Label cpf_cnpjLabel;
-            System.Windows.Forms.Label emailLabel;
-            System.Windows.Forms.Label telefoneLabel;
-            this.glturfreDeployDataSet = new control_services.glturfreDeployDataSet();
-            this.cad_cliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cad_cliTableAdapter = new control_services.glturfreDeployDataSetTableAdapters.cad_cliTableAdapter();
-            this.tableAdapterManager = new control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.lbl_nome = new System.Windows.Forms.Label();
-            this.lbl_CpfCnpj = new System.Windows.Forms.Label();
-            this.lbl_email = new System.Windows.Forms.Label();
-            this.lbl_tel = new System.Windows.Forms.Label();
+            this.cad_clieDataGridView = new System.Windows.Forms.DataGridView();
+            this.cadcliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gldturfreDeployDataSet = new control_services.gldturfreDeployDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.chkbx_PesquisaCPF = new System.Windows.Forms.CheckBox();
             this.chkbx_PesquisaNome = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtbx_nome = new System.Windows.Forms.TextBox();
             this.msktxbx_CpfCnpj = new System.Windows.Forms.MaskedTextBox();
             this.cmb_CpfCnpj = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            id_cliLabel = new System.Windows.Forms.Label();
-            nome_razao_socialLabel = new System.Windows.Forms.Label();
-            cpf_cnpjLabel = new System.Windows.Forms.Label();
-            emailLabel = new System.Windows.Forms.Label();
-            telefoneLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).BeginInit();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableAdapterManager = new control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager();
+            this.cad_cliTableAdapter = new control_services.gldturfreDeployDataSetTableAdapters.cad_cliTableAdapter();
+            this.idcliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomerazaosocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfcnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_clieDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadcliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // id_cliLabel
-            // 
-            id_cliLabel.AutoSize = true;
-            id_cliLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_cliLabel.Location = new System.Drawing.Point(12, 44);
-            id_cliLabel.Name = "id_cliLabel";
-            id_cliLabel.Size = new System.Drawing.Size(53, 24);
-            id_cliLabel.TabIndex = 11;
-            id_cliLabel.Text = "id cli:";
-            // 
-            // nome_razao_socialLabel
-            // 
-            nome_razao_socialLabel.AutoSize = true;
-            nome_razao_socialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_razao_socialLabel.Location = new System.Drawing.Point(6, 88);
-            nome_razao_socialLabel.Name = "nome_razao_socialLabel";
-            nome_razao_socialLabel.Size = new System.Drawing.Size(171, 24);
-            nome_razao_socialLabel.TabIndex = 13;
-            nome_razao_socialLabel.Text = "Nome razao social:";
-            // 
-            // cpf_cnpjLabel
-            // 
-            cpf_cnpjLabel.AutoSize = true;
-            cpf_cnpjLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cpf_cnpjLabel.Location = new System.Drawing.Point(228, 44);
-            cpf_cnpjLabel.Name = "cpf_cnpjLabel";
-            cpf_cnpjLabel.Size = new System.Drawing.Size(132, 24);
-            cpf_cnpjLabel.TabIndex = 15;
-            cpf_cnpjLabel.Text = "CPF ou CNPJ:";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(12, 132);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(60, 24);
-            emailLabel.TabIndex = 17;
-            emailLabel.Text = "email:";
-            // 
-            // telefoneLabel
-            // 
-            telefoneLabel.AutoSize = true;
-            telefoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefoneLabel.Location = new System.Drawing.Point(540, 44);
-            telefoneLabel.Name = "telefoneLabel";
-            telefoneLabel.Size = new System.Drawing.Size(90, 24);
-            telefoneLabel.TabIndex = 19;
-            telefoneLabel.Text = "Telefone:";
-            // 
-            // glturfreDeployDataSet
-            // 
-            this.glturfreDeployDataSet.DataSetName = "glturfreDeployDataSet";
-            this.glturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cad_cliBindingSource
-            // 
-            this.cad_cliBindingSource.DataMember = "cad_cli";
-            this.cad_cliBindingSource.DataSource = this.glturfreDeployDataSet;
-            // 
-            // cad_cliTableAdapter
-            // 
-            this.cad_cliTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.batevolta_carroTableAdapter = null;
-            this.tableAdapterManager.batevolta_conv47LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd60LTableAdapter = null;
-            this.tableAdapterManager.batevolta_dd64LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_exec50LTableAdapter = null;
-            this.tableAdapterManager.batevolta_micro32LTableAdapter = null;
-            this.tableAdapterManager.batevolta_semi46LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van15LTableAdapter = null;
-            this.tableAdapterManager.batevolta_van18LTableAdapter = null;
-            this.tableAdapterManager.cad_cliTableAdapter = this.cad_cliTableAdapter;
-            this.tableAdapterManager.cad_funTableAdapter = null;
-            this.tableAdapterManager.cad_loginTableAdapter = null;
-            this.tableAdapterManager.categ_veiculoTableAdapter = null;
-            this.tableAdapterManager.estadosTableAdapter = null;
-            this.tableAdapterManager.ferpro_carroTableAdapter = null;
-            this.tableAdapterManager.ferpro_conv47LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd60LTableAdapter = null;
-            this.tableAdapterManager.ferpro_dd64LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_exec50LTableAdapter = null;
-            this.tableAdapterManager.ferpro_micro32LTableAdapter = null;
-            this.tableAdapterManager.ferpro_semi46LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van15LTableAdapter = null;
-            this.tableAdapterManager.ferpro_van18LTableAdapter = null;
-            this.tableAdapterManager.fimsem_carroTableAdapter = null;
-            this.tableAdapterManager.fimsem_conv47LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd60LTableAdapter = null;
-            this.tableAdapterManager.fimsem_dd64LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_exec50LTableAdapter = null;
-            this.tableAdapterManager.fimsem_micro32LTableAdapter = null;
-            this.tableAdapterManager.fimsem_semi46LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van15LTableAdapter = null;
-            this.tableAdapterManager.fimsem_van18LTableAdapter = null;
-            this.tableAdapterManager.orcamentoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = control_services.glturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.veiculoTableAdapter = null;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(id_cliLabel);
-            this.groupBox1.Controls.Add(this.lbl_id);
-            this.groupBox1.Controls.Add(nome_razao_socialLabel);
-            this.groupBox1.Controls.Add(this.lbl_nome);
-            this.groupBox1.Controls.Add(cpf_cnpjLabel);
-            this.groupBox1.Controls.Add(this.lbl_CpfCnpj);
-            this.groupBox1.Controls.Add(emailLabel);
-            this.groupBox1.Controls.Add(this.lbl_email);
-            this.groupBox1.Controls.Add(telefoneLabel);
-            this.groupBox1.Controls.Add(this.lbl_tel);
+            this.groupBox1.Controls.Add(this.cad_clieDataGridView);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 153);
+            this.groupBox1.Location = new System.Drawing.Point(0, 149);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 181);
+            this.groupBox1.Size = new System.Drawing.Size(841, 374);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro do Cliente";
             // 
-            // lbl_id
+            // cad_clieDataGridView
             // 
-            this.lbl_id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "id_cli", true));
-            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(80, 44);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(100, 23);
-            this.lbl_id.TabIndex = 12;
+            this.cad_clieDataGridView.AllowUserToAddRows = false;
+            this.cad_clieDataGridView.AllowUserToDeleteRows = false;
+            this.cad_clieDataGridView.AutoGenerateColumns = false;
+            this.cad_clieDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.cad_clieDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cad_clieDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idcliDataGridViewTextBoxColumn,
+            this.nomerazaosocialDataGridViewTextBoxColumn,
+            this.cpfcnpjDataGridViewTextBoxColumn,
+            this.telefoneDataGridViewTextBoxColumn,
+            this.email});
+            this.cad_clieDataGridView.DataSource = this.cadcliBindingSource;
+            this.cad_clieDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cad_clieDataGridView.Location = new System.Drawing.Point(3, 18);
+            this.cad_clieDataGridView.Name = "cad_clieDataGridView";
+            this.cad_clieDataGridView.ReadOnly = true;
+            this.cad_clieDataGridView.Size = new System.Drawing.Size(835, 353);
+            this.cad_clieDataGridView.TabIndex = 0;
             // 
-            // lbl_nome
+            // cadcliBindingSource
             // 
-            this.lbl_nome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "nome_razao_social", true));
-            this.lbl_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.Location = new System.Drawing.Point(180, 88);
-            this.lbl_nome.Name = "lbl_nome";
-            this.lbl_nome.Size = new System.Drawing.Size(584, 23);
-            this.lbl_nome.TabIndex = 14;
+            this.cadcliBindingSource.DataMember = "cad_cli";
+            this.cadcliBindingSource.DataSource = this.gldturfreDeployDataSet;
             // 
-            // lbl_CpfCnpj
+            // gldturfreDeployDataSet
             // 
-            this.lbl_CpfCnpj.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "cpf_cnpj", true));
-            this.lbl_CpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CpfCnpj.Location = new System.Drawing.Point(366, 44);
-            this.lbl_CpfCnpj.Name = "lbl_CpfCnpj";
-            this.lbl_CpfCnpj.Size = new System.Drawing.Size(168, 23);
-            this.lbl_CpfCnpj.TabIndex = 16;
-            // 
-            // lbl_email
-            // 
-            this.lbl_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "email", true));
-            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(78, 132);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(686, 23);
-            this.lbl_email.TabIndex = 18;
-            // 
-            // lbl_tel
-            // 
-            this.lbl_tel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cad_cliBindingSource, "telefone", true));
-            this.lbl_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tel.Location = new System.Drawing.Point(628, 44);
-            this.lbl_tel.Name = "lbl_tel";
-            this.lbl_tel.Size = new System.Drawing.Size(176, 23);
-            this.lbl_tel.TabIndex = 20;
+            this.gldturfreDeployDataSet.DataSetName = "gldturfreDeployDataSet";
+            this.gldturfreDeployDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.chkbx_PesquisaCPF);
             this.groupBox2.Controls.Add(this.chkbx_PesquisaNome);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.txtbx_nome);
             this.groupBox2.Controls.Add(this.msktxbx_CpfCnpj);
             this.groupBox2.Controls.Add(this.cmb_CpfCnpj);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(810, 147);
+            this.groupBox2.Size = new System.Drawing.Size(841, 147);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar";
             // 
+            // button1
+            // 
+            this.button1.Image = global::control_services.Properties.Resources.lupa;
+            this.button1.Location = new System.Drawing.Point(551, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 75);
+            this.button1.TabIndex = 11;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // chkbx_PesquisaCPF
             // 
             this.chkbx_PesquisaCPF.AutoSize = true;
-            this.chkbx_PesquisaCPF.Location = new System.Drawing.Point(333, 90);
+            this.chkbx_PesquisaCPF.Location = new System.Drawing.Point(429, 90);
             this.chkbx_PesquisaCPF.Name = "chkbx_PesquisaCPF";
-            this.chkbx_PesquisaCPF.Size = new System.Drawing.Size(187, 21);
-            this.chkbx_PesquisaCPF.TabIndex = 6;
-            this.chkbx_PesquisaCPF.Text = "Pesquisar por CPF/CNPJ";
+            this.chkbx_PesquisaCPF.Size = new System.Drawing.Size(18, 17);
+            this.chkbx_PesquisaCPF.TabIndex = 10;
             this.chkbx_PesquisaCPF.UseVisualStyleBackColor = true;
+            this.chkbx_PesquisaCPF.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // chkbx_PesquisaNome
             // 
             this.chkbx_PesquisaNome.AutoSize = true;
-            this.chkbx_PesquisaNome.Location = new System.Drawing.Point(485, 42);
+            this.chkbx_PesquisaNome.Location = new System.Drawing.Point(429, 44);
             this.chkbx_PesquisaNome.Name = "chkbx_PesquisaNome";
-            this.chkbx_PesquisaNome.Size = new System.Drawing.Size(159, 21);
-            this.chkbx_PesquisaNome.TabIndex = 5;
-            this.chkbx_PesquisaNome.Text = "Pesquisar por Nome";
+            this.chkbx_PesquisaNome.Size = new System.Drawing.Size(18, 17);
+            this.chkbx_PesquisaNome.TabIndex = 9;
             this.chkbx_PesquisaNome.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::control_services.Properties.Resources.lupa;
-            this.button1.Location = new System.Drawing.Point(723, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 72);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtbx_nome
             // 
-            this.txtbx_nome.Enabled = false;
-            this.txtbx_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_nome.Location = new System.Drawing.Point(129, 39);
+            this.txtbx_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_nome.Location = new System.Drawing.Point(16, 39);
             this.txtbx_nome.Name = "txtbx_nome";
-            this.txtbx_nome.Size = new System.Drawing.Size(350, 28);
-            this.txtbx_nome.TabIndex = 3;
-            this.txtbx_nome.TextChanged += new System.EventHandler(this.txtbx_nome_TextChanged);
+            this.txtbx_nome.Size = new System.Drawing.Size(407, 26);
+            this.txtbx_nome.TabIndex = 8;
             // 
             // msktxbx_CpfCnpj
             // 
-            this.msktxbx_CpfCnpj.Enabled = false;
-            this.msktxbx_CpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msktxbx_CpfCnpj.Location = new System.Drawing.Point(129, 83);
+            this.msktxbx_CpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msktxbx_CpfCnpj.Location = new System.Drawing.Point(129, 85);
             this.msktxbx_CpfCnpj.Name = "msktxbx_CpfCnpj";
-            this.msktxbx_CpfCnpj.Size = new System.Drawing.Size(198, 28);
-            this.msktxbx_CpfCnpj.TabIndex = 2;
+            this.msktxbx_CpfCnpj.Size = new System.Drawing.Size(294, 26);
+            this.msktxbx_CpfCnpj.TabIndex = 7;
             // 
             // cmb_CpfCnpj
             // 
@@ -314,26 +183,138 @@
             this.cmb_CpfCnpj.Size = new System.Drawing.Size(107, 30);
             this.cmb_CpfCnpj.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome ";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_cli";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_cli";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_razao_social";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nome_razao_social";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "cpf_cnpj";
+            this.dataGridViewTextBoxColumn3.HeaderText = "cpf_cnpj";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn4.HeaderText = "email";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "telefone";
+            this.dataGridViewTextBoxColumn5.HeaderText = "telefone";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "endereco";
+            this.dataGridViewTextBoxColumn6.HeaderText = "endereco";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "num_endereco";
+            this.dataGridViewTextBoxColumn7.HeaderText = "num_endereco";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn8.HeaderText = "complemento";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "bairro";
+            this.dataGridViewTextBoxColumn9.HeaderText = "bairro";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "cidade";
+            this.dataGridViewTextBoxColumn10.HeaderText = "cidade";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn11.HeaderText = "estado";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cad_cliTableAdapter = null;
+            this.tableAdapterManager.cad_funTableAdapter = null;
+            this.tableAdapterManager.categ_veiculoTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.estadoTableAdapter = null;
+            this.tableAdapterManager.lgn_usersTableAdapter = null;
+            this.tableAdapterManager.orcamentoTableAdapter = null;
+            this.tableAdapterManager.tabela_BateVoltaTableAdapter = null;
+            this.tableAdapterManager.tabela_FerProTableAdapter = null;
+            this.tableAdapterManager.tabela_FimSemTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = control_services.gldturfreDeployDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.veiculoTableAdapter = null;
+            this.tableAdapterManager.viagem_fechadaTableAdapter = null;
+            // 
+            // cad_cliTableAdapter
+            // 
+            this.cad_cliTableAdapter.ClearBeforeFill = true;
+            // 
+            // idcliDataGridViewTextBoxColumn
+            // 
+            this.idcliDataGridViewTextBoxColumn.DataPropertyName = "id_cli";
+            this.idcliDataGridViewTextBoxColumn.HeaderText = "Codigo do Cliente";
+            this.idcliDataGridViewTextBoxColumn.Name = "idcliDataGridViewTextBoxColumn";
+            this.idcliDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomerazaosocialDataGridViewTextBoxColumn
+            // 
+            this.nomerazaosocialDataGridViewTextBoxColumn.DataPropertyName = "nome_razao_social";
+            this.nomerazaosocialDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomerazaosocialDataGridViewTextBoxColumn.Name = "nomerazaosocialDataGridViewTextBoxColumn";
+            this.nomerazaosocialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpfcnpjDataGridViewTextBoxColumn
+            // 
+            this.cpfcnpjDataGridViewTextBoxColumn.DataPropertyName = "cpf_cnpj";
+            this.cpfcnpjDataGridViewTextBoxColumn.HeaderText = "CPF / CNPJ";
+            this.cpfcnpjDataGridViewTextBoxColumn.Name = "cpfcnpjDataGridViewTextBoxColumn";
+            this.cpfcnpjDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefoneDataGridViewTextBoxColumn
+            // 
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
             // frm_consultCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 334);
+            this.ClientSize = new System.Drawing.Size(841, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -342,10 +323,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Cliente";
             this.Load += new System.EventHandler(this.frm_consultCli_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.glturfreDeployDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cad_cliBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cad_clieDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadcliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gldturfreDeployDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -353,25 +334,35 @@
         }
 
         #endregion
-
-        private glturfreDeployDataSet glturfreDeployDataSet;
-        private System.Windows.Forms.BindingSource cad_cliBindingSource;
-        private glturfreDeployDataSetTableAdapters.cad_cliTableAdapter cad_cliTableAdapter;
-        private glturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private gldturfreDeployDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_id;
-        private System.Windows.Forms.Label lbl_nome;
-        private System.Windows.Forms.Label lbl_CpfCnpj;
-        private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.Label lbl_tel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmb_CpfCnpj;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView cad_clieDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.MaskedTextBox msktxbx_CpfCnpj;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox chkbx_PesquisaCPF;
         private System.Windows.Forms.CheckBox chkbx_PesquisaNome;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtbx_nome;
-        private System.Windows.Forms.MaskedTextBox msktxbx_CpfCnpj;
-        private System.Windows.Forms.Timer timer1;
+        private gldturfreDeployDataSet gldturfreDeployDataSet;
+        private System.Windows.Forms.BindingSource cadcliBindingSource;
+        private gldturfreDeployDataSetTableAdapters.cad_cliTableAdapter cad_cliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcliDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomerazaosocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpjDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

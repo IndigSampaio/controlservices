@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace control_services
 {
@@ -27,37 +28,70 @@ namespace control_services
 
         private void frm_escala_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.viagem_fechada'. Você pode movê-la ou removê-la conforme necessário.
+            // Carrega os dados das tabelas
+            this.veiculoTableAdapter.Fill(this.gldturfreDeployDataSet.veiculo);
+            this.motoristaTableAdapter.Fill(this.gldturfreDeployDataSet.motorista);
             this.viagem_fechadaTableAdapter.Fill(this.gldturfreDeployDataSet.viagem_fechada);
 
+            // Obtém a categoria do veículo selecionado
+            string categoria = categ_veiculoLabel2.Text;
+
+            // Filtra e preenche o ComboBox com os veículos correspondentes à categoria
+            PreencherVeiculos(categoria, veiculoComboBox);
         }
 
-        private void viagem_fechadaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void PreencherVeiculos(string categoria, ComboBox comboBox)
         {
+            // Obtém a categoria do veículo selecionado
+            categoria = categ_veiculoLabel2.Text;
 
-        }
+            // Define a string de conexão com o banco de dados
+            string connectionString = "Data Source=mssql-115648-0.cloudclusters.net,10046; Initial Catalog=gldturfreDeploy;User ID=PedroSampaio;Password=DanielePedro1!";
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            // Define a consulta SQL para selecionar os veículos correspondentes à categoria
+            string comando = $"SELECT veiculo FROM veiculo WHERE categ_veiculo = '{categoria}' AND ativo = 1";
 
-        }
-
-        private void fillByCategVeiculo_DisponivelToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
+            // Cria uma conexão com o banco de dados
+            using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                this.veiculoTableAdapter.FillByCategVeiculo_Disponivel(this.gldturfreDeployDataSet.veiculo, param1ToolStripTextBox.Text);
+                // Cria um comando para executar a consulta SQL
+                using (SqlCommand cmd = new SqlCommand(comando, conexao))
+                {
+                    // Abre a conexão com o banco de dados
+                    conexao.Open();
+
+                    // Executa a consulta SQL e obtém um leitor de dados
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        // Limpa o ComboBox
+                        comboBox.Items.Clear();
+
+                        // Preenche o ComboBox com os veículos correspondentes à categoria
+                        while (reader.Read())
+                        {
+                            comboBox.Items.Add(reader.GetString(0));
+                        }
+                    }
+                }
             }
-            catch (System.Exception ex)
+
+            // Seleciona o primeiro item do ComboBox, se houver
+            if (comboBox.Items.Count > 0)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                comboBox.SelectedIndex = 0;
             }
-
+            else
+            {
+                comboBox.Text = "";
+            }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btn_salvar_Click(object sender, EventArgs e)
         {
-            
+            this.Validate();
+            this.viagem_fechadaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gldturfreDeployDataSet);
         }
+
     }
 }

@@ -24,14 +24,12 @@ namespace control_services
 
         private void frm_consultCidade_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.batevolta_dd64L'. Você pode movê-la ou removê-la conforme necessário.
-            this.batevolta_dd64LTableAdapter.Fill(this.glturfreDeployDataSet.batevolta_dd64L);
-
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.batevolta_dd64LTableAdapter.FillByBateVolta_DD64(this.glturfreDeployDataSet.batevolta_dd64L, textBox1.Text);
+         
         }
     }
 }

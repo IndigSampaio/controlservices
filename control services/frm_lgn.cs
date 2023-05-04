@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace control_services
 {
@@ -57,22 +58,39 @@ namespace control_services
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //int result = this.cad_funTableAdapter.FillByLogin(gldturfreDeployDataSet.cad_fun, txtbx_lgn.Text, txtbx_snh.Text);
-            int result = this.lgn_usersTableAdapter.FillByLgn(gldturfreDeployDataSet.lgn_users, txtbx_lgn.Text, txtbx_snh.Text);
 
-            if (result == 1)
+            string connetionString = null;
+            SqlConnection cnn;
+            connetionString = "Data Source=mssql-115648-0.cloudclusters.net,10046; Initial Catalog=gldturfreDeploy;User ID=PedroSampaio;Password=DanielePedro1!";
+            cnn = new SqlConnection(connetionString);
+
+            try
             {
-                frm_menu menu = new frm_menu();
-                this.Visible = false;
-                menu.ShowDialog();
+                cnn.Open();
+                int result = this.lgn_usersTableAdapter.FillByLgn(gldturfreDeployDataSet.lgn_users, txtbx_lgn.Text, txtbx_snh.Text);
+
+                if (result == 1)
+                {
+                    frm_menu menu = new frm_menu();
+                    this.Visible = false;
+                    menu.ShowDialog();
+                }
+
+                else if (cont <= 3)
+                {
+                    cont = cont - 1;
+                    MessageBox.Show("Usuario ou senha incorreto!\n Tentativas restante: " + cont, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
             }
 
-            else if (cont <= 3 )
-            {
-                cont = cont - 1;
-                MessageBox.Show("Usuario ou senha incorreto!\n Tentativas restante: " + cont , "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                
-            }
+            
 
             if (cont == 0)
             {
