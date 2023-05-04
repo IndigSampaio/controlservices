@@ -17,56 +17,51 @@ namespace control_services
             InitializeComponent();
         }
 
-        private void cad_cliBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
         {
-
-
+            System.Diagnostics.Process.Start(@"Chrome.exe", "https://web.whatsapp.com/send?phone=5511984062207");
         }
 
-        private void frm_cadCli_Load(object sender, EventArgs e)
+        private void btn_sair_Click(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet1.estados'. Você pode movê-la ou removê-la conforme necessário.
-            this.estadosTableAdapter.Fill(this.glturfreDeployDataSet1.estados);
-            // TODO: esta linha de código carrega dados na tabela 'glturfreDeployDataSet.cad_cli'. Você pode movê-la ou removê-la conforme necessário.
-            this.cad_cliTableAdapter.Fill(this.glturfreDeployDataSet.cad_cli);
-
-            txtbx_email.Text = "";
-            txtbx_endereco.Text = "";
-            txtbx_nome.Text = "";
-            txtbx_num_ende.Text = "";
-            maskedTextBox1.Text = "";
-            msktxbx_tel.Text = "";
-            txtbx_bairro.Text = "";
-            txtbx_cidade.Text = "";
-            txtbx_compl.Text = "";
-            comboBox1.Text = "";
-
-        }
-
-        private void btn_salvar_Click(object sender, EventArgs e)
-        {
-            if (txtbx_nome.Text == "" || maskedTextBox1.Text == "" )
+            if (panel_cadastro.Enabled == true)
             {
-                MessageBox.Show("Os campos:\n NOME/RAZAO SOCIAL e CPF/CNPJ\n Nao podem estar vazios", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (txtbx_nome.Text == "")
-            {
-                MessageBox.Show("O campo: \n NOME/RAZAO SOCIAL\n Nao pode estar vazio", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (maskedTextBox1.Text == "")
-            {
-                MessageBox.Show("O campo: \n CPF/CNPJ \n Nao pode estar vazio", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(" Os dados ainda nao foram salvos.\n DESEJA REALMENTE SAIR?\n Os dados nao salvos serao perdidos", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    this.Close();
+                }
             }
 
             else
             {
-                this.Validate();
-                this.cad_cliBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.glturfreDeployDataSet);
-                MessageBox.Show("Cadastro Salvo com sucesso!", "Salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
             }
+        }
+
+        private void cad_clieBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cad_cliBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gldturfreDeployDataSet);
+
+        }
+
+        private void frm_cadCli2_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.estado'. Você pode movê-la ou removê-la conforme necessário.
+            this.estadoTableAdapter.Fill(this.gldturfreDeployDataSet.estado);
+            // TODO: esta linha de código carrega dados na tabela 'gldturfreDeployDataSet.cad_cli'. Você pode movê-la ou removê-la conforme necessário.
+            this.cad_cliTableAdapter.Fill(this.gldturfreDeployDataSet.cad_cli);
+            txtbx_nome.Text = "";
+            maskedTextBox1.Text = "";
+            txtbx_email.Text = "";
+            txtbx_endereco.Text = "";
+            txtbx_num_ende.Text = "";
+            txtbx_bairro.Text = "";
+            txtbx_cidade.Text = "";
+            comboBox1.Text = "";
+            msktxbx_tel.Text = "";
+            txtbx_compl.Text = "";
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -84,19 +79,40 @@ namespace control_services
             }
         }
 
-        private void btn_sair_Click(object sender, EventArgs e)
+        private void btn_salvar_Click(object sender, EventArgs e)
         {
-            if (panel_cadastro.Enabled == true)
+            if (txtbx_nome.Text == "" || maskedTextBox1.Text == "" || msktxbx_tel.Text == "")
             {
-                if(MessageBox.Show(" Os dados ainda nao foram salvos.\n DESEJA REALMENTE SAIR?\n Os dados nao salvos serao perdidos", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    this.Close();
-                }
+                MessageBox.Show("Os campos:\n NOME/RAZAO SOCIAL, CPF/CNPJ e Telefone\n Nao podem estar vazios", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (txtbx_nome.Text == "")
+            {
+                MessageBox.Show("O campo: \n NOME/RAZAO SOCIAL\n Nao pode estar vazio", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (maskedTextBox1.Text == "")
+            {
+                MessageBox.Show("O campo: \n CPF/CNPJ \n Nao pode estar vazio", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
-                this.Close();
+                this.Validate();
+                this.cad_cliBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.gldturfreDeployDataSet);
+                MessageBox.Show("Cadastro Salvo com sucesso!", "Salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtbx_nome.Text = "";
+                maskedTextBox1.Text = "";
+                txtbx_email.Text = "";
+                txtbx_endereco.Text = "";
+                txtbx_num_ende.Text = "";
+                txtbx_bairro.Text = "";
+                txtbx_cidade.Text = "";
+                comboBox1.Text = "";
+                msktxbx_tel.Text = "";
+                txtbx_compl.Text = "";
+                panel_cadastro.Enabled = false;
             }
         }
 
@@ -104,28 +120,18 @@ namespace control_services
         {
             if (cmbbx_cpf_cnpj.Text == "CPF")
             {
-                maskedTextBox1.Mask = ("999.999.999-99");
+                maskedTextBox1.Mask = ("999,999,999-99");
             }
 
             else if (cmbbx_cpf_cnpj.Text == "CNPJ")
             {
-                maskedTextBox1.Mask = ("99.999.999/9999-99");
+                maskedTextBox1.Mask = ("99,999,999/9999-99");
             }
         }
 
-        private void btn_consulta_cliente_Click(object sender, EventArgs e)
+        private void cad_cliBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Area em desenvolvimento");
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
+            
         }
     }
 }
